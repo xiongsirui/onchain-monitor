@@ -1,38 +1,104 @@
-# 快速开始指南
+# 快速上手指南 - 5 分钟开始监控
 
-## 3步启动
+## 🎯 最简单的启动方式（推荐）
 
-### 步骤1: 安装依赖（10秒）
+### 3 步启动 BSC 监听器（无需配置 API Key）
 
 ```bash
+# 步骤 1: 安装依赖
 pip install -r requirements.txt
+
+# 步骤 2: 验证安装
+python3 verify_installation.py
+
+# 步骤 3: 启动 BSC 监听器
+python3 run_bsc.py
 ```
 
-### 步骤2: 配置API（1分钟）
-
-1. 访问 https://www.alchemy.com/
-2. 注册免费账号
-3. 创建应用（选择 Ethereum Mainnet）
-4. 复制 API Key
-
-编辑 `run.py` 第 19-20 行：
-
-```python
-HTTP_RPC = "https://eth-mainnet.g.alchemy.com/v2/你的API_KEY"
-WS_RPC = "wss://eth-mainnet.g.alchemy.com/v2/你的API_KEY"
-```
-
-### 步骤3: 运行（一行命令）
-
-```bash
-python3 run.py
-```
-
-按 `Ctrl+C` 停止。
+**就这么简单！** BSC 使用币安官方免费 RPC，无需任何配置。
 
 ---
 
-## 首次运行预期
+## 📋 详细步骤
+
+### 步骤 1: 安装依赖（1 分钟）
+
+```bash
+cd /home/ray/code/onchain-monitor
+pip install -r requirements.txt
+```
+
+**如果遇到权限问题**:
+```bash
+pip install --user -r requirements.txt
+```
+
+**如果安装很慢**（国内用户）:
+```bash
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+```
+
+---
+
+### 步骤 2: 验证安装（30 秒）
+
+```bash
+python3 verify_installation.py
+```
+
+**预期输出**:
+```
+✅ Python 版本: 3.x.x
+✅ web3: x.x.x
+✅ requests: x.x.x
+⚠️  solana: 未安装 (可选)
+🎉 恭喜！所有检查都通过了！
+```
+
+**如果有问题**: 根据错误提示修复后重新验证
+
+---
+
+### 步骤 3: 启动监听器（30 秒）
+
+#### 方式 A: BSC 快速启动（推荐）⚡
+
+```bash
+python3 run_bsc.py
+```
+
+**提示**:
+```
+是否需要使用代理？(y/n, 默认 n):
+```
+- 网络正常: 输入 `n` 回车
+- 需要代理: 输入 `y` → 输入代理地址（如 `127.0.0.1:7897`）
+
+**启动成功**:
+```
+🚀 BSC 监听器已启动！
+🔍 [BSC] 检查区块 xxxxx - xxxxx
+```
+
+#### 方式 B: ETH 单链启动（需要 API Key）
+
+```bash
+# 1. 访问 https://www.alchemy.com/ 注册并获取 API Key
+# 2. 编辑 run.py 第 19-20 行
+# 3. 运行
+python3 run.py
+```
+
+#### 方式 C: 多链启动
+
+```bash
+python3 example_multichain.py
+# 选择示例 2 或 6
+```
+
+---
+
+## ✅ 运行效果
 
 ```
 ⏳ 正在初始化监听器...
