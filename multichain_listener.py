@@ -12,7 +12,8 @@
 - ✅ 智能告警策略
 """
 
-from web3 import Web3
+from web3 import Web3, AsyncWeb3
+from web3.providers import WebSocketProvider
 import json
 import time
 import pickle
@@ -586,7 +587,7 @@ class BaseChainListener(ABC):
 
 
 class EVMChainListener(BaseChainListener):
-    """EVM兼容链监听器 (支持 Ethereum, BSC)"""
+    """EVM兼容链监听器 (支持 Ethereum, BSC) - HTTP 轮询"""
 
     def __init__(self, chain_name: str, rpc_url: str, ws_url: Optional[str],
                  binance_wallets: List[str], analyzer: AdvancedTokenAnalyzer,
@@ -727,6 +728,103 @@ class EVMChainListener(BaseChainListener):
 
             if callback:
                 callback(transfer_data, self.new_tokens_buffer)
+
+
+class AsyncEVMWebSocketListener(EVMChainListener):
+    """EVM兼容链监听器 (Ethereum / BSC) - WebSocket 订阅"""
+
+    def __init__(self, chain_name: str, rpc_url: str, ws_url: str,
+                 binance_wallets: List[str], analyzer: AdvancedTokenAnalyzer,
+                 binance_filter: Optional[BinanceTokenFilter] = None,
+                 feishu_notifier: Optional['FeishuNotifier'] = None,
+                 proxy: Optional[str] = None):
+        # 仍然初始化 HTTP Web3，用于代币信息、区块时间等查询
+        super().__init__(
+            chain_name=chain_name,
+            rpc_url=rpc_url,
+            ws_url=ws_url,
+            binance_wallets=binance_wallets,
+            analyzer=analyzer,
+            binance_filter=binance_filter,
+            feishu_notifier=feishu_notifier,
+            proxy=proxy,
+        )
+
+        if not ws_url:
+            raise ValueError(f"❌ [{chain_name}] WebSocket URL 未配置")
+
+        # WebSocketProvider 当前不直接支持 HTTP 代理，这里仅打印提示
+        if proxy:
+            print(f"⚠️ [{chain_name}] 当前 WebSocketProvider 暂未配置代理，仍将直接连接 {ws_url}")
+
+        try:
+            self.async_w3 = AsyncWeb3(WebSocketProvider(ws_url))
+            print(f"✅ [{chain_name}] WebSocket 已配置: {ws_url}")
+        except Exception as e:
+            raise Exception(f"❌ [{chain_name}] WebSocket 初始化失败: {e}")
+
+        # WebSocket 模式下不需要轮询间隔，但为了兼容接口仍接受 poll_interval 参数
+        self._ws_callback: Optional[Callable] = None
+
+    async def _handle_log(self, ctx):
+        """WebSocket 订阅回调，处理单条日志"""
+        log = ctx.result
+        transfer_data = self.decode_transfer_log(log)
+        if not transfer_data:
+            return
+
+        # 获取区块时间戳（使用已有 HTTP Web3）
+        transfer_data['timestamp'] = self.get_block_timestamp(
+            transfer_data['block_number']
+        )
+
+        self.process_transfer(transfer_data)
+
+        if self._ws_callback:
+            self._ws_callback(transfer_data, self.new_tokens_buffer)
+
+    async def _run_ws(self, callback=None):
+        """内部协程：为每个监控钱包建立 logs 订阅"""
+        print(f"\n{'='*80}")
+        print(f"🔄 [{self.chain_name}] 启动 WebSocket 监听")
+        print(f"{'='*80}")
+        print(f"监控钱包: {len(self.binance_wallets)} 个")
+        print(f"{'='*80}\n")
+
+        self._ws_callback = callback
+
+        # 为每个钱包单独订阅 Transfer→to=wallet 的日志
+        for wallet in self.binance_wallets:
+            topic_to = '0x' + wallet[2:].zfill(64)
+            logs_filter = {
+                'topics': [
+                    TRANSFER_EVENT_SIGNATURE,
+                    None,
+                    topic_to,
+                ]
+            }
+            await self.async_w3.eth.subscribe(
+                'logs',
+                logs_filter,
+                handler=self._handle_log,
+            )
+            print(f"✅ [{self.chain_name}] 已订阅钱包 {self._shorten(wallet)} 的 Transfer 事件")
+
+        # 保持协程存活
+        try:
+            while True:
+                await asyncio.sleep(3600)
+        except asyncio.CancelledError:
+            print(f"\n⏹️  [{self.chain_name}] WebSocket 监听已停止")
+
+    def listen(self, from_block: str = 'latest', poll_interval: int = 12, callback=None):
+        """兼容 BaseChainListener 接口的同步入口，内部运行异步 WebSocket 监听"""
+        import asyncio
+
+        try:
+            asyncio.run(self._run_ws(callback))
+        except KeyboardInterrupt:
+            print(f"\n⏹️  [{self.chain_name}] WebSocket 监听已停止")
 
 
 class SolanaChainListener(BaseChainListener):
@@ -985,7 +1083,8 @@ class MultiChainListener:
         if feishu_webhook_url and FEISHU_AVAILABLE:
             print("📱 初始化飞书通知器...")
             try:
-                self.feishu_notifier = FeishuNotifier(feishu_webhook_url, proxy=proxy)
+                # 飞书是国内服务，不需要代理
+                self.feishu_notifier = FeishuNotifier(feishu_webhook_url)
                 # 发送测试消息
                 if self.feishu_notifier.send_test_message():
                     print("✅ 飞书通知器已启用\n")
@@ -1007,8 +1106,16 @@ class MultiChainListener:
         # 持久化
         self.persistence_file = Path(persistence_file)
 
-    def add_eth_listener(self, rpc_url: str, ws_url: Optional[str] = None, proxy: Optional[str] = None):
-        """添加以太坊监听器"""
+    def add_eth_listener(self, rpc_url: str, ws_url: Optional[str] = None,
+                         proxy: Optional[str] = None, use_websocket: bool = False):
+        """添加以太坊监听器
+
+        参数:
+            rpc_url: HTTP RPC URL
+            ws_url: WebSocket URL（当 use_websocket=True 时必需）
+            proxy: 可选代理
+            use_websocket: 是否使用 WebSocket 订阅模式
+        """
         binance_wallets = [
             '0x28C6c06298d514Db089934071355E5743bf21d60',  # Binance 14
             '0x21a31Ee1afC51d94C2eFcCAa2092aD1028285549',  # Binance 15
@@ -1020,21 +1127,41 @@ class MultiChainListener:
             '0xF977814e90dA44bFA03b6295A0616a897441aceC',  # Binance 8
         ]
 
-        listener = EVMChainListener(
-            chain_name="Ethereum",
-            rpc_url=rpc_url,
-            ws_url=ws_url,
-            binance_wallets=binance_wallets,
-            analyzer=self.analyzer,
-            binance_filter=self.binance_filter,
-            feishu_notifier=self.feishu_notifier,
-            proxy=proxy or self.proxy
-        )
+        if use_websocket and ws_url:
+            listener = AsyncEVMWebSocketListener(
+                chain_name="Ethereum",
+                rpc_url=rpc_url,
+                ws_url=ws_url,
+                binance_wallets=binance_wallets,
+                analyzer=self.analyzer,
+                binance_filter=self.binance_filter,
+                feishu_notifier=self.feishu_notifier,
+                proxy=proxy or self.proxy
+            )
+        else:
+            listener = EVMChainListener(
+                chain_name="Ethereum",
+                rpc_url=rpc_url,
+                ws_url=ws_url,
+                binance_wallets=binance_wallets,
+                analyzer=self.analyzer,
+                binance_filter=self.binance_filter,
+                feishu_notifier=self.feishu_notifier,
+                proxy=proxy or self.proxy
+            )
         self.listeners['ETH'] = listener
         return listener
 
-    def add_bsc_listener(self, rpc_url: str, ws_url: Optional[str] = None, proxy: Optional[str] = None):
-        """添加BSC监听器"""
+    def add_bsc_listener(self, rpc_url: str, ws_url: Optional[str] = None,
+                         proxy: Optional[str] = None, use_websocket: bool = False):
+        """添加BSC监听器
+
+        参数:
+            rpc_url: HTTP RPC URL
+            ws_url: WebSocket URL（当 use_websocket=True 时必需）
+            proxy: 可选代理
+            use_websocket: 是否使用 WebSocket 订阅模式
+        """
         binance_wallets = [
             '0x8894E0a0c962CB723c1976a4421c95949bE2D4E3',  # Binance BSC Hot Wallet
             '0x28C6c06298d514Db089934071355E5743bf21d60',  # Binance 14
@@ -1042,16 +1169,28 @@ class MultiChainListener:
             '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0',  # Binance BSC Wallet
         ]
 
-        listener = EVMChainListener(
-            chain_name="BSC",
-            rpc_url=rpc_url,
-            ws_url=ws_url,
-            binance_wallets=binance_wallets,
-            analyzer=self.analyzer,
-            binance_filter=self.binance_filter,
-            feishu_notifier=self.feishu_notifier,
-            proxy=proxy or self.proxy
-        )
+        if use_websocket and ws_url:
+            listener = AsyncEVMWebSocketListener(
+                chain_name="BSC",
+                rpc_url=rpc_url,
+                ws_url=ws_url,
+                binance_wallets=binance_wallets,
+                analyzer=self.analyzer,
+                binance_filter=self.binance_filter,
+                feishu_notifier=self.feishu_notifier,
+                proxy=proxy or self.proxy
+            )
+        else:
+            listener = EVMChainListener(
+                chain_name="BSC",
+                rpc_url=rpc_url,
+                ws_url=ws_url,
+                binance_wallets=binance_wallets,
+                analyzer=self.analyzer,
+                binance_filter=self.binance_filter,
+                feishu_notifier=self.feishu_notifier,
+                proxy=proxy or self.proxy
+            )
         self.listeners['BSC'] = listener
         return listener
 

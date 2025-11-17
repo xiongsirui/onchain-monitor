@@ -44,7 +44,9 @@ def main():
     # 1) 优先使用 config.py 中的配置
     if HAS_CONFIG:
         ETH_RPC_URL = ETH_CONFIG['rpc_url']
+        ETH_WS_URL = ETH_CONFIG.get('ws_url')
         BSC_RPC_URL = BSC_CONFIG['rpc_url']
+        BSC_WS_URL = BSC_CONFIG.get('ws_url')
         SOL_RPC_URL = SOLANA_CONFIG['rpc_url']
         PROXY = CONFIG_PROXY
         enable_filter = ENABLE_FILTER
@@ -55,7 +57,9 @@ def main():
     else:
         # 2) 退回到环境变量配置
         ETH_RPC_URL = os.getenv('ETH_RPC_URL', 'https://eth-mainnet.g.alchemy.com/v2/YOUR_API_KEY')
+        ETH_WS_URL = os.getenv('ETH_WS_URL')
         BSC_RPC_URL = os.getenv('BSC_RPC_URL', 'https://bsc-dataseed.binance.org/')
+        BSC_WS_URL = os.getenv('BSC_WS_URL')
         SOL_RPC_URL = os.getenv('SOL_RPC_URL', 'https://api.mainnet-beta.solana.com')
         PROXY = os.getenv('PROXY', None)  # 例如 "127.0.0.1:7897"
         enable_filter = True
@@ -70,11 +74,15 @@ def main():
     # 添加 ETH + BSC 监听器
     listener.add_eth_listener(
         rpc_url=ETH_RPC_URL,
-        proxy=PROXY
+        ws_url=ETH_WS_URL,
+        proxy=PROXY,
+        use_websocket=bool(ETH_WS_URL),
     )
     listener.add_bsc_listener(
         rpc_url=BSC_RPC_URL,
-        proxy=PROXY
+        ws_url=BSC_WS_URL,
+        proxy=PROXY,
+        use_websocket=bool(BSC_WS_URL),
     )
 
     # 询问是否启用 Solana

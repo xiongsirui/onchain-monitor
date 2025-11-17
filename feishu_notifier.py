@@ -25,12 +25,17 @@ class FeishuNotifier:
 
         参数:
             webhook_url: 飞书机器人 Webhook URL
-            proxy: 可选的代理服务器
+            proxy: 可选的代理服务器（通常不需要，飞书是国内服务）
+
+        注意:
+            飞书 webhook 是国内服务，一般不需要代理
+            只有在特殊网络环境下才需要配置代理
         """
         self.webhook_url = webhook_url
         self.proxy = proxy
         self.session = requests.Session()
 
+        # 只在明确指定代理时才配置
         if proxy:
             self.session.proxies = {
                 'http': proxy if proxy.startswith('http') else f'http://{proxy}',
