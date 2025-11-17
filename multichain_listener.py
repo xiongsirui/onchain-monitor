@@ -51,14 +51,6 @@ TOKEN_ABI = json.loads('''[
 ]''')
 
 
-class ChainConfig:
-    """链配置"""
-    def __init__(self, name: str, rpc_url: str, ws_url: Optional[str] = None):
-        self.name = name
-        self.rpc_url = rpc_url
-        self.ws_url = ws_url
-
-
 class AdvancedTokenAnalyzer:
     """
     高级代币分析器 - 策略核心

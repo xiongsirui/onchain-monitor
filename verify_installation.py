@@ -63,7 +63,7 @@ def check_files():
     required_files = [
         'multichain_listener.py',
         'binance_token_filter.py',
-        'example_multichain.py',
+        'run_multichain.py',
         'run_bsc.py',
         'requirements.txt',
     ]
@@ -202,7 +202,7 @@ def main():
         print("\n🎉 恭喜！所有检查都通过了！")
         print("\n下一步:")
         print("  • 运行 BSC 监听器: python3 run_bsc.py")
-        print("  • 运行多链示例: python3 example_multichain.py")
+        print("  • 运行多链监听: python3 run_multichain.py")
         print("  • 查看文档: 阅读 README.md 和 CLAUDE.md")
     else:
         print("\n⚠️  部分检查未通过，请根据上述提示修复问题")

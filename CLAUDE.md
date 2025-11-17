@@ -9,11 +9,11 @@ This is a blockchain on-chain deposit detector for identifying new cryptocurrenc
 **Language**: Python 3
 **Primary Files**:
 - [multichain_listener.py](multichain_listener.py) - Multi-chain listener (ETH + BSC + Solana) 🆕⭐ **RECOMMENDED**
-- [onchain_listener_advanced.py](onchain_listener_advanced.py) - Advanced ETH listener with full strategy
 - [binance_token_filter.py](binance_token_filter.py) - Filter for already-listed Binance tokens
-- [onchain_new_coin_detector.py](onchain_new_coin_detector.py) - API-based polling detector with sybil protection
-- [example_multichain.py](example_multichain.py) - Multi-chain usage examples 🆕
-- [test_filter.py](test_filter.py) - Filter testing script
+- [feishu_notifier.py](feishu_notifier.py) - Feishu (Lark) notification integration
+- [run_multichain.py](run_multichain.py) - Multi-chain runtime entrypoint (ETH + BSC + optional Solana)
+- [run_bsc.py](run_bsc.py) - BSC-only quick start script
+- [run_feishu.py](run_feishu.py) - BSC with Feishu notifications
 
 ## Running the Code
 
@@ -25,8 +25,8 @@ This is the **recommended approach** that supports ETH, BSC, and Solana chains s
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the multi-chain example
-python3 example_multichain.py
+# Run the multi-chain listener
+python3 run_multichain.py
 
 # Or use directly in code
 python3
@@ -75,50 +75,7 @@ python3
 - **BSC (Binance Smart Chain)**: 3-second block time, fastest detection ⚡
 - **Solana**: Sub-second finality, development in progress
 
-### Method 2: Single-Chain Advanced Listener (ETH Only)
-
-For Ethereum-only monitoring with full strategy analysis.
-
-```bash
-# Run advanced ETH listener
-python3
->>> from onchain_listener_advanced import BlockchainListener
->>> listener = BlockchainListener(
-...     rpc_url='https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY',
-...     ws_url='wss://eth-mainnet.g.alchemy.com/v2/YOUR_KEY',
-...     enable_filter=True,
-...     proxy='127.0.0.1:7897'
-... )
->>> listener.listen_with_websocket()  # Real-time mode
->>> # OR
->>> listener.listen_with_polling()     # HTTP polling mode
-```
-
-**Features**:
-- Real-time ERC20 Transfer event monitoring
-- Auto-reconnect on failure
-- Automatic filtering of already-listed tokens
-- Sybil attack detection
-- Data persistence
-
-### Method 3: API-based Polling (Legacy)
-
-Uses Etherscan/BSCScan APIs to periodically check for new deposits.
-
-```bash
-# Run the detector
-python3 onchain_new_coin_detector.py
-
-# Or use in code
-python3
->>> from onchain_new_coin_detector import OnChainDepositDetector
->>> detector = OnChainDepositDetector()
->>> detector.etherscan_api_key = 'YOUR_ETHERSCAN_API_KEY'
->>> detector.bscscan_api_key = 'YOUR_BSCSCAN_API_KEY'
->>> new_tokens = detector.monitor_binance_wallets('ETH')
->>> # OR
->>> detector.comprehensive_monitor(interval=60)
-```
+## Architecture
 
 ### Dependencies
 
@@ -136,31 +93,21 @@ pip install web3>=6.0.0 requests>=2.28.0 solana>=0.30.0 solders>=0.18.0
 
 ### Core Detection Strategy
 
-The system implements three complementary approaches:
+The system uses a multi-chain real-time listener approach:
 
-**A. Multi-Chain Real-time Listener** ([multichain_listener.py](multichain_listener.py)) 🆕⭐
+**Multi-Chain Real-time Listener** ([multichain_listener.py](multichain_listener.py)) 🆕⭐
 - Unified architecture for ETH, BSC, and Solana
 - Direct blockchain node connection via Web3.py (EVM) and Solana RPC
 - HTTP polling for reliable monitoring
 - Multi-threaded parallel chain monitoring
 - Shared token analyzer and filter
+- Feishu notification integration
 
-**B. Single-Chain Advanced Listener** ([onchain_listener_advanced.py](onchain_listener_advanced.py))
-- Ethereum-focused monitoring
-- Real-time ERC20 Transfer event monitoring
-- HTTP polling mode (Web3.py v6+ compatible)
-- Data persistence with state recovery
-
-**C. API-based Historical Analysis** ([onchain_new_coin_detector.py](onchain_new_coin_detector.py))
-- Etherscan/BSCScan API integration
-- Sybil attack detection and validation
-- Comprehensive fraud filtering
-- Legacy support
-
-All approaches:
+**Core workflow**:
 1. **Wallet Monitoring**: Track known Binance hot/cold wallets across multiple chains
 2. **Transaction Analysis**: Detect new token contracts from transfer events
 3. **Validation**: Filter false positives and fraudulent signals
+4. **Notification**: Send alerts via Feishu when new tokens detected
 
 ### Key Components
 
@@ -259,149 +206,21 @@ Smart filter for identifying already-listed Binance tokens.
 - Thread-safe buffer management
 - Unified alert system
 
-#### BlockchainListener Class ([onchain_listener_advanced.py](onchain_listener_advanced.py))
+#### FeishuNotifier Class ([feishu_notifier.py](feishu_notifier.py))
 
-Advanced single-chain (Ethereum) monitoring system with full strategy.
+**Feishu (Lark) messaging integration** for real-time notifications.
 
 **Core Methods**:
-- `__init__(rpc_url, ws_url, enable_filter, persistence_file, proxy)`: Initialize with persistence and proxy support
-- `get_token_info(contract_address)`: Fetch ERC20 token metadata with caching
-- `decode_transfer_log(log)`: Parse raw Transfer event logs
-- `listen_with_websocket(callback)`: Real-time monitoring (uses HTTP polling in v6+)
-- `listen_with_polling(from_block, poll_interval, callback)`: HTTP polling mode
-- `process_transfer(transfer_data)`: Complete strategy analysis pipeline
-- `_display_analysis(analysis, token_info)`: Rich analysis display
-- `_check_alert_conditions(contract, buffer, analysis, token_info)`: Smart alert logic
-- `_save_state()` / `_load_state()`: State persistence
+- `__init__(webhook_url)`: Initialize with Feishu webhook URL
+- `send_new_token_alert(token_data, chain)`: Send token detection alert
+- `send_message(title, content, color)`: Send custom message card
+- `test_connection()`: Verify webhook connectivity
 
-**Event Detection Flow**:
-```
-Web3 WebSocket → Transfer Events → decode_transfer_log()
-                                         ↓
-                                  Filter by Binance wallets
-                                         ↓
-                                  get_token_info() → Cache
-                                         ↓
-                        is_listed_on_binance()? ← BinanceTokenFilter
-                                    ↙         ↘
-                            YES (listed)    NO (new!)
-                                ↓               ↓
-                         ⏭️ Skip/Log    🚨 Alert & Aggregate
-                                                ↓
-                                  new_tokens_buffer (is_new=True)
-                                                ↓
-                                  process_transfer() → Callback
-```
-
-**Buffer Structure**:
-- `new_tokens_buffer`: Dict[contract_address] → {transfers: [], senders: set(), first_seen: datetime, is_new: bool, binance_symbol: str}
-- Automatically aggregates all transfers by token contract
-- Tracks unique senders for validation
-- Records first detection timestamp
-- **New**: `is_new` flag distinguishes unlisted vs already-listed tokens
-- **New**: `binance_symbol` stores matched symbol for listed tokens
-
-**Statistics Tracking**:
-- `stats['total_transfers']`: Total transfer events captured
-- `stats['filtered_tokens']`: Number of already-listed tokens filtered out
-- `stats['new_tokens']`: Number of genuinely new (unlisted) tokens detected
-
-**Connection Management**:
-- Dual connection: HTTP (reliable queries) + WebSocket (real-time events)
-- Auto-reconnect on WebSocket failure
-- Graceful degradation to HTTP polling if WebSocket unavailable
-
-#### OnChainDepositDetector Class ([onchain_new_coin_detector.py](onchain_new_coin_detector.py))
-
-Main detector class with several functional modules:
-
-**Wallet Address Lists** (lines 38-79)
-- `binance_hot_wallets`: Dictionary of known Binance hot wallet addresses by chain
-- `binance_cold_wallets`: Dictionary of cold storage addresses
-- Addresses are validated and updated as of October 2024
-
-**Sybil Attack Detection** (lines 88-366)
-- `sybil_protection`: Configuration parameters for filtering fraudulent signals
-- `get_address_info()`: Retrieves wallet metadata (balance, age, transaction count)
-- `check_address_legitimacy()`: Validates individual sender addresses
-- `detect_sybil_patterns()`: Identifies coordinated attack patterns (same timestamps, amounts, sequential nonces)
-- `analyze_sender_network()`: Analyzes relationships between sender addresses
-- `validate_token_transfers()`: Comprehensive validation combining all checks
-
-**Detection Methods**:
-
-1. **Method 1: Hot Wallet Monitoring** (lines 368-550)
-   - `get_erc20_transfers_to_address()`: Fetches token transfers via Etherscan API
-   - `analyze_new_tokens()`: Aggregates transfers by token contract and validates legitimacy
-   - `monitor_binance_wallets()`: Main monitoring loop for wallet activity
-
-2. **Method 2: Factory Contract Monitoring** (lines 552-575)
-   - `get_recent_token_creations()`: Monitors DEX factory contracts (Uniswap, PancakeSwap)
-   - Placeholder for Web3.py implementation
-
-3. **Method 3: Dune Analytics** (lines 577-593)
-   - `query_dune_analytics()`: Interface for Dune Analytics SQL queries
-   - Placeholder for API integration
-
-4. **Method 4: Large Transfer Detection** (lines 595-621)
-   - `detect_large_transfers()`: Tracks high-value token movements to Binance
-   - Useful for detecting market maker preparation
-
-5. **Method 5: Testnet Monitoring** (lines 623-639)
-   - `monitor_testnet_activity()`: Tracks Binance activity on test networks
-   - Can signal upcoming mainnet listings
-
-6. **Method 6: Telegram Alerts** (lines 641-665)
-   - `setup_telegram_alerts()`: Real-time notifications via Telegram bot
-
-**Continuous Monitoring** (lines 667-707)
-- `comprehensive_monitor()`: Main loop combining all detection methods
-- Configurable interval between checks
-
-### Data Flow
-
-```
-External APIs (Etherscan/BSCScan)
-    ↓
-get_erc20_transfers_to_address()
-    ↓
-analyze_new_tokens()
-    ↓
-validate_token_transfers() → Sybil Detection
-    ↓
-monitor_binance_wallets() → Results with confidence scores
-    ↓
-comprehensive_monitor() → Optional Telegram alerts
-```
-
-### Validation Pipeline
-
-Each detected token goes through:
-1. Basic aggregation (transaction count, unique senders)
-2. Address legitimacy checks (balance, age, activity)
-3. Pattern detection (timestamp clustering, amount similarity, nonce sequences)
-4. Network analysis (sender relationships)
-5. Confidence scoring (0.0-1.0 range)
-6. Final filtering (only tokens with confidence > 0.3 or is_valid=True)
-
-## Important Implementation Details
-
-### API Rate Limiting
-
-- Built-in 0.2 second delays between API calls (line 548)
-- Etherscan/BSCScan free tier: 5 requests/second
-- Consider implementing exponential backoff for production use
-
-### Token Validation Thresholds
-
-Defined in `sybil_protection` dict (lines 88-100):
-- Minimum sender balance: 0.1 ETH
-- Minimum account age: 30 days
-- Minimum transaction count: 10 txs
-- Minimum unique senders: 3 addresses
-- Confidence threshold: 0.5 for validity
-
-These can be tuned based on false positive/negative rates in production.
+**Features**:
+- Rich message cards with token details
+- Color-coded alerts (red for warnings, green for success)
+- Chain-specific formatting
+- Error handling and retry logic
 
 ### Known Limitations
 
@@ -412,27 +231,19 @@ These can be tuned based on false positive/negative rates in production.
 4. **No Historical Backfill**: Only captures events from start time forward
 5. **Solana Token Metadata**: Currently uses simplified token info (symbol/name based on mint address), requires Metaplex integration for full metadata
 
-**onchain_listener_advanced.py**:
-1. **Single Chain**: Currently only monitors Ethereum mainnet
-2. **Basic Filtering Only**: Uses BinanceTokenFilter but integrated sybil detection
-3. **Memory-only Storage**: Token buffer lost on restart (uses pickle for state)
-4. **No Historical Backfill**: Only captures events from start time forward
-
 **binance_token_filter.py**:
 1. **API Dependencies**: Requires Binance API and CoinGecko (both free but may have rate limits)
 2. **Coverage Gaps**: Some tokens may not have contract addresses in CoinGecko database
 3. **24h Cache**: Updates daily, may miss tokens listed in past 24h
 4. **ETH/BSC Only**: Currently only maps Ethereum and BSC contracts (Solana needs manual addition)
 
-**onchain_new_coin_detector.py**:
-1. **Incomplete Implementations**: Methods 2-5 are placeholders requiring Web3.py, Dune API, or additional infrastructure
-2. **Block Range**: Currently queries all historical blocks - should be optimized to recent blocks in production
-3. **Network Analysis**: `analyze_sender_network()` is a stub
-4. **No Persistent Storage**: Detected tokens tracked only in memory via `known_tokens` set
+**feishu_notifier.py**:
+1. **No Retry Queue**: Failed notifications are logged but not retried
+2. **Rate Limiting**: No built-in rate limiting for high-frequency alerts
+3. **Single Webhook**: Only supports one webhook URL at a time
 
-**All**:
+**All Components**:
 - No database persistence (recommend PostgreSQL/MongoDB for production)
-- No Telegram/Discord integration (webhook support recommended)
 - Single-threaded per chain (could parallelize wallet queries within chain)
 - No dynamic wallet discovery (relies on hardcoded wallet lists)
 
@@ -441,11 +252,13 @@ These can be tuned based on false positive/negative rates in production.
 Token detection results include:
 - Contract address
 - Symbol and name
+- Chain information (ETH, BSC, or Solana)
 - Transaction count and unique senders
 - Confidence score (with visual bar chart)
 - Validation report with warnings
 - Sybil attack patterns if detected
 - Recommendation (high/medium/low confidence)
+- Real-time notifications via Feishu
 
 ## Security Considerations
 
@@ -453,8 +266,8 @@ This code is designed for **authorized security research and market analysis onl
 
 1. **Public Data Only**: Uses public blockchain explorers and APIs
 2. **No Trading Logic**: Detection only - does not execute trades
-3. **Risk Warnings**: Comprehensive risk disclosure in usage guide (lines 892-908)
-4. **Sybil Protection**: Built-in fraud detection to avoid manipulation
+3. **Sybil Protection**: Built-in fraud detection to avoid manipulation
+4. **Secure Configuration**: Use environment variables for sensitive data (API keys, webhooks)
 
 **Do not** use this for:
 - Acting on insider information
@@ -464,19 +277,18 @@ This code is designed for **authorized security research and market analysis onl
 
 ## Testing Approach
 
-No formal tests exist yet. To validate changes:
+Use the provided testing utilities:
 
-1. **Mock API Responses**: Test with sample transaction data
-2. **Sybil Detection**: Create test cases with coordinated wallets
-3. **Known Token Dataset**: Test against historical Binance listings
-4. **Rate Limiting**: Verify API call throttling works correctly
+1. **verify_installation.py**: Verify all dependencies are installed correctly
+2. **test_feishu.py**: Test Feishu webhook integration
+3. **Manual Testing**: Test against historical Binance listings to validate detection accuracy
 
 Example test pattern:
 ```python
-# Create detector with mock data
-detector = OnChainDepositDetector()
-test_transactions = [...]  # Load fixture
-new_tokens = detector.analyze_new_tokens(test_transactions)
-assert len(new_tokens) > 0
-assert all(token['confidence'] >= 0.3 for token in new_tokens)
+# Test multi-chain listener
+from multichain_listener import MultiChainListener
+
+listener = MultiChainListener(enable_filter=True)
+listener.add_bsc_listener(rpc_url='https://bsc-dataseed.binance.org/')
+# Monitor for a few blocks to verify detection
 ```

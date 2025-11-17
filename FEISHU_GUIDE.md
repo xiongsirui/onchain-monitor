@@ -55,8 +55,8 @@ FEISHU_CONFIG = {
 #### 快速测试（推荐）
 
 ```bash
-# 运行飞书通知示例
-python3 example_feishu.py
+# 运行飞书通知脚本
+python3 run_feishu.py
 ```
 
 **预期输出**:
@@ -308,4 +308,4 @@ notifier.send_test_message()
 - 📊 **结构化信息** - 清晰的卡片展示
 - 🔗 **快速响应** - 一键跳转区块浏览器
 
-**开始使用**: `python3 example_feishu.py` 🚀
+**开始使用**: `python3 run_feishu.py` 🚀

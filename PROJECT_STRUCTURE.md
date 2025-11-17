@@ -7,14 +7,12 @@
 |------|------|------|
 | [multichain_listener.py](multichain_listener.py) | 36K | **多链统一监听器**（推荐）- 支持 ETH、BSC、Solana |
 | [binance_token_filter.py](binance_token_filter.py) | 12K | **代币过滤器** - 过滤已上架代币 |
-| [onchain_listener_advanced.py](onchain_listener_advanced.py) | 35K | ETH 单链高级监听器（可选） |
 
 ### 2. 启动脚本
 | 文件 | 大小 | 说明 |
 |------|------|------|
 | [run_bsc.py](run_bsc.py) | 5.5K | **BSC 一键启动**（最简单）⭐ |
-| [example_multichain.py](example_multichain.py) | 7.6K | 多链示例（6个完整示例） |
-| [run.py](run.py) | 4.6K | ETH 单链启动（可选） |
+| [run_multichain.py](run_multichain.py) | 7.6K | 多链监听启动脚本（ETH + BSC + 可选 Solana） |
 
 ### 3. 配置和工具
 | 文件 | 大小 | 说明 |
@@ -43,7 +41,7 @@ python3 run_bsc.py
 
 ### 进阶用户（多链监控）
 ```bash
-python3 example_multichain.py
+python3 run_multichain.py
 ```
 - ✅ ETH + BSC 双链
 - ✅ 多线程并行

@@ -80,20 +80,13 @@ python3 run_bsc.py
 🔍 [BSC] 检查区块 xxxxx - xxxxx
 ```
 
-#### 方式 B: ETH 单链启动（需要 API Key）
+#### 方式 B: ETH + BSC 多链启动（可选 Solana）
 
 ```bash
-# 1. 访问 https://www.alchemy.com/ 注册并获取 API Key
-# 2. 编辑 run.py 第 19-20 行
+# 1. 访问 https://www.alchemy.com/ 注册并获取 ETH RPC URL
+# 2. 编辑 config.py 或设置环境变量 ETH_RPC_URL / BSC_RPC_URL / SOL_RPC_URL
 # 3. 运行
-python3 run.py
-```
-
-#### 方式 C: 多链启动
-
-```bash
-python3 example_multichain.py
-# 选择示例 2 或 6
+python3 run_multichain.py
 ```
 
 ---
@@ -192,7 +185,7 @@ python3 example_multichain.py
 A: 这很正常！程序在持续监听，只有当检测到新代币时才会输出。你可以：
 - 耐心等待（平均每天1-5个新币信号）
 - 查看日志确认程序正在运行
-- 禁用过滤器查看所有转账（编辑 run.py 设置 ENABLE_FILTER = False）
+- 如需查看所有转账，可在脚本中将监听器初始化时的 `enable_filter` 参数设为 `False`（例如 `MultiChainListener(enable_filter=False, ...)`）
 
 ### Q: 卡在"正在初始化"？
 A: 检查：

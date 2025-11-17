@@ -16,8 +16,16 @@ def test_feishu():
     print("="*80)
     print()
 
-    # 检查 Webhook URL
+    # 检查 Webhook URL (从环境变量或 config.py 读取)
     webhook_url = os.environ.get('FEISHU_WEBHOOK_URL')
+
+    # 尝试从配置文件读取
+    if not webhook_url:
+        try:
+            import config
+            webhook_url = config.webhook_url
+        except (ImportError, AttributeError):
+            pass
 
     if not webhook_url:
         print("❌ 未找到飞书 Webhook URL")
@@ -130,7 +138,7 @@ def test_feishu():
     print("="*80)
     print()
     print("下一步:")
-    print("  运行 python3 example_feishu.py 启动实时监控")
+    print("  运行 python3 run_feishu.py 启动实时监控")
     print()
 
     return True

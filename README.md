@@ -19,16 +19,12 @@ python3 run_bsc.py
 
 这是最简单的方式，直接监听 BSC 链，无需任何配置！
 
-### 方式 2: 使用示例脚本
+### 方式 2: 多链启动脚本（ETH + BSC，支持 Solana）
 
 ```bash
-# 运行多链示例
-python3 example_multichain.py
+# 运行多链监听脚本
+python3 run_multichain.py
 ```
-
-选择示例:
-- **示例 2**: ETH + BSC 双链监听 ⭐ 推荐
-- **示例 6**: 只监听 BSC（最快）⚡
 
 ### 方式 3: 自定义配置
 
@@ -101,22 +97,20 @@ listener.listeners['BSC'].listen(poll_interval=3)
 | 文件 | 说明 | 推荐度 |
 |------|------|--------|
 | [run_bsc.py](run_bsc.py) | **BSC 一键启动脚本** 🆕 | ⭐⭐⭐⭐⭐ |
-| [example_feishu.py](example_feishu.py) | **飞书通知示例** 🆕 | ⭐⭐⭐⭐⭐ |
+| [run_feishu.py](run_feishu.py) | **飞书通知启动脚本** 🆕 | ⭐⭐⭐⭐⭐ |
 | [verify_installation.py](verify_installation.py) | **安装验证脚本** 🆕 | ⭐⭐⭐⭐⭐ |
 | [multichain_listener.py](multichain_listener.py) | 多链统一监听器（ETH+BSC+Solana） | ⭐⭐⭐⭐⭐ |
 | [feishu_notifier.py](feishu_notifier.py) | 飞书机器人通知器 🆕 | ⭐⭐⭐⭐⭐ |
-| [example_multichain.py](example_multichain.py) | 多链使用示例 | ⭐⭐⭐⭐⭐ |
+| [run_multichain.py](run_multichain.py) | 多链监听启动脚本 | ⭐⭐⭐⭐⭐ |
 | [config_template.py](config_template.py) | 配置文件模板 🆕 | ⭐⭐⭐⭐ |
-| [onchain_listener_advanced.py](onchain_listener_advanced.py) | 高级 ETH 单链监听器 | ⭐⭐⭐⭐ |
 | [binance_token_filter.py](binance_token_filter.py) | 币安代币过滤器 | ⭐⭐⭐⭐ |
-| [run.py](run.py) | ETH 单链快速启动脚本 | ⭐⭐⭐ |
 | [FEISHU_GUIDE.md](FEISHU_GUIDE.md) | 飞书通知配置指南 🆕 | 📖 |
 | [CLAUDE.md](CLAUDE.md) | 开发者详细文档 | 📖 |
 
 **推荐使用**:
 - 🆕 **新手**: 直接运行 `python3 run_bsc.py`
-- 🆕 **飞书通知**: 使用 `python3 example_feishu.py` 启用飞书告警
-- **进阶**: 使用 `example_multichain.py` 进行多链监听
+- 🆕 **飞书通知**: 使用 `python3 run_feishu.py` 启用飞书告警
+- **进阶**: 使用 `python3 run_multichain.py` 进行多链监听
 
 ---
 
@@ -174,7 +168,7 @@ listener.listeners['BSC'].listen(poll_interval=3, callback=on_new_token)
 export FEISHU_WEBHOOK_URL='https://open.feishu.cn/open-apis/bot/v2/hook/YOUR_TOKEN'
 
 # 2. 运行飞书通知示例
-python3 example_feishu.py
+python3 run_feishu.py
 ```
 
 ### 代码集成

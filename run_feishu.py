@@ -1,32 +1,49 @@
 #!/usr/bin/env python3
 """
-飞书通知示例 - 集成飞书机器人告警
+飞书通知启动脚本 - 集成飞书机器人告警
 
 使用方法:
 1. 在飞书群组中创建自定义机器人
-2. 获取 Webhook URL
+2. 在 config.py 中配置 FEISHU_CONFIG，或设置环境变量 FEISHU_WEBHOOK_URL
 3. 运行此脚本
 """
 
 import os
+
 from multichain_listener import MultiChainListener
+
+try:
+    from config import (
+        BSC_CONFIG,
+        PROXY as CONFIG_PROXY,
+        ENABLE_FILTER,
+        FEISHU_CONFIG,
+    )
+
+    HAS_CONFIG = True
+except ImportError:
+    HAS_CONFIG = False
+    CONFIG_PROXY = None
+    ENABLE_FILTER = True
+    FEISHU_CONFIG = {}
 
 
 def main():
     print("""
 ╔════════════════════════════════════════════════════════════════════════════╗
-║              多链区块链监听器 - 飞书通知示例                              ║
+║              多链区块链监听器 - 飞书通知                                  ║
 ╚════════════════════════════════════════════════════════════════════════════╝
 """)
 
     # ========== 配置区域 ==========
 
     # 飞书 Webhook URL
-    # 方式 1: 直接在代码中设置
-    FEISHU_WEBHOOK_URL = None  # 替换为你的飞书 Webhook URL
+    # 优先从 config.py 中读取，其次从环境变量读取
+    FEISHU_WEBHOOK_URL = None
 
-    # 方式 2: 从环境变量读取（更安全）
-    if not FEISHU_WEBHOOK_URL:
+    if HAS_CONFIG and FEISHU_CONFIG.get('enabled') and FEISHU_CONFIG.get('webhook_url'):
+        FEISHU_WEBHOOK_URL = FEISHU_CONFIG['webhook_url']
+    else:
         FEISHU_WEBHOOK_URL = os.environ.get('FEISHU_WEBHOOK_URL')
 
     if not FEISHU_WEBHOOK_URL:
@@ -43,10 +60,14 @@ def main():
         return
 
     # RPC 配置
-    BSC_RPC = "https://bsc-dataseed.binance.org/"  # BSC 免费 RPC
-
-    # 代理配置（可选）
-    PROXY = None  # 例如: "127.0.0.1:7897"
+    if HAS_CONFIG:
+        BSC_RPC = BSC_CONFIG['rpc_url']
+        PROXY = CONFIG_PROXY  # 例如: "127.0.0.1:7897"
+        enable_filter = ENABLE_FILTER
+    else:
+        BSC_RPC = "https://bsc-dataseed.binance.org/"  # BSC 免费 RPC
+        PROXY = None
+        enable_filter = True
 
     # ==============================
 
@@ -54,7 +75,7 @@ def main():
 
     # 创建监听器，传入飞书 Webhook URL
     listener = MultiChainListener(
-        enable_filter=True,
+        enable_filter=enable_filter,
         proxy=PROXY,
         feishu_webhook_url=FEISHU_WEBHOOK_URL  # 启用飞书通知
     )
