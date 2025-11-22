@@ -47,7 +47,6 @@ config.py
 credentials.json
 
 # Logs
-*.log
 logs/
 
 # OS files
