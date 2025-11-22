@@ -13,8 +13,25 @@
 """
 
 from web3 import Web3, AsyncWeb3
-from web3.providers import WebSocketProvider
 from web3.exceptions import ProviderConnectionError
+
+# 兼容不同版本的 Web3.py
+try:
+    # Web3.py v7+ (新版本)
+    from web3.providers.persistent import WebSocketProvider
+except ImportError:
+    try:
+        # Web3.py v6 (WebsocketProviderV2)
+        from web3.providers.websocket import WebsocketProviderV2 as WebSocketProvider
+    except ImportError:
+        try:
+            # Web3.py v5 或更早版本 (旧的 WebsocketProvider)
+            from web3.providers.websocket import WebsocketProvider as WebSocketProvider
+        except ImportError:
+            # 如果都失败，使用 AsyncHTTPProvider 作为备选
+            from web3.providers import AsyncHTTPProvider
+            WebSocketProvider = None
+            print("⚠️ WebSocketProvider 不可用，WebSocket 功能将被禁用")
 import json
 import time
 import pickle
@@ -753,6 +770,10 @@ class AsyncEVMWebSocketListener(EVMChainListener):
 
         if not ws_url:
             raise ValueError(f"❌ [{chain_name}] WebSocket URL 未配置")
+
+        # 检查 WebSocketProvider 是否可用
+        if WebSocketProvider is None:
+            raise ImportError(f"❌ [{chain_name}] WebSocketProvider 不可用，请升级 Web3.py 到 v6.0.0 或更高版本")
 
         # WebSocketProvider 当前不直接支持 HTTP 代理，这里仅打印提示
         if proxy:
