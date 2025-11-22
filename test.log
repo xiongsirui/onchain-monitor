@@ -1,0 +1,7 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/home/ubuntu/onchain-monitor/run_multichain.py", line 14, in <module>
+    from multichain_listener import MultiChainListener
+  File "/home/ubuntu/onchain-monitor/multichain_listener.py", line 16, in <module>
+    from web3.providers import WebSocketProvider
+ImportError: cannot import name 'WebSocketProvider' from 'web3.providers' (/home/ubuntu/anaconda3/envs/xtrade/lib/python3.10/site-packages/web3/providers/__init__.py)
