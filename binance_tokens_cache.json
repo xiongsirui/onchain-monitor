@@ -1,491 +1,31 @@
 {
   "tokens": {
-    "UTK": {
-      "symbol": "UTK",
+    "RUNE": {
+      "symbol": "RUNE",
       "source": "binance",
-      "name": "Utrust",
-      "coingecko_id": "utrust",
-      "eth_contract": "0xdc9ac3c20d1ed0b540df9b1fedc10039df13f99c"
+      "name": "THORChain",
+      "coingecko_id": "thorchain"
     },
-    "PROM": {
-      "symbol": "PROM",
+    "BAR": {
+      "symbol": "BAR",
       "source": "binance",
-      "eth_contract": "0xfc82bb4ba86045af6f327323a46e80412b91b27d",
-      "bsc_contract": "0xaf53d56ff99f1322515e54fdde93ff8b3b7dafd5",
-      "name": "Prom",
-      "coingecko_id": "prometeus"
+      "name": "Gold Standard",
+      "coingecko_id": "gold-standard",
+      "eth_contract": "0x777be1c6075c20184c4fd76344b7b0b7c858fe6b"
     },
-    "EUR": {
-      "symbol": "EUR",
-      "source": "binance"
-    },
-    "CTK": {
-      "symbol": "CTK",
-      "source": "binance",
-      "name": "Cryptyk",
-      "coingecko_id": "cryptyk",
-      "eth_contract": "0x42a501903afaa1086b5975773375c80e363f4063"
-    },
-    "ARDR": {
-      "symbol": "ARDR",
-      "source": "binance",
-      "name": "Ardor",
-      "coingecko_id": "ardor"
-    },
-    "NFP": {
-      "symbol": "NFP",
-      "source": "binance",
-      "bsc_contract": "0x551897f8203bd131b350601d3ac0679ba0fc0136",
-      "name": "NFPrompt",
-      "coingecko_id": "nfprompt-token"
-    },
-    "ME": {
-      "symbol": "ME",
-      "source": "binance",
-      "name": "Magic Eden",
-      "coingecko_id": "magic-eden"
-    },
-    "AMP": {
-      "symbol": "AMP",
-      "source": "binance",
-      "eth_contract": "0xff20817765cb7f73d4bde2e66e067e58d11095c2",
-      "name": "Amp",
-      "coingecko_id": "amp-token"
-    },
-    "IQ": {
-      "symbol": "IQ",
-      "source": "binance",
-      "eth_contract": "0x579cea1889991f68acc35ff5c3dd0621ff29b0c9",
-      "bsc_contract": "0x0e37d70b51ffa2b98b4d34a5712c5291115464e3",
-      "name": "IQ Labs",
-      "coingecko_id": "iq6900-2"
-    },
-    "ANIME": {
-      "symbol": "ANIME",
-      "source": "binance",
-      "name": "Animefication",
-      "coingecko_id": "animefication",
-      "eth_contract": "0x4dc26fc5854e7648a064a4abd590bbe71724c277"
-    },
-    "XNO": {
-      "symbol": "XNO",
-      "source": "binance",
-      "name": "Nano",
-      "coingecko_id": "nano"
-    },
-    "GNO": {
-      "symbol": "GNO",
-      "source": "binance",
-      "eth_contract": "0x6810e776880c02933d47db1b9fc05908e5386b96",
-      "name": "Linea Bridged GNO (Linea)",
-      "coingecko_id": "linea-bridged-gno-linea"
-    },
-    "VANA": {
-      "symbol": "VANA",
-      "source": "binance",
-      "eth_contract": "0x7ff7fa94b8b66ef313f7970d4eebd2cb3103a2c0",
-      "bsc_contract": "0x7ff7fa94b8b66ef313f7970d4eebd2cb3103a2c0",
-      "name": "Vana",
-      "coingecko_id": "vana"
-    },
-    "TFUEL": {
-      "symbol": "TFUEL",
-      "source": "binance",
-      "name": "Theta Fuel",
-      "coingecko_id": "theta-fuel"
-    },
-    "XEC": {
-      "symbol": "XEC",
-      "source": "binance",
-      "name": "eCash",
-      "coingecko_id": "ecash"
-    },
-    "ZEN": {
-      "symbol": "ZEN",
-      "source": "binance",
-      "name": "Zenith",
-      "coingecko_id": "zenith-3",
-      "eth_contract": "0x3bbbb6a231d0a1a12c6b79ba5bc2ed6358db5160"
-    },
-    "GUN": {
-      "symbol": "GUN",
-      "source": "binance",
-      "name": "Gunz",
-      "coingecko_id": "gunz"
-    },
-    "ENA": {
-      "symbol": "ENA",
-      "source": "binance",
-      "eth_contract": "0x57e114b691db790c35207b2e685d4a43181e6061",
-      "name": "Ethena",
-      "coingecko_id": "ethena"
-    },
-    "T": {
-      "symbol": "T",
-      "source": "binance",
-      "name": "Threshold Network",
-      "coingecko_id": "threshold-network-token",
-      "eth_contract": "0xcdf7028ceab81fa0c6971208e83fa7872994bee5"
-    },
-    "EPIC": {
-      "symbol": "EPIC",
-      "source": "binance",
-      "name": "Epic Chain",
-      "coingecko_id": "epic-chain",
-      "eth_contract": "0x94314a14df63779c99c0764a30e0cd22fa78fc0e"
-    },
-    "AIXBT": {
-      "symbol": "AIXBT",
-      "source": "binance",
-      "eth_contract": "0x0d37af9d8ae74f35f3a38bd2a08fcb29890ca6d2",
-      "name": "aixbt",
-      "coingecko_id": "aixbt"
-    },
-    "ZEC": {
-      "symbol": "ZEC",
-      "source": "binance",
-      "bsc_contract": "0x1ba42e5193dfa8b03d15dd1b86a3113bbbef8eeb",
-      "name": "Zcash",
-      "coingecko_id": "zcash"
-    },
-    "SOL": {
-      "symbol": "SOL",
-      "source": "binance",
-      "name": "Wrapped SOL",
-      "coingecko_id": "wrapped-solana",
-      "bsc_contract": "0x570a5d26f7765ecb712c0924e4de545b89fd43df"
-    },
-    "ACM": {
-      "symbol": "ACM",
-      "source": "binance",
-      "eth_contract": "0x1bd9abf284e893705104e64b564b414620b722f1",
-      "bsc_contract": "0x1bd9abf284e893705104e64b564b414620b722f1",
-      "name": "AC Milan Fan Token",
-      "coingecko_id": "ac-milan-fan-token"
-    },
-    "LUNC": {
-      "symbol": "LUNC",
-      "source": "binance",
-      "eth_contract": "0xd2877702675e6ceb975b4a1dff9fb7baf4c91ea9",
-      "bsc_contract": "0x156ab3346823b651294766e23e6cf87254d68962",
-      "name": "Wrapped LUNC",
-      "coingecko_id": "wrapped-terra"
-    },
-    "DOGE": {
-      "symbol": "DOGE",
-      "source": "binance",
-      "bsc_contract": "0xba2ae424d960c26247dd6c32edc70b295c744c43",
-      "name": "Doge on Pulsechain",
-      "coingecko_id": "doge-on-pulsechain",
-      "eth_contract": "0x81fcc294d91bd8ffc8a822d7df0e2fd2f8526c39"
-    },
-    "MOVR": {
-      "symbol": "MOVR",
-      "source": "binance",
-      "name": "MOVR.ai",
-      "coingecko_id": "movr-ai"
-    },
-    "BERA": {
-      "symbol": "BERA",
-      "source": "binance",
-      "name": "Berachain",
-      "coingecko_id": "berachain-bera"
-    },
-    "BNB": {
-      "symbol": "BNB",
-      "source": "binance",
-      "eth_contract": "0x418d75f65a02b3d53b2418fb8e1fe493759c7605",
-      "name": "Binance Coin (Wormhole)",
-      "coingecko_id": "binance-coin-wormhole"
-    },
-    "ASTR": {
-      "symbol": "ASTR",
-      "source": "binance",
-      "eth_contract": "0xf27441230eadeac85b764610325cc9a0d7859689",
-      "name": "Soneium Bridged ASTR (Soneium)",
-      "coingecko_id": "soneium-bridged-astar-soneium"
-    },
-    "EURI": {
-      "symbol": "EURI",
-      "source": "binance",
-      "eth_contract": "0x9d1a7a3191102e9f900faa10540837ba84dcbae7",
-      "bsc_contract": "0x9d1a7a3191102e9f900faa10540837ba84dcbae7",
-      "name": "Eurite",
-      "coingecko_id": "eurite"
-    },
-    "MDT": {
-      "symbol": "MDT",
-      "source": "binance",
-      "eth_contract": "0x814e0908b12a99fecf5bc101bb5d0b8b5cdf7d26",
-      "name": "Measurable Data",
-      "coingecko_id": "measurable-data-token"
-    },
-    "SUN": {
-      "symbol": "SUN",
-      "source": "binance",
-      "name": "Sun Token",
-      "coingecko_id": "sun-token"
-    },
-    "SOPH": {
-      "symbol": "SOPH",
-      "source": "binance",
-      "eth_contract": "0x6b7774cb12ed7573a7586e7d0e62a2a563ddd3f0",
-      "bsc_contract": "0x31dba3c96481fde3cd81c2aaf51f2d8bf618c742",
-      "name": "Sophon",
-      "coingecko_id": "sophon"
-    },
-    "INJ": {
-      "symbol": "INJ",
-      "source": "binance",
-      "eth_contract": "0xe28b3b32b6c345a34ff64674606124dd5aceca30",
-      "bsc_contract": "0xa2b726b1145a4773f68593cf171187d8ebe4d495",
-      "name": "Injective",
-      "coingecko_id": "injective-protocol"
-    },
-    "PENDLE": {
-      "symbol": "PENDLE",
-      "source": "binance",
-      "eth_contract": "0x808507121b80c02388fad14726482e061b8da827",
-      "bsc_contract": "0xb3ed0a426155b79b898849803e3b36552f7ed507",
-      "name": "Pendle",
-      "coingecko_id": "pendle"
-    },
-    "ASR": {
-      "symbol": "ASR",
-      "source": "binance",
-      "name": "AS Roma Fan Token",
-      "coingecko_id": "as-roma-fan-token"
-    },
-    "BICO": {
-      "symbol": "BICO",
-      "source": "binance",
-      "eth_contract": "0xf17e65822b568b3903685a7c9f496cf7656cc6c2",
-      "name": "Biconomy",
-      "coingecko_id": "biconomy"
-    },
-    "NEAR": {
-      "symbol": "NEAR",
-      "source": "binance",
-      "bsc_contract": "0x1fa4a73a3f0133f0025378af00236f3abdee5d63",
-      "name": "NEAR Protocol",
-      "coingecko_id": "near",
-      "eth_contract": "0x85f17cf997934a597031b2e18a9ab6ebd4b9f6a4"
-    },
-    "KSM": {
-      "symbol": "KSM",
-      "source": "binance",
-      "name": "Kusama",
-      "coingecko_id": "kusama"
-    },
-    "LAYER": {
-      "symbol": "LAYER",
-      "source": "binance",
-      "name": "UniLayer",
-      "coingecko_id": "unilayer",
-      "eth_contract": "0x0ff6ffcfda92c53f615a4a75d982f399c989366b",
-      "bsc_contract": "0xc2c23a86def9e9f5972a633b3d25f7ecbfa5e575"
-    },
-    "MIRA": {
-      "symbol": "MIRA",
-      "source": "binance",
-      "eth_contract": "0xf5207ac91c9e7ec7ebb03e93cbcbcad10878ac79",
-      "bsc_contract": "0x7839fbfd09dae4d0f15bfb36b8f16f7898fbe684",
-      "name": "Mira",
-      "coingecko_id": "mira-3"
-    },
-    "LRC": {
-      "symbol": "LRC",
-      "source": "binance",
-      "eth_contract": "0xbbbbca6a901c926f240b89eacb641d8aec7aeafd",
-      "name": "Loopring",
-      "coingecko_id": "loopring"
-    },
-    "ICX": {
-      "symbol": "ICX",
-      "source": "binance",
-      "name": "ICON",
-      "coingecko_id": "icon"
-    },
-    "AR": {
-      "symbol": "AR",
-      "source": "binance",
-      "name": "Arweave",
-      "coingecko_id": "arweave"
-    },
-    "ALT": {
-      "symbol": "ALT",
-      "source": "binance",
-      "bsc_contract": "0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb",
-      "name": "AltLayer",
-      "coingecko_id": "altlayer",
-      "eth_contract": "0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb"
-    },
-    "LINK": {
-      "symbol": "LINK",
-      "source": "binance",
-      "eth_contract": "0x514910771af9ca656af840dff83e8264ecf986ca",
-      "bsc_contract": "0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd",
-      "name": "Osmosis allLINK",
-      "coingecko_id": "osmosis-alllink"
-    },
-    "YB": {
-      "symbol": "YB",
-      "source": "binance",
-      "eth_contract": "0x01791f726b4103694969820be083196cc7c045ff",
-      "bsc_contract": "0xfb93ee8152dd0a0e6f4b49c66c06d800cf1db72d",
-      "name": "Yield Basis",
-      "coingecko_id": "yield-basis"
-    },
-    "DATA": {
-      "symbol": "DATA",
-      "source": "binance",
-      "bsc_contract": "0x0864c156b3c5f69824564dec60c629ae6401bf2a",
-      "name": "Streamr",
-      "coingecko_id": "streamr",
-      "eth_contract": "0x8f693ca8d21b157107184d29d398a8d082b38b76"
-    },
-    "CRV": {
-      "symbol": "CRV",
-      "source": "binance",
-      "name": "Curve DAO",
-      "coingecko_id": "curve-dao-token",
-      "eth_contract": "0xd533a949740bb3306d119cc777fa900ba034cd52"
-    },
-    "ZK": {
-      "symbol": "ZK",
-      "source": "binance",
-      "eth_contract": "0x66a5cfb2e9c529f14fe6364ad1075df3a649c0a5",
-      "name": "ZKsync",
-      "coingecko_id": "zksync"
-    },
-    "SAHARA": {
-      "symbol": "SAHARA",
-      "source": "binance",
-      "eth_contract": "0xfdffb411c4a70aa7c95d5c981a6fb4da867e1111",
-      "bsc_contract": "0xfdffb411c4a70aa7c95d5c981a6fb4da867e1111",
-      "name": "Sahara AI",
-      "coingecko_id": "sahara-ai"
-    },
-    "ANKR": {
-      "symbol": "ANKR",
-      "source": "binance",
-      "eth_contract": "0x8290333cef9e6d528dd5618fb97a76f268f3edd4",
-      "bsc_contract": "0xf307910a4c7bbc79691fd374889b36d8531b08e3",
-      "name": "Ankr Network",
-      "coingecko_id": "ankr"
-    },
-    "HOLO": {
-      "symbol": "HOLO",
-      "source": "binance",
-      "name": "Holozone",
-      "coingecko_id": "holozone",
-      "bsc_contract": "0x1a5d7e4c3a7f940b240b7357a4bfed30d17f9497"
-    },
-    "PAXG": {
-      "symbol": "PAXG",
-      "source": "binance",
-      "name": "PAX Gold",
-      "coingecko_id": "pax-gold",
-      "eth_contract": "0x45804880de22913dafe09f4980848ece6ecbaf78"
-    },
-    "NIL": {
-      "symbol": "NIL",
-      "source": "binance",
-      "eth_contract": "0x7cf9a80db3b29ee8efe3710aadb7b95270572d47",
-      "name": "Nillion",
-      "coingecko_id": "nillion"
-    },
-    "PLUME": {
-      "symbol": "PLUME",
-      "source": "binance",
-      "eth_contract": "0x4c1746a800d224393fe2470c70a35717ed4ea5f1",
-      "bsc_contract": "0x5afadcd1e8e3ca78ee2d37100102f2aec8bc0aa8",
-      "name": "Plume",
-      "coingecko_id": "plume"
-    },
-    "KITE": {
-      "symbol": "KITE",
-      "source": "binance",
-      "name": "Kite",
-      "coingecko_id": "kite-2",
-      "eth_contract": "0x904567252d8f48555b7447c67dca23f0372e16be",
-      "bsc_contract": "0x904567252d8f48555b7447c67dca23f0372e16be"
-    },
-    "BMT": {
-      "symbol": "BMT",
-      "source": "binance",
-      "name": "Bubblemaps",
-      "coingecko_id": "bubblemaps",
-      "eth_contract": "0xf028adee51533b1b47beaa890feb54a457f51e89",
-      "bsc_contract": "0x7d814b9ed370ec0a502edc3267393bf62d891b62"
-    },
-    "RAD": {
-      "symbol": "RAD",
-      "source": "binance",
-      "eth_contract": "0x31c8eacbffdd875c74b94b077895bd78cf1e64a3",
-      "name": "Radtarded Rat",
-      "coingecko_id": "retarded-rat"
-    },
-    "GNS": {
-      "symbol": "GNS",
-      "source": "binance",
-      "name": "Gains Network",
-      "coingecko_id": "gains-network"
-    },
-    "SLP": {
-      "symbol": "SLP",
-      "source": "binance",
-      "name": "Smooth Love Potion",
-      "coingecko_id": "smooth-love-potion",
-      "eth_contract": "0xcc8fa225d80b9c7d42f96e9570156c65d6caaa25"
-    },
-    "SOLV": {
-      "symbol": "SOLV",
-      "source": "binance",
-      "bsc_contract": "0xabe8e5cabe24cb36df9540088fd7ce1175b9bc52",
-      "name": "Solv Protocol",
-      "coingecko_id": "solv-protocol"
-    },
-    "FORM": {
-      "symbol": "FORM",
-      "source": "binance",
-      "bsc_contract": "0x5b73a93b4e5e4f1fd27d8b3f8c97d69908b5e284",
-      "name": "Makeform",
-      "coingecko_id": "makeform"
-    },
-    "EGLD": {
-      "symbol": "EGLD",
-      "source": "binance",
-      "name": "MultiversX",
-      "coingecko_id": "elrond-erd-2"
-    },
-    "ZRX": {
-      "symbol": "ZRX",
-      "source": "binance",
-      "eth_contract": "0xe41d2489571d322189246dafa5ebde1f4699f498",
-      "name": "Energi Bridged ZRX (Energi)",
-      "coingecko_id": "energi-bridged-zrx-energi"
-    },
-    "HBAR": {
-      "symbol": "HBAR",
-      "source": "binance",
-      "name": "Hedera",
-      "coingecko_id": "hedera-hashgraph"
-    },
-    "QKC": {
-      "symbol": "QKC",
+    "NMR": {
+      "symbol": "NMR",
       "source": "binance",
-      "eth_contract": "0xea26c4ac16d4a5a106820bc8aee85fd0b7b2b664",
-      "name": "QuarkChain",
-      "coingecko_id": "quark-chain"
+      "eth_contract": "0x1776e1f26f98b1a5df9cd347953a26dd3cb46671",
+      "name": "Numeraire",
+      "coingecko_id": "numeraire"
     },
-    "AI": {
-      "symbol": "AI",
+    "XVG": {
+      "symbol": "XVG",
       "source": "binance",
-      "bsc_contract": "0xbda011d7f8ec00f66c1923b049b94c67d148d8b2",
-      "name": "Sleepless AI",
-      "coingecko_id": "sleepless-ai",
-      "eth_contract": "0xc91b523a59acc63a64f61fc7bbfb4bfc82dd25f2"
+      "name": "Verge (ETH)",
+      "coingecko_id": "verge-eth",
+      "eth_contract": "0x85614a474dbeed440d5bbdb8ac50b0f22367f997"
     },
     "CELR": {
       "symbol": "CELR",
@@ -494,138 +34,12 @@
       "name": "Celer Network",
       "coingecko_id": "celer-network"
     },
-    "JOE": {
-      "symbol": "JOE",
+    "RPL": {
+      "symbol": "RPL",
       "source": "binance",
-      "bsc_contract": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
-      "name": "Joe Coin",
-      "coingecko_id": "joe-coin",
-      "eth_contract": "0x76e222b07c53d28b89b0bac18602810fc22b49a8"
-    },
-    "SAND": {
-      "symbol": "SAND",
-      "source": "binance",
-      "eth_contract": "0x3845badade8e6dff049820680d1f14bd3903a5d0",
-      "name": "The Sandbox (Wormhole)",
-      "coingecko_id": "the-sandbox-wormhole"
-    },
-    "TLM": {
-      "symbol": "TLM",
-      "source": "binance",
-      "eth_contract": "0x888888848b652b3e3a0f34c96e00eec0f3a23f72",
-      "bsc_contract": "0x2222227e22102fe3322098e4cbfe18cfebd57c95",
-      "name": "Alien Worlds",
-      "coingecko_id": "alien-worlds"
-    },
-    "LUNA": {
-      "symbol": "LUNA",
-      "source": "binance",
-      "name": "Terra",
-      "coingecko_id": "terra-luna-2"
-    },
-    "ATA": {
-      "symbol": "ATA",
-      "source": "binance",
-      "name": "Automata",
-      "coingecko_id": "automata",
-      "eth_contract": "0xa2120b9e674d3fc3875f415a7df52e382f141225",
-      "bsc_contract": "0xa2120b9e674d3fc3875f415a7df52e382f141225"
-    },
-    "METIS": {
-      "symbol": "METIS",
-      "source": "binance",
-      "name": "Metis",
-      "coingecko_id": "metis-token",
-      "eth_contract": "0x9e32b13ce7f2e80a01932b42553652e053d6ed8e"
-    },
-    "BLUR": {
-      "symbol": "BLUR",
-      "source": "binance",
-      "eth_contract": "0x5283d291dbcf85356a21ba090e6db59121208b44",
-      "name": "Blur",
-      "coingecko_id": "blur"
-    },
-    "BABY": {
-      "symbol": "BABY",
-      "source": "binance",
-      "name": "Deer Seized by US Government",
-      "coingecko_id": "deer-seized-by-us-government",
-      "bsc_contract": "0x53e562b9b7e5e94b81f10e96ee70ad06df3d2657",
-      "eth_contract": "0xff931a7946d2fa11cf9123ef0dc6f6c7c6cb60c4"
-    },
-    "KAITO": {
-      "symbol": "KAITO",
-      "source": "binance",
-      "name": "KAITO",
-      "coingecko_id": "kaito"
-    },
-    "G": {
-      "symbol": "G",
-      "source": "binance",
-      "eth_contract": "0x9c7beba8f6ef6643abd725e45a4e8387ef260649",
-      "name": "Gravity (by Galxe)",
-      "coingecko_id": "g-token",
-      "bsc_contract": "0x9c7beba8f6ef6643abd725e45a4e8387ef260649"
-    },
-    "RAY": {
-      "symbol": "RAY",
-      "source": "binance",
-      "name": "Raydium",
-      "coingecko_id": "raydium"
-    },
-    "CETUS": {
-      "symbol": "CETUS",
-      "source": "binance",
-      "name": "Cetus Protocol",
-      "coingecko_id": "cetus-protocol"
-    },
-    "MTL": {
-      "symbol": "MTL",
-      "source": "binance",
-      "name": "Metal DAO",
-      "coingecko_id": "metal"
-    },
-    "TKO": {
-      "symbol": "TKO",
-      "source": "binance",
-      "bsc_contract": "0x9f589e3eabe42ebc94a44727b3f3531c0c877809",
-      "name": "Tokocrypto",
-      "coingecko_id": "tokocrypto"
-    },
-    "JST": {
-      "symbol": "JST",
-      "source": "binance",
-      "name": "JUST",
-      "coingecko_id": "just"
-    },
-    "PUMP": {
-      "symbol": "PUMP",
-      "source": "binance",
-      "bsc_contract": "0xb7c0007ab75350c582d5eab1862b872b5cf53f0c",
-      "name": "Respect The Pump",
-      "coingecko_id": "respect-the-pump"
-    },
-    "IOTX": {
-      "symbol": "IOTX",
-      "source": "binance",
-      "bsc_contract": "0x9678e42cebeb63f23197d726b29b1cb20d0064e5",
-      "name": "IoTeX",
-      "coingecko_id": "iotex",
-      "eth_contract": "0x6fb3e0a217407efff7ca062d46c26e5d60a14d69"
-    },
-    "NKN": {
-      "symbol": "NKN",
-      "source": "binance",
-      "eth_contract": "0x5cf04716ba20127f1e2297addcf4b5035000c9eb",
-      "name": "NKN",
-      "coingecko_id": "nkn"
-    },
-    "C": {
-      "symbol": "C",
-      "source": "binance",
-      "bsc_contract": "0xc32cc70741c3a8433dcbcb5ade071c299b55ffc8",
-      "name": "Chainbase",
-      "coingecko_id": "chainbase"
+      "eth_contract": "0xd33526068d116ce69f19a9ee46f0bd304f21a51f",
+      "name": "Rocket Pool",
+      "coingecko_id": "rocket-pool"
     },
     "SXP": {
       "symbol": "SXP",
@@ -635,103 +49,40 @@
       "name": "Solar",
       "coingecko_id": "swipe"
     },
-    "ATOM": {
-      "symbol": "ATOM",
+    "ANIME": {
+      "symbol": "ANIME",
       "source": "binance",
-      "bsc_contract": "0x0eb3a705fc54725037cc9e008bdede697f62f335",
-      "name": "Lost Bitcoin Layer",
-      "coingecko_id": "lost-bitcoin-layer"
+      "name": "Animefication",
+      "coingecko_id": "animefication",
+      "eth_contract": "0x4dc26fc5854e7648a064a4abd590bbe71724c277"
     },
-    "PYR": {
-      "symbol": "PYR",
+    "MUBARAK": {
+      "symbol": "MUBARAK",
       "source": "binance",
-      "eth_contract": "0x430ef9263e76dae63c84292c3409d61c598e9682",
-      "name": "Vulcan Forged",
-      "coingecko_id": "vulcan-forged"
+      "bsc_contract": "0x5c85d6c6825ab4032337f11ee92a72df936b46f6",
+      "name": "Mubarak Sol",
+      "coingecko_id": "mubarak-sol"
     },
-    "LTC": {
-      "symbol": "LTC",
+    "ID": {
+      "symbol": "ID",
       "source": "binance",
-      "bsc_contract": "0x4338665cbb7b2485a8855a139b75d5e34ab0db94",
-      "name": "Litecoin",
-      "coingecko_id": "litecoin"
+      "eth_contract": "0x2dff88a56767223a5529ea5960da7a3f5f766406",
+      "name": "SPACE ID",
+      "coingecko_id": "space-id",
+      "bsc_contract": "0x2dff88a56767223a5529ea5960da7a3f5f766406"
     },
-    "BIFI": {
-      "symbol": "BIFI",
+    "ETC": {
+      "symbol": "ETC",
       "source": "binance",
-      "eth_contract": "0x2791bfd60d232150bff86b39b7146c0eaaa2ba81",
-      "name": "BiFi",
-      "coingecko_id": "bifi"
+      "name": "Ethereum Classic",
+      "coingecko_id": "ethereum-classic"
     },
-    "YFI": {
-      "symbol": "YFI",
+    "NEXO": {
+      "symbol": "NEXO",
       "source": "binance",
-      "eth_contract": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
-      "name": "yearn.finance",
-      "coingecko_id": "yearn-finance"
-    },
-    "NTRN": {
-      "symbol": "NTRN",
-      "source": "binance",
-      "name": "Neutron",
-      "coingecko_id": "neutron-3"
-    },
-    "MINA": {
-      "symbol": "MINA",
-      "source": "binance",
-      "name": "Mina Protocol",
-      "coingecko_id": "mina-protocol"
-    },
-    "USD1": {
-      "symbol": "USD1",
-      "source": "binance",
-      "name": "USD1",
-      "coingecko_id": "usd1-wlfi",
-      "eth_contract": "0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d",
-      "bsc_contract": "0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d"
-    },
-    "JUP": {
-      "symbol": "JUP",
-      "source": "binance",
-      "eth_contract": "0x4b1e80cac91e2216eeb63e29b957eb91ae9c2be8",
-      "bsc_contract": "0x0231f91e02debd20345ae8ab7d71a41f8e140ce7",
-      "name": "Jupiter",
-      "coingecko_id": "jupiter-exchange-solana"
-    },
-    "RESOLV": {
-      "symbol": "RESOLV",
-      "source": "binance",
-      "eth_contract": "0x259338656198ec7a76c729514d3cb45dfbf768a1",
-      "bsc_contract": "0xda6cef7f667d992a60eb823ab215493aa0c6b360",
-      "name": "Resolv",
-      "coingecko_id": "resolv"
-    },
-    "MEME": {
-      "symbol": "MEME",
-      "source": "binance",
-      "name": "MPX6900",
-      "coingecko_id": "mpx6900",
-      "eth_contract": "0xb131f4a55907b10d1f0a50d8ab8fa09ec342cd74",
-      "bsc_contract": "0x193397bb76868c6873e733ad60d5953843ebc84e"
-    },
-    "GLMR": {
-      "symbol": "GLMR",
-      "source": "binance",
-      "name": "Moonbeam",
-      "coingecko_id": "moonbeam"
-    },
-    "OSMO": {
-      "symbol": "OSMO",
-      "source": "binance",
-      "name": "Osmosis",
-      "coingecko_id": "osmosis"
-    },
-    "BCH": {
-      "symbol": "BCH",
-      "source": "binance",
-      "bsc_contract": "0x8ff795a6f4d97e7887c79bea79aba5cc76444adf",
-      "name": "Bitcoin Cash",
-      "coingecko_id": "bitcoin-cash"
+      "eth_contract": "0xb62132e35a6c13ee1ee0f84dc5d40bad8d815206",
+      "name": "NEXO",
+      "coingecko_id": "nexo"
     },
     "ROSE": {
       "symbol": "ROSE",
@@ -740,28 +91,690 @@
       "name": "Rose Finance",
       "coingecko_id": "rose-finance"
     },
-    "ONT": {
-      "symbol": "ONT",
+    "ENSO": {
+      "symbol": "ENSO",
       "source": "binance",
-      "bsc_contract": "0xfd7b3a77848f1c2d67e05e54d78d174a0c850335",
-      "name": "Ontology",
-      "coingecko_id": "ontology"
+      "eth_contract": "0x699f088b5dddcafb7c4824db5b10b57b37cb0c66",
+      "bsc_contract": "0xfeb339236d25d3e415f280189bc7c2fbab6ae9ef",
+      "name": "Enso",
+      "coingecko_id": "enso"
     },
-    "TURBO": {
-      "symbol": "TURBO",
+    "CHR": {
+      "symbol": "CHR",
       "source": "binance",
-      "name": "TURBO.WIN",
-      "coingecko_id": "turbo-win",
-      "eth_contract": "0x109ba5f0230b7b39e4a8ab56e7361db89fa0e108",
-      "bsc_contract": "0x9d0211c1b1a217a574cb55b0e9c367e56debeae0"
+      "eth_contract": "0x8a2279d4a90b6fe1c4b30fa660cc9f926797baa2",
+      "bsc_contract": "0xf9cec8d50f6c8ad3fb6dccec577e05aa32b224fe",
+      "name": "Chronos Finance",
+      "coingecko_id": "chronos-finance"
     },
-    "NEIRO": {
-      "symbol": "NEIRO",
+    "EDU": {
+      "symbol": "EDU",
       "source": "binance",
-      "name": "Neiro on Tron",
-      "coingecko_id": "neiro-on-tron",
-      "eth_contract": "0xa6180029845469e89c507fe3eafedfa242687822",
-      "bsc_contract": "0x94162acc63812d53ac2bcf1f4aef65863273e63b"
+      "eth_contract": "0x26aad156ba8efa501b32b42ffcdc8413f90e9c99",
+      "bsc_contract": "0xbdeae1ca48894a1759a8374d63925f21f2ee2639",
+      "name": "Open Campus",
+      "coingecko_id": "edu-coin"
+    },
+    "ACX": {
+      "symbol": "ACX",
+      "source": "binance",
+      "eth_contract": "0x44108f0223a3c3028f5fe7aec7f9bb2e66bef82f",
+      "name": "Across Protocol",
+      "coingecko_id": "across-protocol"
+    },
+    "LTC": {
+      "symbol": "LTC",
+      "source": "binance",
+      "bsc_contract": "0x4338665cbb7b2485a8855a139b75d5e34ab0db94",
+      "name": "Litecoin",
+      "coingecko_id": "litecoin"
+    },
+    "SUN": {
+      "symbol": "SUN",
+      "source": "binance",
+      "name": "Sun Token",
+      "coingecko_id": "sun-token"
+    },
+    "QI": {
+      "symbol": "QI",
+      "source": "binance",
+      "name": "QiSwap",
+      "coingecko_id": "qiswap",
+      "eth_contract": "0x559b7bfc48a5274754b08819f75c5f27af53d53b"
+    },
+    "OGN": {
+      "symbol": "OGN",
+      "source": "binance",
+      "eth_contract": "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26",
+      "name": "Origin Token",
+      "coingecko_id": "origin-protocol"
+    },
+    "PORTAL": {
+      "symbol": "PORTAL",
+      "source": "binance",
+      "eth_contract": "0x1bbe973bef3a977fc51cbed703e8ffdefe001fed",
+      "name": "Portal",
+      "coingecko_id": "portal-2"
+    },
+    "FIDA": {
+      "symbol": "FIDA",
+      "source": "binance",
+      "name": "Bonfida",
+      "coingecko_id": "bonfida"
+    },
+    "OP": {
+      "symbol": "OP",
+      "source": "binance",
+      "name": "Optimism",
+      "coingecko_id": "optimism"
+    },
+    "TRUMP": {
+      "symbol": "TRUMP",
+      "source": "binance",
+      "name": "TrumpEffect69420",
+      "coingecko_id": "trumpeffect69420",
+      "eth_contract": "0x69420cb71f5fa439a84545e79557977c0600c46e",
+      "bsc_contract": "0x4ea98c1999575aaadfb38237dd015c5e773f75a2"
+    },
+    "HOME": {
+      "symbol": "HOME",
+      "source": "binance",
+      "bsc_contract": "0x4bfaa776991e85e5f8b1255461cbbd216cfc714f",
+      "name": "HOME",
+      "coingecko_id": "home"
+    },
+    "ARKM": {
+      "symbol": "ARKM",
+      "source": "binance",
+      "eth_contract": "0x6e2a43be0b1d33b726f0ca3b8de60b3482b8b050",
+      "name": "Arkham",
+      "coingecko_id": "arkham"
+    },
+    "TFUEL": {
+      "symbol": "TFUEL",
+      "source": "binance",
+      "name": "Theta Fuel",
+      "coingecko_id": "theta-fuel"
+    },
+    "AEUR": {
+      "symbol": "AEUR",
+      "source": "binance",
+      "eth_contract": "0xa40640458fbc27b6eefedea1e9c9e17d4cee7a21",
+      "bsc_contract": "0xa40640458fbc27b6eefedea1e9c9e17d4cee7a21",
+      "name": "Anchored Coins AEUR",
+      "coingecko_id": "anchored-coins-eur"
+    },
+    "INIT": {
+      "symbol": "INIT",
+      "source": "binance",
+      "name": "Initia",
+      "coingecko_id": "initia"
+    },
+    "FLOKI": {
+      "symbol": "FLOKI",
+      "source": "binance",
+      "eth_contract": "0xcf0c122c6b73ff809c693db761e7baebe62b6a2e",
+      "bsc_contract": "0xfb5b838b6cfeedc2873ab27866079ac55363d37e",
+      "name": "Flokiwifhat",
+      "coingecko_id": "flokiwifhat"
+    },
+    "WOO": {
+      "symbol": "WOO",
+      "source": "binance",
+      "eth_contract": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
+      "bsc_contract": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
+      "name": "WOO",
+      "coingecko_id": "woo-network"
+    },
+    "ARB": {
+      "symbol": "ARB",
+      "source": "binance",
+      "name": "ARB Protocol",
+      "coingecko_id": "arb-protocol",
+      "eth_contract": "0xb50721bcf8d664c30412cfbc6cf7a15145234ad1"
+    },
+    "KMNO": {
+      "symbol": "KMNO",
+      "source": "binance",
+      "name": "Kamino",
+      "coingecko_id": "kamino"
+    },
+    "POL": {
+      "symbol": "POL",
+      "source": "binance",
+      "name": "Proof Of Liquidity",
+      "coingecko_id": "proof-of-liquidity",
+      "eth_contract": "0x455e53cbb86018ac2b8092fdcd39d8444affc3f6"
+    },
+    "LINK": {
+      "symbol": "LINK",
+      "source": "binance",
+      "eth_contract": "0x514910771af9ca656af840dff83e8264ecf986ca",
+      "bsc_contract": "0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd",
+      "name": "Osmosis allLINK",
+      "coingecko_id": "osmosis-alllink"
+    },
+    "EDEN": {
+      "symbol": "EDEN",
+      "source": "binance",
+      "eth_contract": "0x24a3d725c37a8d1a66eb87f0e5d07fe67c120035",
+      "name": "OpenEden",
+      "coingecko_id": "openeden",
+      "bsc_contract": "0x235b6fe22b4642ada16d311855c49ce7de260841"
+    },
+    "DOGS": {
+      "symbol": "DOGS",
+      "source": "binance",
+      "eth_contract": "0xf9962329a1e9fa84836d2f37640d7012fb588e9d",
+      "name": "We Love Dogs",
+      "coingecko_id": "we-love-dogs"
+    },
+    "1000SATS": {
+      "symbol": "1000SATS",
+      "source": "binance",
+      "name": "1000SATS (Ordinals)",
+      "coingecko_id": "1000sats-ordinals"
+    },
+    "CYBER": {
+      "symbol": "CYBER",
+      "source": "binance",
+      "eth_contract": "0x14778860e937f509e651192a90589de711fb88a9",
+      "bsc_contract": "0x14778860e937f509e651192a90589de711fb88a9",
+      "name": "Cyberpunk City",
+      "coingecko_id": "cyberpunk-city"
+    },
+    "C98": {
+      "symbol": "C98",
+      "source": "binance",
+      "eth_contract": "0xae12c5930881c53715b369cec7606b70d8eb229f",
+      "bsc_contract": "0xaec945e04baf28b135fa7c640f624f8d90f1c3a6",
+      "name": "Coin98",
+      "coingecko_id": "coin98"
+    },
+    "MANA": {
+      "symbol": "MANA",
+      "source": "binance",
+      "eth_contract": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
+      "name": "Meme Anarchic Numismatic Asset",
+      "coingecko_id": "meme-anarchic-numismatic-asset"
+    },
+    "MAV": {
+      "symbol": "MAV",
+      "source": "binance",
+      "eth_contract": "0x7448c7456a97769f6cd04f1e83a4a23ccdc46abd",
+      "bsc_contract": "0xd691d9a68c887bdf34da8c36f63487333acfd103",
+      "name": "Maverick Protocol",
+      "coingecko_id": "maverick-protocol"
+    },
+    "WLFI": {
+      "symbol": "WLFI",
+      "source": "binance",
+      "name": "World Liberty Financial",
+      "coingecko_id": "world-liberty-financial",
+      "eth_contract": "0xda5e1988097297dcdc1f90d4dfe7909e847cbef6",
+      "bsc_contract": "0x47474747477b199288bf72a1d702f7fe0fb1deea"
+    },
+    "DF": {
+      "symbol": "DF",
+      "source": "binance",
+      "eth_contract": "0x431ad2ff6a9c365805ebad47ee021148d6f7dbe0",
+      "bsc_contract": "0x4a9a2b2b04549c3927dd2c9668a5ef3fca473623",
+      "name": "dForce",
+      "coingecko_id": "dforce-token"
+    },
+    "GUN": {
+      "symbol": "GUN",
+      "source": "binance",
+      "name": "Gunz",
+      "coingecko_id": "gunz"
+    },
+    "COTI": {
+      "symbol": "COTI",
+      "source": "binance",
+      "eth_contract": "0xddb3422497e61e13543bea06989c0789117555c5",
+      "name": "COTI",
+      "coingecko_id": "coti"
+    },
+    "UTK": {
+      "symbol": "UTK",
+      "source": "binance",
+      "name": "Utrust",
+      "coingecko_id": "utrust",
+      "eth_contract": "0xdc9ac3c20d1ed0b540df9b1fedc10039df13f99c"
+    },
+    "KITE": {
+      "symbol": "KITE",
+      "source": "binance",
+      "name": "Kite",
+      "coingecko_id": "kite-2",
+      "eth_contract": "0x904567252d8f48555b7447c67dca23f0372e16be",
+      "bsc_contract": "0x904567252d8f48555b7447c67dca23f0372e16be"
+    },
+    "BICO": {
+      "symbol": "BICO",
+      "source": "binance",
+      "eth_contract": "0xf17e65822b568b3903685a7c9f496cf7656cc6c2",
+      "name": "Biconomy",
+      "coingecko_id": "biconomy"
+    },
+    "MBOX": {
+      "symbol": "MBOX",
+      "source": "binance",
+      "bsc_contract": "0x3203c9e46ca618c8c1ce5dc67e7e9d75f5da2377",
+      "name": "Mobox",
+      "coingecko_id": "mobox"
+    },
+    "TST": {
+      "symbol": "TST",
+      "source": "binance",
+      "name": "Test",
+      "coingecko_id": "test-3",
+      "eth_contract": "0x0828096494ad6252f0f853abfc5b6ec9dfe9fdad",
+      "bsc_contract": "0x86bb94ddd16efc8bc58e6b056e8df71d9e666429"
+    },
+    "AVAX": {
+      "symbol": "AVAX",
+      "source": "binance",
+      "name": "Binance-Peg Avalanche",
+      "coingecko_id": "binance-peg-avalanche",
+      "eth_contract": "0x85f138bfee4ef8e540890cfb48f620571d67eda3",
+      "bsc_contract": "0x1ce0c2827e2ef14d5c4f29a091d735a204794041"
+    },
+    "TWT": {
+      "symbol": "TWT",
+      "source": "binance",
+      "bsc_contract": "0x4b0f1812e5df2a09796481ff14017e6005508003",
+      "name": "Trust Wallet",
+      "coingecko_id": "trust-wallet-token"
+    },
+    "FXS": {
+      "symbol": "FXS",
+      "source": "binance"
+    },
+    "LDO": {
+      "symbol": "LDO",
+      "source": "binance",
+      "eth_contract": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
+      "name": "Linea Bridged LDO (Linea)",
+      "coingecko_id": "linea-bridged-ldo-linea",
+      "bsc_contract": "0x986854779804799c1d68867f5e03e601e781e41b"
+    },
+    "HUMA": {
+      "symbol": "HUMA",
+      "source": "binance",
+      "bsc_contract": "0x92516e0ddf1ddbf7fab1b79cac26689fdc5ba8e6",
+      "name": "Huma Finance",
+      "coingecko_id": "huma-finance"
+    },
+    "FF": {
+      "symbol": "FF",
+      "source": "binance",
+      "eth_contract": "0xfa1c09fc8b491b6a4d3ff53a10cad29381b3f949",
+      "bsc_contract": "0xac23b90a79504865d52b49b327328411a23d4db2",
+      "name": "Falcon Finance",
+      "coingecko_id": "falcon-finance-ff"
+    },
+    "OXT": {
+      "symbol": "OXT",
+      "source": "binance",
+      "eth_contract": "0x4575f41308ec1483f3d399aa9a2826d74da13deb",
+      "name": "Orchid Protocol",
+      "coingecko_id": "orchid-protocol"
+    },
+    "SOMI": {
+      "symbol": "SOMI",
+      "source": "binance",
+      "name": "Somnia",
+      "coingecko_id": "somnia"
+    },
+    "D": {
+      "symbol": "D",
+      "source": "binance",
+      "eth_contract": "0x33b481cbbf3c24f2b3184ee7cb02daad1c4f49a8",
+      "bsc_contract": "0xa71b404f6b35c6ae119d33f1c4885d8ad8b54444",
+      "name": "DARUMA",
+      "coingecko_id": "daruma-2"
+    },
+    "RLC": {
+      "symbol": "RLC",
+      "source": "binance",
+      "eth_contract": "0x607f4c5bb672230e8672085532f7e901544a7375",
+      "name": "iExec RLC",
+      "coingecko_id": "iexec-rlc"
+    },
+    "MITO": {
+      "symbol": "MITO",
+      "source": "binance",
+      "bsc_contract": "0x8e1e6bf7e13c400269987b65ab2b5724b016caef",
+      "name": "Mitosis",
+      "coingecko_id": "mitosis"
+    },
+    "USDP": {
+      "symbol": "USDP",
+      "source": "binance",
+      "eth_contract": "0x8e870d67f660d95d5be530380d0ec0bd388289e1",
+      "name": "United States Dominant Peg",
+      "coingecko_id": "united-states-dominant-peg"
+    },
+    "PROM": {
+      "symbol": "PROM",
+      "source": "binance",
+      "eth_contract": "0xfc82bb4ba86045af6f327323a46e80412b91b27d",
+      "bsc_contract": "0xaf53d56ff99f1322515e54fdde93ff8b3b7dafd5",
+      "name": "Prom",
+      "coingecko_id": "prometeus"
+    },
+    "FARM": {
+      "symbol": "FARM",
+      "source": "binance",
+      "name": "This is a Farm",
+      "coingecko_id": "this-is-a-farm",
+      "eth_contract": "0xa0246c9032bc3a600820415ae600c6388619a14d",
+      "bsc_contract": "0x4b5c23cac08a567ecf0c1ffca8372a45a5d33743"
+    },
+    "ETH": {
+      "symbol": "ETH",
+      "source": "binance",
+      "name": "The Ticker Is ETH",
+      "coingecko_id": "the-ticker-is-eth",
+      "bsc_contract": "0x4db5a66e937a9f4473fa95b1caf1d1e1d62e29ea",
+      "eth_contract": "0x5e21d1ee5cf0077b314c381720273ae82378d613"
+    },
+    "GIGGLE": {
+      "symbol": "GIGGLE",
+      "source": "binance",
+      "bsc_contract": "0x20d6015660b3fe52e6690a889b5c51f69902ce0e",
+      "name": "Giggle Fund",
+      "coingecko_id": "giggle-fund"
+    },
+    "LQTY": {
+      "symbol": "LQTY",
+      "source": "binance",
+      "eth_contract": "0x6dea81c8171d0ba574754ef6f8b412f2ed88c54d",
+      "name": "Liquity",
+      "coingecko_id": "liquity"
+    },
+    "DYM": {
+      "symbol": "DYM",
+      "source": "binance",
+      "name": "Dymension",
+      "coingecko_id": "dymension"
+    },
+    "TRB": {
+      "symbol": "TRB",
+      "source": "binance",
+      "eth_contract": "0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0",
+      "name": "Tellor Tributes",
+      "coingecko_id": "tellor"
+    },
+    "BTC": {
+      "symbol": "BTC",
+      "source": "binance",
+      "name": "Osmosis allBTC",
+      "coingecko_id": "osmosis-allbtc",
+      "bsc_contract": "0x0afcb0065362ec8bc94902479b9d37e3fa49eda6"
+    },
+    "HAEDAL": {
+      "symbol": "HAEDAL",
+      "source": "binance",
+      "bsc_contract": "0x3d9be0ac1001cd81c32464276d863d2ffdca4967",
+      "name": "Haedal Protocol",
+      "coingecko_id": "haedal"
+    },
+    "T": {
+      "symbol": "T",
+      "source": "binance",
+      "name": "Threshold Network",
+      "coingecko_id": "threshold-network-token",
+      "eth_contract": "0xcdf7028ceab81fa0c6971208e83fa7872994bee5"
+    },
+    "GPS": {
+      "symbol": "GPS",
+      "source": "binance",
+      "bsc_contract": "0x9a4a67721573f2c9209dfff972c52be4e3f6642e",
+      "name": "GoPlus Security",
+      "coingecko_id": "goplus-security"
+    },
+    "GNO": {
+      "symbol": "GNO",
+      "source": "binance",
+      "eth_contract": "0x6810e776880c02933d47db1b9fc05908e5386b96",
+      "name": "Linea Bridged GNO (Linea)",
+      "coingecko_id": "linea-bridged-gno-linea"
+    },
+    "IMX": {
+      "symbol": "IMX",
+      "source": "binance",
+      "eth_contract": "0xf57e7e7c23978c3caec3c3548e3d615c346e79ff",
+      "name": "Immutable",
+      "coingecko_id": "immutable-x"
+    },
+    "SUSHI": {
+      "symbol": "SUSHI",
+      "source": "binance",
+      "eth_contract": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
+      "bsc_contract": "0x947950bcc74888a40ffa2593c5798f11fc9124c4",
+      "name": "Sushi",
+      "coingecko_id": "sushi"
+    },
+    "EPIC": {
+      "symbol": "EPIC",
+      "source": "binance",
+      "name": "Epic Chain",
+      "coingecko_id": "epic-chain",
+      "eth_contract": "0x94314a14df63779c99c0764a30e0cd22fa78fc0e"
+    },
+    "SHIB": {
+      "symbol": "SHIB",
+      "source": "binance",
+      "bsc_contract": "0xb1547683da678f2e1f003a780143ec10af8a832b",
+      "name": "Strategic Hub for Innovation in Blockchain",
+      "coingecko_id": "strategic-hub-for-innovation-in-blockchain",
+      "eth_contract": "0xf4b7b9ab55a2eeb3bd6123b8f45b0abffd5089c7"
+    },
+    "STEEM": {
+      "symbol": "STEEM",
+      "source": "binance",
+      "name": "Steem",
+      "coingecko_id": "steem"
+    },
+    "GLM": {
+      "symbol": "GLM",
+      "source": "binance",
+      "eth_contract": "0x7dd9c5cba05e151c895fde1cf355c9a1d5da6429",
+      "name": "Golem",
+      "coingecko_id": "golem"
+    },
+    "ADA": {
+      "symbol": "ADA",
+      "source": "binance",
+      "bsc_contract": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47",
+      "name": "Cardano",
+      "coingecko_id": "cardano"
+    },
+    "BAND": {
+      "symbol": "BAND",
+      "source": "binance",
+      "eth_contract": "0xba11d00c5f74255f56a5e366f4f77f5a186d7f55",
+      "name": "Band",
+      "coingecko_id": "band-protocol"
+    },
+    "A2Z": {
+      "symbol": "A2Z",
+      "source": "binance",
+      "eth_contract": "0x08dcb9b5989fb09ef80e85567ec1f49577a70d29",
+      "name": "Arena-Z",
+      "coingecko_id": "arena-z"
+    },
+    "ONE": {
+      "symbol": "ONE",
+      "source": "binance",
+      "name": "OneFinity",
+      "coingecko_id": "onedex",
+      "bsc_contract": "0x04baf95fd4c52fd09a56d840baee0ab8d7357bf0",
+      "eth_contract": "0x946551dd05c5abd7cc808927480225ce36d8c475"
+    },
+    "VANRY": {
+      "symbol": "VANRY",
+      "source": "binance",
+      "eth_contract": "0x8de5b80a0c1b02fe4976851d030b36122dbb8624",
+      "name": "Vanar Chain",
+      "coingecko_id": "vanar-chain"
+    },
+    "LAZIO": {
+      "symbol": "LAZIO",
+      "source": "binance",
+      "bsc_contract": "0x77d547256a2cd95f32f67ae0313e450ac200648d",
+      "name": "Lazio Fan Token",
+      "coingecko_id": "lazio-fan-token"
+    },
+    "XAI": {
+      "symbol": "XAI",
+      "source": "binance",
+      "bsc_contract": "0x43ff4cf60f75fbcc91be7d5036710ffcf2a80459",
+      "name": "xAI PreStocks",
+      "coingecko_id": "xai-prestocks-2",
+      "eth_contract": "0x0a13a5929e5f0ff0eaba4bd9e9512c91fce40280"
+    },
+    "STX": {
+      "symbol": "STX",
+      "source": "binance",
+      "name": "Stacks",
+      "coingecko_id": "blockstack"
+    },
+    "GRT": {
+      "symbol": "GRT",
+      "source": "binance",
+      "eth_contract": "0xc944e90c64b2c07662a292be6244bdf05cda44a7",
+      "name": "The Graph",
+      "coingecko_id": "the-graph"
+    },
+    "F": {
+      "symbol": "F",
+      "source": "binance",
+      "bsc_contract": "0xc9ccbd76c2353e593cc975f13295e8289d04d3bb",
+      "name": "SynFutures",
+      "coingecko_id": "synfutures",
+      "eth_contract": "0x6e15a54b5ecac17e58dadeddbe8506a7560252f9"
+    },
+    "BNB": {
+      "symbol": "BNB",
+      "source": "binance",
+      "eth_contract": "0x418d75f65a02b3d53b2418fb8e1fe493759c7605",
+      "name": "Binance Coin (Wormhole)",
+      "coingecko_id": "binance-coin-wormhole"
+    },
+    "ZK": {
+      "symbol": "ZK",
+      "source": "binance",
+      "eth_contract": "0x66a5cfb2e9c529f14fe6364ad1075df3a649c0a5",
+      "name": "ZKsync",
+      "coingecko_id": "zksync"
+    },
+    "RDNT": {
+      "symbol": "RDNT",
+      "source": "binance",
+      "eth_contract": "0x137ddb47ee24eaa998a535ab00378d6bfa84f893",
+      "bsc_contract": "0xf7de7e8a6bd59ed41a4b5fe50278b3b7f31384df",
+      "name": "Radiant Capital",
+      "coingecko_id": "radiant-capital"
+    },
+    "XLM": {
+      "symbol": "XLM",
+      "source": "binance",
+      "name": "Stellar",
+      "coingecko_id": "stellar"
+    },
+    "OPEN": {
+      "symbol": "OPEN",
+      "source": "binance",
+      "name": "OPEN Tony",
+      "coingecko_id": "open-tony",
+      "eth_contract": "0x323c03c48660fe31186fa82c289b0766d331ce21",
+      "bsc_contract": "0xa227cc36938f0c9e09ce0e64dfab226cad739447"
+    },
+    "BTTC": {
+      "symbol": "BTTC",
+      "source": "binance"
+    },
+    "RARE": {
+      "symbol": "RARE",
+      "source": "binance",
+      "eth_contract": "0x93dfaf57d986b9ca77df9376c50878e013d9c7c8",
+      "name": "Unique One",
+      "coingecko_id": "unique-one"
+    },
+    "EUL": {
+      "symbol": "EUL",
+      "source": "binance",
+      "eth_contract": "0xd9fcd98c322942075a5c3860693e9f4f03aae07b",
+      "bsc_contract": "0x2117e8b79e8e176a670c9fcf945d4348556bffad",
+      "name": "Euler",
+      "coingecko_id": "euler"
+    },
+    "APE": {
+      "symbol": "APE",
+      "source": "binance",
+      "eth_contract": "0xa0385e7283c83e2871e9af49eec0966088421ddd",
+      "name": "The Ape",
+      "coingecko_id": "the-ape-2"
+    },
+    "DEXE": {
+      "symbol": "DEXE",
+      "source": "binance",
+      "eth_contract": "0xde4ee8057785a7e8e800db58f9784845a5c2cbd6",
+      "bsc_contract": "0x6e88056e8376ae7709496ba64d37fa2f8015ce3e",
+      "name": "DeXe",
+      "coingecko_id": "dexe"
+    },
+    "LPT": {
+      "symbol": "LPT",
+      "source": "binance",
+      "eth_contract": "0x58b6a8a3302369daec383334672404ee733ab239",
+      "name": "Livepeer",
+      "coingecko_id": "livepeer"
+    },
+    "USDT": {
+      "symbol": "USDT",
+      "source": "binance",
+      "name": "Zircuit Bridged USDT (Zircuit)",
+      "coingecko_id": "zircuit-bridged-usdt-zircuit",
+      "eth_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "bsc_contract": "0x524bc91dc82d6b90ef29f76a3ecaabafffd490bc"
+    },
+    "TRU": {
+      "symbol": "TRU",
+      "source": "binance",
+      "eth_contract": "0x4c19596f5aaff459fa38b0f7ed92f11ae6543784",
+      "name": "Trulink",
+      "coingecko_id": "trulink"
+    },
+    "PYTH": {
+      "symbol": "PYTH",
+      "source": "binance",
+      "name": "Pyth Network",
+      "coingecko_id": "pyth-network"
+    },
+    "LRC": {
+      "symbol": "LRC",
+      "source": "binance",
+      "eth_contract": "0xbbbbca6a901c926f240b89eacb641d8aec7aeafd",
+      "name": "Loopring",
+      "coingecko_id": "loopring"
+    },
+    "2Z": {
+      "symbol": "2Z",
+      "source": "binance",
+      "name": "DoubleZero",
+      "coingecko_id": "doublezero"
+    },
+    "WBETH": {
+      "symbol": "WBETH",
+      "source": "binance",
+      "eth_contract": "0xa2e3356610840701bdf5611a53974510ae27e2e1",
+      "bsc_contract": "0xa2e3356610840701bdf5611a53974510ae27e2e1",
+      "name": "Wrapped Beacon ETH",
+      "coingecko_id": "wrapped-beacon-eth"
     },
     "CGPT": {
       "symbol": "CGPT",
@@ -778,883 +791,20 @@
       "coingecko_id": "wif-secondchance",
       "eth_contract": "0x886c869cdc619214138c87f1db0ada522b16dfa3"
     },
-    "MUBARAK": {
-      "symbol": "MUBARAK",
-      "source": "binance",
-      "bsc_contract": "0x5c85d6c6825ab4032337f11ee92a72df936b46f6",
-      "name": "Mubarak Sol",
-      "coingecko_id": "mubarak-sol"
-    },
-    "RIF": {
-      "symbol": "RIF",
-      "source": "binance",
-      "eth_contract": "0x01b603be3d545f096015741e6503440282bf45fb",
-      "name": "Rootstock Infrastructure Framework",
-      "coingecko_id": "rif-token"
-    },
-    "SEI": {
-      "symbol": "SEI",
-      "source": "binance",
-      "eth_contract": "0xbdf43ecadc5cef51b7d1772f722e40596bc1788b",
-      "name": "Sei",
-      "coingecko_id": "sei-network"
-    },
-    "CITY": {
-      "symbol": "CITY",
-      "source": "binance",
-      "name": "Manchester City Fan Token",
-      "coingecko_id": "manchester-city-fan-token"
-    },
-    "LINEA": {
-      "symbol": "LINEA",
-      "source": "binance",
-      "eth_contract": "0x1789e0043623282d5dcc7f213d703c6d8bafbb04",
-      "name": "Linea",
-      "coingecko_id": "linea"
-    },
-    "F": {
-      "symbol": "F",
-      "source": "binance",
-      "bsc_contract": "0xc9ccbd76c2353e593cc975f13295e8289d04d3bb",
-      "name": "SynFutures",
-      "coingecko_id": "synfutures",
-      "eth_contract": "0x6e15a54b5ecac17e58dadeddbe8506a7560252f9"
-    },
-    "MASK": {
-      "symbol": "MASK",
-      "source": "binance",
-      "name": "MaskNumber",
-      "coingecko_id": "masknumber",
-      "eth_contract": "0x69af81e73a73b40adf4f3d4223cd9b1ece623074",
-      "bsc_contract": "0x2ed9a5c8c13b93955103b9a7c167b67ef4d568a3"
-    },
-    "MAV": {
-      "symbol": "MAV",
-      "source": "binance",
-      "eth_contract": "0x7448c7456a97769f6cd04f1e83a4a23ccdc46abd",
-      "bsc_contract": "0xd691d9a68c887bdf34da8c36f63487333acfd103",
-      "name": "Maverick Protocol",
-      "coingecko_id": "maverick-protocol"
-    },
-    "BANK": {
-      "symbol": "BANK",
-      "source": "binance",
-      "name": "Lorenzo Protocol",
-      "coingecko_id": "lorenzo-protocol",
-      "eth_contract": "0x24a6a37576377f63f194caa5f518a60f45b42921",
-      "bsc_contract": "0x3aee7602b612de36088f3ffed8c8f10e86ebf2bf"
-    },
-    "PSG": {
-      "symbol": "PSG",
-      "source": "binance",
-      "name": "Paris Saint-Germain Fan Token",
-      "coingecko_id": "paris-saint-germain-fan-token"
-    },
-    "ZKC": {
-      "symbol": "ZKC",
-      "source": "binance",
-      "eth_contract": "0x000006c2a22ff4a44ff1f5d0f2ed65f781f55555",
-      "bsc_contract": "0x15247e6e23d3923a853ccf15940a20ccdf16e94a",
-      "name": "Boundless",
-      "coingecko_id": "boundless"
-    },
-    "PORTO": {
-      "symbol": "PORTO",
-      "source": "binance",
-      "bsc_contract": "0x49f2145d6366099e13b10fbf80646c0f377ee7f6",
-      "name": "FC Porto",
-      "coingecko_id": "fc-porto"
-    },
-    "NMR": {
-      "symbol": "NMR",
-      "source": "binance",
-      "eth_contract": "0x1776e1f26f98b1a5df9cd347953a26dd3cb46671",
-      "name": "Numeraire",
-      "coingecko_id": "numeraire"
-    },
-    "SHIB": {
-      "symbol": "SHIB",
-      "source": "binance",
-      "bsc_contract": "0xb1547683da678f2e1f003a780143ec10af8a832b",
-      "name": "Strategic Hub for Innovation in Blockchain",
-      "coingecko_id": "strategic-hub-for-innovation-in-blockchain",
-      "eth_contract": "0xf4b7b9ab55a2eeb3bd6123b8f45b0abffd5089c7"
-    },
-    "AEVO": {
-      "symbol": "AEVO",
-      "source": "binance",
-      "eth_contract": "0xb528edbef013aff855ac3c50b381f253af13b997",
-      "name": "Aevo",
-      "coingecko_id": "aevo-exchange"
-    },
-    "SIGN": {
-      "symbol": "SIGN",
-      "source": "binance",
-      "eth_contract": "0x868fced65edbf0056c4163515dd840e9f287a4c3",
-      "bsc_contract": "0x868fced65edbf0056c4163515dd840e9f287a4c3",
-      "name": "Sign",
-      "coingecko_id": "sign-global"
-    },
-    "IDEX": {
-      "symbol": "IDEX",
-      "source": "binance",
-      "eth_contract": "0xb705268213d593b8fd88d3fdeff93aff5cbdcfae",
-      "name": "IDEX",
-      "coingecko_id": "aurora-dao"
-    },
-    "EIGEN": {
-      "symbol": "EIGEN",
-      "source": "binance",
-      "eth_contract": "0xec53bf9167f50cdeb3ae105f56099aaab9061f83",
-      "name": "EigenCloud (prev. EigenLayer)",
-      "coingecko_id": "eigenlayer"
-    },
-    "DUSK": {
-      "symbol": "DUSK",
-      "source": "binance",
-      "eth_contract": "0x940a2db1b7008b6c776d4faaca729d6d4a4aa551",
-      "bsc_contract": "0xb2bd0749dbe21f623d9baba856d3b0f0e1bfec9c",
-      "name": "DUSK",
-      "coingecko_id": "dusk-network"
-    },
-    "RPL": {
-      "symbol": "RPL",
-      "source": "binance",
-      "eth_contract": "0xd33526068d116ce69f19a9ee46f0bd304f21a51f",
-      "name": "Rocket Pool",
-      "coingecko_id": "rocket-pool"
-    },
-    "FIL": {
-      "symbol": "FIL",
-      "source": "binance",
-      "bsc_contract": "0x0d8ce2a99bb6e3b7db580ed848240e4a0f9ae153",
-      "name": "Filecoin",
-      "coingecko_id": "filecoin"
-    },
-    "ARK": {
-      "symbol": "ARK",
-      "source": "binance",
-      "name": "Arken World",
-      "coingecko_id": "arken-world",
-      "bsc_contract": "0xcae117ca6bc8a341d2e7207f30e180f0e5618b9d"
-    },
-    "USDC": {
-      "symbol": "USDC",
-      "source": "binance",
-      "name": "zkSync Bridged USDC (zkSync)",
-      "coingecko_id": "zksync-bridged-usdc-zksync",
-      "bsc_contract": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
-      "eth_contract": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
-    },
-    "CHR": {
-      "symbol": "CHR",
-      "source": "binance",
-      "eth_contract": "0x8a2279d4a90b6fe1c4b30fa660cc9f926797baa2",
-      "bsc_contract": "0xf9cec8d50f6c8ad3fb6dccec577e05aa32b224fe",
-      "name": "Chronos Finance",
-      "coingecko_id": "chronos-finance"
-    },
-    "MANTA": {
-      "symbol": "MANTA",
-      "source": "binance",
-      "name": "Manta Network",
-      "coingecko_id": "manta-network"
-    },
-    "THE": {
-      "symbol": "THE",
-      "source": "binance",
-      "name": "The Protocol",
-      "coingecko_id": "the-protocol",
-      "bsc_contract": "0xf4c8e32eadec4bfe97e0f595add0f4450a863a11",
-      "eth_contract": "0x0cba60ca5ef4d42f92a5070a8fedd13be93e2861"
-    },
-    "S": {
-      "symbol": "S",
-      "source": "binance",
-      "name": "Token S",
-      "coingecko_id": "token-s"
-    },
-    "XRP": {
-      "symbol": "XRP",
-      "source": "binance",
-      "bsc_contract": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe",
-      "name": "WarioXRPDumbledoreYugioh69Inu",
-      "coingecko_id": "warioxrpdumbledoreyugioh69inu",
-      "eth_contract": "0xb1c064c3f2908f741c9dea4afc5773238b53e6cc"
-    },
-    "DCR": {
-      "symbol": "DCR",
-      "source": "binance",
-      "name": "Decred",
-      "coingecko_id": "decred"
-    },
-    "BARD": {
-      "symbol": "BARD",
-      "source": "binance",
-      "eth_contract": "0xf0db65d17e30a966c2ae6a21f6bba71cea6e9754",
-      "bsc_contract": "0xd23a186a78c0b3b805505e5f8ea4083295ef9f3a",
-      "name": "Lombard",
-      "coingecko_id": "lombard-protocol"
-    },
-    "ADA": {
-      "symbol": "ADA",
-      "source": "binance",
-      "bsc_contract": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47",
-      "name": "Cardano",
-      "coingecko_id": "cardano"
-    },
-    "LA": {
-      "symbol": "LA",
-      "source": "binance",
-      "eth_contract": "0xe50365f5d679cb98a1dd62d6f6e58e59321bcddf",
-      "bsc_contract": "0x389ad4bb96d0d6ee5b6ef0efaf4b7db0ba2e02a0",
-      "name": "LA",
-      "coingecko_id": "latoken"
-    },
-    "ARB": {
-      "symbol": "ARB",
-      "source": "binance",
-      "name": "ARB Protocol",
-      "coingecko_id": "arb-protocol",
-      "eth_contract": "0xb50721bcf8d664c30412cfbc6cf7a15145234ad1"
-    },
-    "A2Z": {
-      "symbol": "A2Z",
-      "source": "binance",
-      "eth_contract": "0x08dcb9b5989fb09ef80e85567ec1f49577a70d29",
-      "name": "Arena-Z",
-      "coingecko_id": "arena-z"
-    },
-    "SOMI": {
-      "symbol": "SOMI",
-      "source": "binance",
-      "name": "Somnia",
-      "coingecko_id": "somnia"
-    },
-    "KERNEL": {
-      "symbol": "KERNEL",
-      "source": "binance",
-      "eth_contract": "0x3f80b1c54ae920be41a77f8b902259d48cf24ccf",
-      "bsc_contract": "0x9ecaf80c1303cca8791afbc0ad405c8a35e8d9f1",
-      "name": "KernelDAO",
-      "coingecko_id": "kernel-2"
-    },
-    "DEXE": {
-      "symbol": "DEXE",
-      "source": "binance",
-      "eth_contract": "0xde4ee8057785a7e8e800db58f9784845a5c2cbd6",
-      "bsc_contract": "0x6e88056e8376ae7709496ba64d37fa2f8015ce3e",
-      "name": "DeXe",
-      "coingecko_id": "dexe"
-    },
-    "TAO": {
-      "symbol": "TAO",
-      "source": "binance",
-      "name": "The Anthropic Order",
-      "coingecko_id": "the-anthropic-order"
-    },
-    "SNX": {
-      "symbol": "SNX",
-      "source": "binance",
-      "eth_contract": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
-      "name": "Synthetix",
-      "coingecko_id": "havven"
-    },
-    "SPK": {
-      "symbol": "SPK",
-      "source": "binance",
-      "eth_contract": "0xc20059e0317de91738d13af027dfc4a50781b066",
-      "name": "Spark",
-      "coingecko_id": "spark-2"
-    },
-    "KMNO": {
-      "symbol": "KMNO",
-      "source": "binance",
-      "name": "Kamino",
-      "coingecko_id": "kamino"
-    },
-    "VTHO": {
-      "symbol": "VTHO",
-      "source": "binance",
-      "name": "VeThor",
-      "coingecko_id": "vethor-token"
-    },
-    "RUNE": {
-      "symbol": "RUNE",
-      "source": "binance",
-      "name": "THORChain",
-      "coingecko_id": "thorchain"
-    },
-    "WLFI": {
-      "symbol": "WLFI",
-      "source": "binance",
-      "name": "World Liberty Financial",
-      "coingecko_id": "world-liberty-financial",
-      "eth_contract": "0xda5e1988097297dcdc1f90d4dfe7909e847cbef6",
-      "bsc_contract": "0x47474747477b199288bf72a1d702f7fe0fb1deea"
-    },
-    "FTT": {
-      "symbol": "FTT",
-      "source": "binance",
-      "eth_contract": "0x50d1c9771902476076ecfc8b2a83ad6b9355a4c9",
-      "name": "FTX",
-      "coingecko_id": "ftx-token"
-    },
-    "PORTAL": {
-      "symbol": "PORTAL",
-      "source": "binance",
-      "eth_contract": "0x1bbe973bef3a977fc51cbed703e8ffdefe001fed",
-      "name": "Portal",
-      "coingecko_id": "portal-2"
-    },
-    "FET": {
-      "symbol": "FET",
-      "source": "binance",
-      "eth_contract": "0xaea46a60368a7bd060eec7df8cba43b7ef41ad85",
-      "bsc_contract": "0x031b41e504677879370e9dbcf937283a8691fa7f",
-      "name": "Artificial Superintelligence Alliance",
-      "coingecko_id": "fetch-ai"
-    },
-    "FF": {
-      "symbol": "FF",
-      "source": "binance",
-      "eth_contract": "0xfa1c09fc8b491b6a4d3ff53a10cad29381b3f949",
-      "bsc_contract": "0xac23b90a79504865d52b49b327328411a23d4db2",
-      "name": "Falcon Finance",
-      "coingecko_id": "falcon-finance-ff"
-    },
-    "BAND": {
-      "symbol": "BAND",
-      "source": "binance",
-      "eth_contract": "0xba11d00c5f74255f56a5e366f4f77f5a186d7f55",
-      "name": "Band",
-      "coingecko_id": "band-protocol"
-    },
-    "VIC": {
-      "symbol": "VIC",
-      "source": "binance",
-      "name": "Viction",
-      "coingecko_id": "tomochain"
-    },
-    "TUSD": {
-      "symbol": "TUSD",
-      "source": "binance",
-      "bsc_contract": "0x40af3827f39d0eacbf4a168f8d4ee67c121d11c9",
-      "name": "Turbo USD",
-      "coingecko_id": "turbo-usd",
-      "eth_contract": "0x0000000000085d4780b73119b644ae5ecd22b376"
-    },
-    "GRT": {
-      "symbol": "GRT",
-      "source": "binance",
-      "eth_contract": "0xc944e90c64b2c07662a292be6244bdf05cda44a7",
-      "name": "The Graph",
-      "coingecko_id": "the-graph"
-    },
-    "USUAL": {
-      "symbol": "USUAL",
-      "source": "binance",
-      "eth_contract": "0xc4441c2be5d8fa8126822b9929ca0b81ea0de38e",
-      "bsc_contract": "0x4acd4d03af6f9cc0fb7c5f0868b7b6287d7969c5",
-      "name": "Usual",
-      "coingecko_id": "usual"
-    },
-    "STRAX": {
-      "symbol": "STRAX",
-      "source": "binance",
-      "name": "Xertra",
-      "coingecko_id": "stratis"
-    },
-    "MBOX": {
-      "symbol": "MBOX",
-      "source": "binance",
-      "bsc_contract": "0x3203c9e46ca618c8c1ce5dc67e7e9d75f5da2377",
-      "name": "Mobox",
-      "coingecko_id": "mobox"
-    },
-    "DAI": {
-      "symbol": "DAI",
-      "source": "binance",
-      "name": "ZKsync ERC20 Bridged DAI (zkSync)",
-      "coingecko_id": "zksync-erc20-bridged-dai-zksync",
-      "bsc_contract": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
-      "eth_contract": "0x6b175474e89094c44da98b954eedeac495271d0f"
-    },
-    "GLM": {
-      "symbol": "GLM",
-      "source": "binance",
-      "eth_contract": "0x7dd9c5cba05e151c895fde1cf355c9a1d5da6429",
-      "name": "Golem",
-      "coingecko_id": "golem"
-    },
-    "APE": {
-      "symbol": "APE",
-      "source": "binance",
-      "eth_contract": "0xa0385e7283c83e2871e9af49eec0966088421ddd",
-      "name": "The Ape",
-      "coingecko_id": "the-ape-2"
-    },
-    "LPT": {
-      "symbol": "LPT",
-      "source": "binance",
-      "eth_contract": "0x58b6a8a3302369daec383334672404ee733ab239",
-      "name": "Livepeer",
-      "coingecko_id": "livepeer"
-    },
-    "FORTH": {
-      "symbol": "FORTH",
-      "source": "binance",
-      "eth_contract": "0x77fba179c79de5b7653f68b5039af940ada60ce0",
-      "name": "Ampleforth Governance",
-      "coingecko_id": "ampleforth-governance-token"
-    },
-    "STG": {
-      "symbol": "STG",
-      "source": "binance",
-      "eth_contract": "0xaf5191b0de278c7286d6c7cc6ab6bb8a73ba2cd6",
-      "bsc_contract": "0xb0d502e938ed5f4df2e681fe6e419ff29631d62b",
-      "name": "Stargate Finance",
-      "coingecko_id": "stargate-finance"
-    },
-    "SXT": {
-      "symbol": "SXT",
-      "source": "binance",
-      "eth_contract": "0xe6bfd33f52d82ccb5b37e16d3dd81f9ffdabb195",
-      "name": "Space and Time",
-      "coingecko_id": "space-and-time"
-    },
-    "W": {
-      "symbol": "W",
-      "source": "binance",
-      "name": "Wormhole",
-      "coingecko_id": "wormhole",
-      "bsc_contract": "0x19683a9d2a31508847a026dfe77f53a05a084444",
-      "eth_contract": "0xb0ffa8000886e57f86dd5264b9582b2ad87b2b91"
-    },
-    "DASH": {
-      "symbol": "DASH",
-      "source": "binance",
-      "name": "DASH",
-      "coingecko_id": "dash-2",
-      "eth_contract": "0xedc3be0080f65c628964f44ba3f2b6057e60f8dc"
-    },
-    "ACT": {
-      "symbol": "ACT",
-      "source": "binance",
-      "bsc_contract": "0x9f3bcbe48e8b754f331dfc694a894e8e686ac31d",
-      "name": "Act I The AI Prophecy",
-      "coingecko_id": "act-i-the-ai-prophecy"
-    },
-    "DYM": {
-      "symbol": "DYM",
-      "source": "binance",
-      "name": "Dymension",
-      "coingecko_id": "dymension"
-    },
-    "DEGO": {
-      "symbol": "DEGO",
-      "source": "binance",
-      "eth_contract": "0x3da932456d082cba208feb0b096d49b202bf89c8",
-      "bsc_contract": "0x3da932456d082cba208feb0b096d49b202bf89c8",
-      "name": "Dego Finance",
-      "coingecko_id": "dego-finance"
-    },
-    "FXS": {
-      "symbol": "FXS",
-      "source": "binance"
-    },
-    "INIT": {
-      "symbol": "INIT",
-      "source": "binance",
-      "name": "Initia",
-      "coingecko_id": "initia"
-    },
-    "MAGIC": {
-      "symbol": "MAGIC",
-      "source": "binance",
-      "eth_contract": "0x435cbf7c09e01d6a07b9997770f7b9d1ab754020",
-      "name": "Magnificent 7777",
-      "coingecko_id": "magnificent-7777"
-    },
-    "HIVE": {
-      "symbol": "HIVE",
-      "source": "binance",
-      "name": "SolHive",
-      "coingecko_id": "solhive",
-      "bsc_contract": "0x8fb024a51841e45891579bdc924550996b72b0fd"
-    },
-    "AXL": {
-      "symbol": "AXL",
-      "source": "binance",
-      "eth_contract": "0x25b24b3c47918b7962b3e49c4f468367f73cc0e0",
-      "bsc_contract": "0x25b24b3c47918b7962b3e49c4f468367f73cc0e0",
-      "name": "AXL INU",
-      "coingecko_id": "axl-inu"
-    },
-    "2Z": {
-      "symbol": "2Z",
-      "source": "binance",
-      "name": "DoubleZero",
-      "coingecko_id": "doublezero"
-    },
-    "ARKM": {
-      "symbol": "ARKM",
-      "source": "binance",
-      "eth_contract": "0x6e2a43be0b1d33b726f0ca3b8de60b3482b8b050",
-      "name": "Arkham",
-      "coingecko_id": "arkham"
-    },
-    "ADX": {
-      "symbol": "ADX",
-      "source": "binance",
-      "eth_contract": "0xade00c28244d5ce17d72e40330b1c318cd12b7c3",
-      "bsc_contract": "0x6bff4fb161347ad7de4a625ae5aa3a1ca7077819",
-      "name": "Adrena",
-      "coingecko_id": "adrena"
-    },
-    "CAKE": {
-      "symbol": "CAKE",
-      "source": "binance",
-      "eth_contract": "0x152649ea73beab28c5b49b26eb48f7ead6d4c898",
-      "bsc_contract": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
-      "name": "PancakeSwap",
-      "coingecko_id": "pancakeswap-token"
-    },
-    "FLOKI": {
-      "symbol": "FLOKI",
-      "source": "binance",
-      "eth_contract": "0xcf0c122c6b73ff809c693db761e7baebe62b6a2e",
-      "bsc_contract": "0xfb5b838b6cfeedc2873ab27866079ac55363d37e",
-      "name": "Flokiwifhat",
-      "coingecko_id": "flokiwifhat"
-    },
-    "WBETH": {
-      "symbol": "WBETH",
-      "source": "binance",
-      "eth_contract": "0xa2e3356610840701bdf5611a53974510ae27e2e1",
-      "bsc_contract": "0xa2e3356610840701bdf5611a53974510ae27e2e1",
-      "name": "Wrapped Beacon ETH",
-      "coingecko_id": "wrapped-beacon-eth"
-    },
-    "THETA": {
-      "symbol": "THETA",
-      "source": "binance",
-      "name": "Theta Network",
-      "coingecko_id": "theta-token"
-    },
-    "SUPER": {
-      "symbol": "SUPER",
-      "source": "binance",
-      "name": "SuperVerse",
-      "coingecko_id": "superfarm",
-      "eth_contract": "0xe53ec727dbdeb9e2d5456c3be40cff031ab40a55"
-    },
-    "RED": {
-      "symbol": "RED",
-      "source": "binance",
-      "eth_contract": "0xc744df3419a8c9bd4d6b9852a503eb1c5308a326",
-      "name": "RED TOKEN",
-      "coingecko_id": "red-token"
-    },
-    "ERA": {
-      "symbol": "ERA",
-      "source": "binance",
-      "eth_contract": "0xe2ad0bf751834f2fbdc62a41014f84d67ca1de2a",
-      "bsc_contract": "0x6f9f0c4ad9af7ebd61ac5a1d4e0f2227f7b0e5f9",
-      "name": "Erable°",
-      "coingecko_id": "erable"
-    },
-    "PIVX": {
-      "symbol": "PIVX",
-      "source": "binance",
-      "name": "PIVX",
-      "coingecko_id": "pivx"
-    },
-    "DENT": {
-      "symbol": "DENT",
-      "source": "binance",
-      "eth_contract": "0x3597bfd533a99c9aa083587b074434e61eb0a258",
-      "name": "Dent",
-      "coingecko_id": "dent"
-    },
-    "GIGGLE": {
-      "symbol": "GIGGLE",
-      "source": "binance",
-      "bsc_contract": "0x20d6015660b3fe52e6690a889b5c51f69902ce0e",
-      "name": "Giggle Fund",
-      "coingecko_id": "giggle-fund"
-    },
-    "GMX": {
-      "symbol": "GMX",
-      "source": "binance",
-      "bsc_contract": "0x6961974d3bc7f26f3488c64330111c8ecfe75bf3",
-      "name": "GMX",
-      "coingecko_id": "gmx"
-    },
-    "FUN": {
-      "symbol": "FUN",
-      "source": "binance",
-      "name": "terminal of fun",
-      "coingecko_id": "terminal-of-fun",
-      "eth_contract": "0x419d0d8bdd9af5e606ae2232ed285aff190e711b"
-    },
-    "DYDX": {
-      "symbol": "DYDX",
-      "source": "binance",
-      "name": "dYdX (Wormhole)",
-      "coingecko_id": "dydx-wormhole"
-    },
-    "TIA": {
-      "symbol": "TIA",
-      "source": "binance",
-      "name": "Tiamonds [OLD]",
-      "coingecko_id": "tia",
-      "eth_contract": "0x824e35f7a75324f99300afac75ecf7354e17ea26"
-    },
-    "ENS": {
-      "symbol": "ENS",
-      "source": "binance",
-      "eth_contract": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
-      "name": "Ethereum Name Service",
-      "coingecko_id": "ethereum-name-service"
-    },
-    "LUMIA": {
-      "symbol": "LUMIA",
-      "source": "binance",
-      "name": "Lumia",
-      "coingecko_id": "lumia"
-    },
-    "ONE": {
-      "symbol": "ONE",
-      "source": "binance",
-      "name": "OneFinity",
-      "coingecko_id": "onedex",
-      "bsc_contract": "0x04baf95fd4c52fd09a56d840baee0ab8d7357bf0",
-      "eth_contract": "0x946551dd05c5abd7cc808927480225ce36d8c475"
-    },
-    "AEUR": {
-      "symbol": "AEUR",
-      "source": "binance",
-      "eth_contract": "0xa40640458fbc27b6eefedea1e9c9e17d4cee7a21",
-      "bsc_contract": "0xa40640458fbc27b6eefedea1e9c9e17d4cee7a21",
-      "name": "Anchored Coins AEUR",
-      "coingecko_id": "anchored-coins-eur"
-    },
-    "ID": {
-      "symbol": "ID",
-      "source": "binance",
-      "eth_contract": "0x2dff88a56767223a5529ea5960da7a3f5f766406",
-      "name": "SPACE ID",
-      "coingecko_id": "space-id",
-      "bsc_contract": "0x2dff88a56767223a5529ea5960da7a3f5f766406"
-    },
-    "DIA": {
-      "symbol": "DIA",
-      "source": "binance",
-      "eth_contract": "0x84ca8bc7997272c7cfb4d0cd3d55cd942b3c9419",
-      "bsc_contract": "0x99956d38059cf7beda96ec91aa7bb2477e0901dd",
-      "name": "DIA",
-      "coingecko_id": "dia-data"
-    },
-    "TRU": {
-      "symbol": "TRU",
-      "source": "binance",
-      "eth_contract": "0x4c19596f5aaff459fa38b0f7ed92f11ae6543784",
-      "name": "Trulink",
-      "coingecko_id": "trulink"
-    },
-    "AGLD": {
-      "symbol": "AGLD",
-      "source": "binance",
-      "eth_contract": "0x32353a6c91143bfd6c7d363b546e62a9a2489a20",
-      "name": "Adventure Gold",
-      "coingecko_id": "adventure-gold"
-    },
-    "MOVE": {
-      "symbol": "MOVE",
-      "source": "binance",
-      "name": "Movement",
-      "coingecko_id": "movement",
-      "bsc_contract": "0x95ca12cd249d27008a482009e101a8501cf3a64f",
-      "eth_contract": "0x3073f7aaa4db83f95e9fff17424f71d4751a3073"
-    },
-    "TRUMP": {
-      "symbol": "TRUMP",
-      "source": "binance",
-      "name": "TrumpEffect69420",
-      "coingecko_id": "trumpeffect69420",
-      "eth_contract": "0x69420cb71f5fa439a84545e79557977c0600c46e",
-      "bsc_contract": "0x4ea98c1999575aaadfb38237dd015c5e773f75a2"
-    },
-    "GPS": {
-      "symbol": "GPS",
-      "source": "binance",
-      "bsc_contract": "0x9a4a67721573f2c9209dfff972c52be4e3f6642e",
-      "name": "GoPlus Security",
-      "coingecko_id": "goplus-security"
-    },
-    "GTC": {
-      "symbol": "GTC",
-      "source": "binance",
-      "eth_contract": "0xe138fda441fc31b36171122397a8a11d6cd2c479",
-      "name": "Global Trust Coin",
-      "coingecko_id": "global-trust-coin",
-      "bsc_contract": "0x6cd871fb811224aa23b6bf1646177cdfe5106416"
-    },
-    "FDUSD": {
-      "symbol": "FDUSD",
-      "source": "binance",
-      "eth_contract": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
-      "bsc_contract": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
-      "name": "First Digital USD",
-      "coingecko_id": "first-digital-usd"
-    },
-    "QNT": {
-      "symbol": "QNT",
-      "source": "binance",
-      "eth_contract": "0x4a220e6096b25eadb88358cb44068a3248254675",
-      "name": "Quant",
-      "coingecko_id": "quant-network"
-    },
-    "ACH": {
-      "symbol": "ACH",
-      "source": "binance",
-      "eth_contract": "0xed04915c23f00a313a544955524eb7dbd823143d",
-      "bsc_contract": "0xbc7d6b50616989655afd682fb42743507003056d",
-      "name": "Alchemy Pay",
-      "coingecko_id": "alchemy-pay"
-    },
-    "USDT": {
-      "symbol": "USDT",
-      "source": "binance",
-      "name": "Zircuit Bridged USDT (Zircuit)",
-      "coingecko_id": "zircuit-bridged-usdt-zircuit",
-      "eth_contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-      "bsc_contract": "0x524bc91dc82d6b90ef29f76a3ecaabafffd490bc"
-    },
-    "JASMY": {
-      "symbol": "JASMY",
-      "source": "binance",
-      "eth_contract": "0x7420b4b9a0110cdc71fb720908340c03f9bc03ec",
-      "name": "JasmyCoin",
-      "coingecko_id": "jasmycoin"
-    },
-    "ZIL": {
-      "symbol": "ZIL",
-      "source": "binance",
-      "bsc_contract": "0xb86abcb37c3a4b64f74f59301aff131a1becc787",
-      "name": "Zilliqa",
-      "coingecko_id": "zilliqa"
-    },
-    "ALCX": {
-      "symbol": "ALCX",
-      "source": "binance",
-      "eth_contract": "0xdbdb4d16eda451d0503b854cf79d55697f90c8df",
-      "name": "Alchemix",
-      "coingecko_id": "alchemix"
-    },
-    "HOOK": {
-      "symbol": "HOOK",
-      "source": "binance",
-      "bsc_contract": "0xa260e12d2b924cb899ae80bb58123ac3fee1e2f0",
-      "name": "Hooked Protocol",
-      "coingecko_id": "hooked-protocol"
-    },
-    "BTTC": {
-      "symbol": "BTTC",
-      "source": "binance"
-    },
-    "OG": {
-      "symbol": "OG",
-      "source": "binance",
-      "name": "OG Fan Token",
-      "coingecko_id": "og-fan-token"
-    },
-    "XUSD": {
-      "symbol": "XUSD",
-      "source": "binance",
-      "name": "XUSD (BabelFish)",
-      "coingecko_id": "xusd-babelfish",
-      "eth_contract": "0xc08e7e23c235073c6807c2efe7021304cb7c2815",
-      "bsc_contract": "0xf81ac2e1a0373dde1bce01e2fe694a9b7e3bfcb9"
-    },
-    "AVAX": {
-      "symbol": "AVAX",
-      "source": "binance",
-      "name": "Binance-Peg Avalanche",
-      "coingecko_id": "binance-peg-avalanche",
-      "eth_contract": "0x85f138bfee4ef8e540890cfb48f620571d67eda3",
-      "bsc_contract": "0x1ce0c2827e2ef14d5c4f29a091d735a204794041"
-    },
-    "RONIN": {
-      "symbol": "RONIN",
-      "source": "binance"
-    },
-    "PARTI": {
-      "symbol": "PARTI",
-      "source": "binance",
-      "bsc_contract": "0x59264f02d301281f3393e1385c0aefd446eb0f00",
-      "name": "Particle Network",
-      "coingecko_id": "particle-network"
-    },
-    "AUCTION": {
-      "symbol": "AUCTION",
-      "source": "binance",
-      "eth_contract": "0xa9b1eb5908cfc3cdf91f9b8b3a74108598009096",
-      "name": "Bounce",
-      "coingecko_id": "auction"
-    },
-    "NXPC": {
-      "symbol": "NXPC",
-      "source": "binance",
-      "name": "Nexpace",
-      "coingecko_id": "nexpace"
-    },
-    "XAI": {
-      "symbol": "XAI",
-      "source": "binance",
-      "bsc_contract": "0x43ff4cf60f75fbcc91be7d5036710ffcf2a80459",
-      "name": "xAI PreStocks",
-      "coingecko_id": "xai-prestocks-2",
-      "eth_contract": "0x0a13a5929e5f0ff0eaba4bd9e9512c91fce40280"
-    },
-    "ETHFI": {
-      "symbol": "ETHFI",
-      "source": "binance",
-      "eth_contract": "0xfe0c30065b384f05761f15d0cc899d4f9f9cc0eb",
-      "name": "Ether.fi",
-      "coingecko_id": "ether-fi"
-    },
-    "USDP": {
-      "symbol": "USDP",
-      "source": "binance",
-      "eth_contract": "0x8e870d67f660d95d5be530380d0ec0bd388289e1",
-      "name": "United States Dominant Peg",
-      "coingecko_id": "united-states-dominant-peg"
-    },
-    "AXS": {
-      "symbol": "AXS",
-      "source": "binance",
-      "eth_contract": "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b",
-      "bsc_contract": "0x715d400f88c167884bbcc41c5fea407ed4d2f8a0",
-      "name": "Axie Infinity",
-      "coingecko_id": "axie-infinity"
-    },
-    "ZRO": {
-      "symbol": "ZRO",
-      "source": "binance",
-      "eth_contract": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
-      "bsc_contract": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
-      "name": "LayerZero",
-      "coingecko_id": "layerzero"
-    },
-    "BANANA": {
-      "symbol": "BANANA",
-      "source": "binance",
-      "eth_contract": "0x38e68a37e401f7271568cecaac63c6b1e19130b4",
-      "bsc_contract": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95",
-      "name": "World Record Banana",
-      "coingecko_id": "world-record-banana"
+    "TUT": {
+      "symbol": "TUT",
+      "source": "binance",
+      "name": "Tutorial",
+      "coingecko_id": "tutorial",
+      "bsc_contract": "0xcaae2a2f939f51d97cdfa9a86e79e3f085b799f3"
+    },
+    "MEME": {
+      "symbol": "MEME",
+      "source": "binance",
+      "name": "MPX6900",
+      "coingecko_id": "mpx6900",
+      "eth_contract": "0xb131f4a55907b10d1f0a50d8ab8fa09ec342cd74",
+      "bsc_contract": "0x193397bb76868c6873e733ad60d5953843ebc84e"
     },
     "KAVA": {
       "symbol": "KAVA",
@@ -1663,761 +813,15 @@
       "name": "Kava",
       "coingecko_id": "kava"
     },
-    "RDNT": {
-      "symbol": "RDNT",
-      "source": "binance",
-      "eth_contract": "0x137ddb47ee24eaa998a535ab00378d6bfa84f893",
-      "bsc_contract": "0xf7de7e8a6bd59ed41a4b5fe50278b3b7f31384df",
-      "name": "Radiant Capital",
-      "coingecko_id": "radiant-capital"
-    },
-    "SAGA": {
-      "symbol": "SAGA",
-      "source": "binance",
-      "name": "Wrapped SAGA",
-      "coingecko_id": "wrapped-saga",
-      "eth_contract": "0xf42fcffc27a5b8d0afec45659407b82f9f32fa98"
-    },
-    "CHESS": {
-      "symbol": "CHESS",
-      "source": "binance",
-      "bsc_contract": "0x20de22029ab63cf9a7cf5feb2b737ca1ee4c82a6",
-      "name": "Tranchess",
-      "coingecko_id": "tranchess"
-    },
-    "VET": {
-      "symbol": "VET",
-      "source": "binance",
-      "name": "VeChain",
-      "coingecko_id": "vechain"
-    },
-    "LISTA": {
-      "symbol": "LISTA",
-      "source": "binance",
-      "bsc_contract": "0xfceb31a79f71ac9cbdcf853519c1b12d379edc46",
-      "name": "Lista DAO",
-      "coingecko_id": "lista"
-    },
-    "WAN": {
-      "symbol": "WAN",
-      "source": "binance",
-      "name": "Wanchain",
-      "coingecko_id": "wanchain"
-    },
-    "ATM": {
-      "symbol": "ATM",
-      "source": "binance",
-      "name": "Automatic Treasury Machine",
-      "coingecko_id": "automatic-treasury-machine"
-    },
-    "DODO": {
-      "symbol": "DODO",
-      "source": "binance",
-      "eth_contract": "0x747e550a7b848ace786c3cfe754aa78febc8a022",
-      "bsc_contract": "0x67ee3cb086f8a16f34bee3ca72fad36f7db929e2",
-      "name": "Dodo the Black Swan",
-      "coingecko_id": "dodo-the-black-swan"
-    },
-    "STX": {
-      "symbol": "STX",
-      "source": "binance",
-      "name": "Stacks",
-      "coingecko_id": "blockstack"
-    },
-    "BNSOL": {
-      "symbol": "BNSOL",
-      "source": "binance",
-      "name": "Binance Staked SOL",
-      "coingecko_id": "binance-staked-sol"
-    },
-    "COTI": {
-      "symbol": "COTI",
-      "source": "binance",
-      "eth_contract": "0xddb3422497e61e13543bea06989c0789117555c5",
-      "name": "COTI",
-      "coingecko_id": "coti"
-    },
-    "XTZ": {
-      "symbol": "XTZ",
-      "source": "binance",
-      "bsc_contract": "0x16939ef78684453bfdfb47825f8a5f714f12623a",
-      "name": "Tezos",
-      "coingecko_id": "tezos"
-    },
-    "WAL": {
-      "symbol": "WAL",
-      "source": "binance",
-      "name": "Walrus",
-      "coingecko_id": "walrus-2"
-    },
-    "FLOW": {
-      "symbol": "FLOW",
-      "source": "binance",
-      "name": "STAKE FLOW",
-      "coingecko_id": "stake-flow",
-      "bsc_contract": "0x7dc31152f557f0a21897cab58b0d2d213a6d4444"
-    },
-    "ALPINE": {
-      "symbol": "ALPINE",
-      "source": "binance",
-      "bsc_contract": "0x287880ea252b52b63cc5f40a2d3e5a44aa665a76",
-      "name": "Alpine F1 Team Fan Token",
-      "coingecko_id": "alpine-f1-team-fan-token"
-    },
-    "ORDI": {
-      "symbol": "ORDI",
-      "source": "binance",
-      "name": "ORDI",
-      "coingecko_id": "ordinals"
-    },
-    "TRX": {
-      "symbol": "TRX",
-      "source": "binance",
-      "name": "TRON (BSC)",
-      "coingecko_id": "tron-bsc",
-      "bsc_contract": "0xce7de646e7208a4ef112cb6ed5038fa6cc6b12e3"
-    },
-    "HOME": {
-      "symbol": "HOME",
-      "source": "binance",
-      "bsc_contract": "0x4bfaa776991e85e5f8b1255461cbbd216cfc714f",
-      "name": "HOME",
-      "coingecko_id": "home"
-    },
-    "HIGH": {
-      "symbol": "HIGH",
-      "source": "binance",
-      "name": "Highstreet",
-      "coingecko_id": "highstreet",
-      "eth_contract": "0x71ab77b7dbb4fa7e017bc15090b2163221420282",
-      "bsc_contract": "0x5f4bde007dc06b867f86ebfe4802e34a1ffeed63"
-    },
-    "STORJ": {
-      "symbol": "STORJ",
-      "source": "binance",
-      "eth_contract": "0xb64ef51c888972c908cfacf59b47c1afbc0ab8ac",
-      "name": "Storj",
-      "coingecko_id": "storj"
-    },
-    "BIO": {
-      "symbol": "BIO",
-      "source": "binance",
-      "eth_contract": "0xcb1592591996765ec0efc1f92599a19767ee5ffa",
-      "name": "Bio Protocol",
-      "coingecko_id": "bio-protocol"
-    },
-    "AWE": {
-      "symbol": "AWE",
-      "source": "binance",
-      "name": "AWE Network",
-      "coingecko_id": "stp-network"
-    },
-    "IOTA": {
-      "symbol": "IOTA",
-      "source": "binance",
-      "name": "IOTA",
-      "coingecko_id": "iota"
-    },
-    "EDEN": {
-      "symbol": "EDEN",
-      "source": "binance",
-      "eth_contract": "0x24a3d725c37a8d1a66eb87f0e5d07fe67c120035",
-      "name": "OpenEden",
-      "coingecko_id": "openeden",
-      "bsc_contract": "0x235b6fe22b4642ada16d311855c49ce7de260841"
-    },
-    "FIO": {
-      "symbol": "FIO",
-      "source": "binance",
-      "name": "FIO Protocol",
-      "coingecko_id": "fio-protocol"
-    },
-    "BNT": {
-      "symbol": "BNT",
-      "source": "binance",
-      "eth_contract": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
-      "name": "Bancor Network",
-      "coingecko_id": "bancor"
-    },
-    "MET": {
-      "symbol": "MET",
-      "source": "binance",
-      "eth_contract": "0x2ebd53d035150f328bd754d6dc66b99b0edb89aa",
-      "name": "Metronome",
-      "coingecko_id": "metronome"
-    },
-    "NEO": {
-      "symbol": "NEO",
-      "source": "binance",
-      "name": "NEO",
-      "coingecko_id": "neo"
-    },
-    "XVG": {
-      "symbol": "XVG",
-      "source": "binance",
-      "name": "Verge (ETH)",
-      "coingecko_id": "verge-eth",
-      "eth_contract": "0x85614a474dbeed440d5bbdb8ac50b0f22367f997"
-    },
-    "SHELL": {
-      "symbol": "SHELL",
-      "source": "binance",
-      "eth_contract": "0xf2c88757f8d03634671208935974b60a2a28bdb3",
-      "bsc_contract": "0xf2c88757f8d03634671208935974b60a2a28bdb3",
-      "name": "Stargate Bridged Shell (Avalanche)",
-      "coingecko_id": "stargate-bridged-shell-avalanche"
-    },
-    "TUT": {
-      "symbol": "TUT",
-      "source": "binance",
-      "name": "Tutorial",
-      "coingecko_id": "tutorial",
-      "bsc_contract": "0xcaae2a2f939f51d97cdfa9a86e79e3f085b799f3"
-    },
-    "SPELL": {
-      "symbol": "SPELL",
-      "source": "binance",
-      "eth_contract": "0x090185f2135308bad17527004364ebcc2d37e5f6",
-      "name": "The Spellcaster",
-      "coingecko_id": "the-spellcaster"
-    },
-    "BEAMX": {
-      "symbol": "BEAMX",
-      "source": "binance"
-    },
-    "SSV": {
-      "symbol": "SSV",
-      "source": "binance",
-      "eth_contract": "0x9d65ff81a3c488d585bbfb0bfe3c7707c7917f54",
-      "name": "SSV Network",
-      "coingecko_id": "ssv-network"
-    },
-    "ACE": {
-      "symbol": "ACE",
-      "source": "binance",
-      "eth_contract": "0xec5483804e637d45cde22fa0869656b64b5ab1ab",
-      "name": "Fusionist",
-      "coingecko_id": "endurance",
-      "bsc_contract": "0xc27a719105a987b4c34116223cae8bd8f4b5def4"
-    },
-    "NEXO": {
-      "symbol": "NEXO",
-      "source": "binance",
-      "eth_contract": "0xb62132e35a6c13ee1ee0f84dc5d40bad8d815206",
-      "name": "NEXO",
-      "coingecko_id": "nexo"
-    },
-    "FIS": {
-      "symbol": "FIS",
-      "source": "binance",
-      "eth_contract": "0xef3a930e1ffffacd2fc13434ac81bd278b0ecc8d",
-      "name": "Stafi",
-      "coingecko_id": "stafi"
-    },
-    "PEOPLE": {
-      "symbol": "PEOPLE",
-      "source": "binance",
-      "eth_contract": "0x7a58c0be72be218b41c608b7fe7c5bb630736c71",
-      "name": "ConstitutionDAO (Wormhole)",
-      "coingecko_id": "constitutiondao-wormhole"
-    },
-    "OM": {
-      "symbol": "OM",
-      "source": "binance",
-      "eth_contract": "0x3593d125a4f7849a1b059e64f4517a86dd60c95d",
-      "bsc_contract": "0xf78d2e7936f5fe18308a3b2951a93b6c4a41f5e2",
-      "name": "MANTRA",
-      "coingecko_id": "mantra-dao"
-    },
-    "SKY": {
-      "symbol": "SKY",
-      "source": "binance",
-      "name": "Skynet",
-      "coingecko_id": "skynet-3",
-      "eth_contract": "0x56072c95faa701256059aa122697b133aded9279"
-    },
-    "OGN": {
-      "symbol": "OGN",
-      "source": "binance",
-      "eth_contract": "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26",
-      "name": "Origin Token",
-      "coingecko_id": "origin-protocol"
-    },
-    "DF": {
-      "symbol": "DF",
-      "source": "binance",
-      "eth_contract": "0x431ad2ff6a9c365805ebad47ee021148d6f7dbe0",
-      "bsc_contract": "0x4a9a2b2b04549c3927dd2c9668a5ef3fca473623",
-      "name": "dForce",
-      "coingecko_id": "dforce-token"
-    },
-    "CVX": {
-      "symbol": "CVX",
-      "source": "binance",
-      "eth_contract": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
-      "name": "Convex Finance",
-      "coingecko_id": "convex-finance"
-    },
-    "AVNT": {
-      "symbol": "AVNT",
-      "source": "binance",
-      "name": "Avantis",
-      "coingecko_id": "avantis"
-    },
-    "ETC": {
-      "symbol": "ETC",
-      "source": "binance",
-      "name": "Ethereum Classic",
-      "coingecko_id": "ethereum-classic"
-    },
-    "REQ": {
-      "symbol": "REQ",
-      "source": "binance",
-      "eth_contract": "0x8f8221afbb33998d8584a2b05749ba73c37a938a",
-      "name": "Request",
-      "coingecko_id": "request-network"
-    },
-    "ALLO": {
-      "symbol": "ALLO",
-      "source": "binance",
-      "eth_contract": "0x8408d45b61f5823298f19a09b53b7339c0280489",
-      "bsc_contract": "0xcce5f304fd043d6a4e8ccb5376a4a4fb583b98d5",
-      "name": "Allora",
-      "coingecko_id": "allora"
-    },
-    "QI": {
-      "symbol": "QI",
-      "source": "binance",
-      "name": "QiSwap",
-      "coingecko_id": "qiswap",
-      "eth_contract": "0x559b7bfc48a5274754b08819f75c5f27af53d53b"
-    },
-    "WCT": {
-      "symbol": "WCT",
-      "source": "binance",
-      "eth_contract": "0xef4461891dfb3ac8572ccf7c794664a8dd927945",
-      "name": "WalletConnect Token",
-      "coingecko_id": "connect-token-wct"
-    },
-    "OXT": {
-      "symbol": "OXT",
-      "source": "binance",
-      "eth_contract": "0x4575f41308ec1483f3d399aa9a2826d74da13deb",
-      "name": "Orchid Protocol",
-      "coingecko_id": "orchid-protocol"
-    },
-    "SFP": {
-      "symbol": "SFP",
-      "source": "binance",
-      "eth_contract": "0x12e2b8033420270db2f3b328e32370cb5b2ca134",
-      "bsc_contract": "0xd41fdb03ba84762dd66a0af1a6c8540ff1ba5dfb",
-      "name": "SafePal",
-      "coingecko_id": "safepal"
-    },
-    "BB": {
-      "symbol": "BB",
-      "source": "binance",
-      "bsc_contract": "0x16f9cc3c6f8d8006cfc0ee693cef9d76b0d44c36",
-      "name": "BounceBit",
-      "coingecko_id": "bouncebit",
-      "eth_contract": "0xd459eceddafcc1d876a3be7290a2e16e801073a3"
-    },
-    "COOKIE": {
-      "symbol": "COOKIE",
-      "source": "binance",
-      "eth_contract": "0xc0041ef357b183448b235a8ea73ce4e4ec8c265f",
-      "bsc_contract": "0xc0041ef357b183448b235a8ea73ce4e4ec8c265f",
-      "name": "CookieBase",
-      "coingecko_id": "cookiebase"
-    },
-    "PROVE": {
-      "symbol": "PROVE",
-      "source": "binance",
-      "eth_contract": "0x6bef15d938d4e72056ac92ea4bdd0d76b1c4ad29",
-      "bsc_contract": "0x7ddf164cecfddd0f992299d033b5a11279a15929",
-      "name": "Succinct",
-      "coingecko_id": "succinct"
-    },
-    "SYS": {
-      "symbol": "SYS",
-      "source": "binance",
-      "name": "Syscoin",
-      "coingecko_id": "syscoin"
-    },
-    "AAVE": {
-      "symbol": "AAVE",
-      "source": "binance",
-      "eth_contract": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
-      "bsc_contract": "0xfb6115445bff7b52feb98650c87f44907e58f802",
-      "name": "Aave",
-      "coingecko_id": "aave"
-    },
-    "POWR": {
-      "symbol": "POWR",
-      "source": "binance",
-      "eth_contract": "0x595832f8fc6bf59c85c527fec3740a1b7a361269",
-      "name": "Powerledger",
-      "coingecko_id": "power-ledger"
-    },
-    "LSK": {
-      "symbol": "LSK",
-      "source": "binance",
-      "eth_contract": "0x6033f7f88332b8db6ad452b7c6d5bb643990ae3f",
-      "name": "Lisk",
-      "coingecko_id": "lisk"
-    },
-    "EUL": {
-      "symbol": "EUL",
-      "source": "binance",
-      "eth_contract": "0xd9fcd98c322942075a5c3860693e9f4f03aae07b",
-      "bsc_contract": "0x2117e8b79e8e176a670c9fcf945d4348556bffad",
-      "name": "Euler",
-      "coingecko_id": "euler"
-    },
-    "MORPHO": {
-      "symbol": "MORPHO",
-      "source": "binance",
-      "eth_contract": "0x9994e35db50125e0df82e4c2dde62496ce330999",
-      "name": "Legacy Morpho",
-      "coingecko_id": "morpho-2"
-    },
-    "DOLO": {
-      "symbol": "DOLO",
-      "source": "binance",
-      "eth_contract": "0x0f81001ef0a83ecce5ccebf63eb302c70a39a654",
-      "name": "Dolomite",
-      "coingecko_id": "dolomite"
-    },
-    "BANANAS31": {
-      "symbol": "BANANAS31",
-      "source": "binance",
-      "bsc_contract": "0x3d4f0513e8a29669b960f9dbca61861548a9a760",
-      "name": "Banana For Scale",
-      "coingecko_id": "banana-for-scale-2"
-    },
-    "API3": {
-      "symbol": "API3",
-      "source": "binance",
-      "eth_contract": "0x0b38210ea11411557c13457d4da7dc6ea731b88a",
-      "name": "Api3",
-      "coingecko_id": "api3"
-    },
-    "BOME": {
-      "symbol": "BOME",
-      "source": "binance",
-      "name": "BOOK OF MEME",
-      "coingecko_id": "book-of-meme"
-    },
-    "MBL": {
-      "symbol": "MBL",
-      "source": "binance",
-      "name": "MovieBloc",
-      "coingecko_id": "moviebloc"
-    },
-    "HFT": {
-      "symbol": "HFT",
-      "source": "binance",
-      "eth_contract": "0xb3999f658c0391d94a37f7ff328f3fec942bcadc",
-      "bsc_contract": "0x44ec807ce2f4a6f2737a92e985f318d035883e47",
-      "name": "Hashflow",
-      "coingecko_id": "hashflow"
-    },
-    "TRB": {
-      "symbol": "TRB",
-      "source": "binance",
-      "eth_contract": "0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0",
-      "name": "Tellor Tributes",
-      "coingecko_id": "tellor"
-    },
-    "IOST": {
-      "symbol": "IOST",
-      "source": "binance",
-      "bsc_contract": "0xaf48b7e315a52518cfbf7d96c455d9dfad94cb48",
-      "name": "IOST",
-      "coingecko_id": "iostoken"
-    },
-    "JTO": {
-      "symbol": "JTO",
-      "source": "binance",
-      "name": "Jito",
-      "coingecko_id": "jito-governance-token"
-    },
-    "D": {
-      "symbol": "D",
-      "source": "binance",
-      "eth_contract": "0x33b481cbbf3c24f2b3184ee7cb02daad1c4f49a8",
-      "bsc_contract": "0xa71b404f6b35c6ae119d33f1c4885d8ad8b54444",
-      "name": "DARUMA",
-      "coingecko_id": "daruma-2"
-    },
-    "PENGU": {
-      "symbol": "PENGU",
-      "source": "binance",
-      "name": "Pudgy Penguins",
-      "coingecko_id": "pudgy-penguins",
-      "eth_contract": "0x6418c0dd099a9fda397c766304cdd918233e8847",
-      "bsc_contract": "0x6418c0dd099a9fda397c766304cdd918233e8847"
-    },
-    "BONK": {
-      "symbol": "BONK",
-      "source": "binance",
-      "name": "BONK on ETH",
-      "coingecko_id": "bonk-on-eth",
-      "eth_contract": "0x4fbaf51b95b024d0d7cab575be2a1f0afedc9b64",
-      "bsc_contract": "0xa697e272a73744b343528c3bc4702f2565b2f422"
-    },
-    "GALA": {
-      "symbol": "GALA",
-      "source": "binance",
-      "eth_contract": "0xd1d2eb1b1e90b638588728b4130137d262c87cae",
-      "name": "GALA",
-      "coingecko_id": "gala"
-    },
-    "COW": {
-      "symbol": "COW",
-      "source": "binance",
-      "eth_contract": "0xdef1ca1fb7fbcdc777520aa7f396b4e015f497ab",
-      "bsc_contract": "0x7aaaa5b10f97321345acd76945083141be1c5631",
-      "name": "CoW Protocol",
-      "coingecko_id": "cow-protocol"
-    },
-    "RVN": {
-      "symbol": "RVN",
-      "source": "binance",
-      "name": "Ravencoin",
-      "coingecko_id": "ravencoin"
-    },
-    "QTUM": {
-      "symbol": "QTUM",
-      "source": "binance",
-      "name": "Qtum",
-      "coingecko_id": "qtum"
-    },
-    "ZBT": {
-      "symbol": "ZBT",
-      "source": "binance",
-      "eth_contract": "0xfab99fcf605fd8f4593edb70a43ba56542777777",
-      "bsc_contract": "0xfab99fcf605fd8f4593edb70a43ba56542777777",
-      "name": "ZEROBASE",
-      "coingecko_id": "zerobase"
-    },
-    "1000SATS": {
-      "symbol": "1000SATS",
-      "source": "binance",
-      "name": "1000SATS (Ordinals)",
-      "coingecko_id": "1000sats-ordinals"
-    },
-    "BAR": {
-      "symbol": "BAR",
-      "source": "binance",
-      "name": "Gold Standard",
-      "coingecko_id": "gold-standard",
-      "eth_contract": "0x777be1c6075c20184c4fd76344b7b0b7c858fe6b"
-    },
-    "RENDER": {
-      "symbol": "RENDER",
-      "source": "binance",
-      "eth_contract": "0x6de037ef9ad2725eb40118bb1702ebb27e4aeb24",
-      "name": "Render",
-      "coingecko_id": "render-token"
-    },
-    "HMSTR": {
-      "symbol": "HMSTR",
-      "source": "binance",
-      "name": "Hamster Kombat",
-      "coingecko_id": "hamster-kombat"
-    },
-    "GMT": {
-      "symbol": "GMT",
-      "source": "binance",
-      "bsc_contract": "0x3019bf2a2ef8040c242c9a4c5c4bd4c81678b2a1",
-      "name": "GMT",
-      "coingecko_id": "stepn",
-      "eth_contract": "0xe3c408bd53c31c085a1746af401a4042954ff740"
-    },
-    "LQTY": {
-      "symbol": "LQTY",
-      "source": "binance",
-      "eth_contract": "0x6dea81c8171d0ba574754ef6f8b412f2ed88c54d",
-      "name": "Liquity",
-      "coingecko_id": "liquity"
-    },
-    "CELO": {
-      "symbol": "CELO",
-      "source": "binance",
-      "name": "Celo",
-      "coingecko_id": "celo"
-    },
-    "ILV": {
-      "symbol": "ILV",
-      "source": "binance",
-      "eth_contract": "0x767fe9edc9e0df98e07454847909b5e959d7ca0e",
-      "name": "Illuvium",
-      "coingecko_id": "illuvium"
-    },
-    "BAT": {
-      "symbol": "BAT",
-      "source": "binance",
-      "eth_contract": "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
-      "name": "BitBat Token",
-      "coingecko_id": "bitbat-token"
-    },
-    "RLC": {
-      "symbol": "RLC",
-      "source": "binance",
-      "eth_contract": "0x607f4c5bb672230e8672085532f7e901544a7375",
-      "name": "iExec RLC",
-      "coingecko_id": "iexec-rlc"
-    },
-    "SUI": {
-      "symbol": "SUI",
-      "source": "binance",
-      "name": "Sui",
-      "coingecko_id": "sui"
-    },
-    "TST": {
-      "symbol": "TST",
-      "source": "binance",
-      "name": "Test",
-      "coingecko_id": "test-3",
-      "eth_contract": "0x0828096494ad6252f0f853abfc5b6ec9dfe9fdad",
-      "bsc_contract": "0x86bb94ddd16efc8bc58e6b056e8df71d9e666429"
-    },
-    "GHST": {
-      "symbol": "GHST",
-      "source": "binance",
-      "eth_contract": "0x3f382dbd960e3a9bbceae22651e88158d2791550",
-      "name": "Aavegotchi",
-      "coingecko_id": "aavegotchi"
-    },
-    "XVS": {
-      "symbol": "XVS",
-      "source": "binance",
-      "eth_contract": "0xd3cc9d8f3689b83c91b7b59cab4946b063eb894a",
-      "bsc_contract": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63",
-      "name": "Venus",
-      "coingecko_id": "venus"
-    },
-    "STO": {
-      "symbol": "STO",
-      "source": "binance",
-      "eth_contract": "0x1d88713b483a8e45cff0e5cd7c2e15e5fab4534d",
-      "bsc_contract": "0xdaf1695c41327b61b9b9965ac6a5843a3198cf07",
-      "name": "StakeStone",
-      "coingecko_id": "stakestone"
-    },
-    "FIDA": {
-      "symbol": "FIDA",
-      "source": "binance",
-      "name": "Bonfida",
-      "coingecko_id": "bonfida"
-    },
-    "VANRY": {
-      "symbol": "VANRY",
-      "source": "binance",
-      "eth_contract": "0x8de5b80a0c1b02fe4976851d030b36122dbb8624",
-      "name": "Vanar Chain",
-      "coingecko_id": "vanar-chain"
-    },
-    "KNC": {
-      "symbol": "KNC",
-      "source": "binance",
-      "eth_contract": "0xdefa4e8a7bcba345f687a2f1456f5edd9ce97202",
-      "bsc_contract": "0xfe56d5892bdffc7bf58f2e84be1b2c32d21c308b",
-      "name": "Kyber Network Crystal",
-      "coingecko_id": "kyber-network-crystal"
-    },
-    "SCRT": {
-      "symbol": "SCRT",
-      "source": "binance",
-      "name": "Secret",
-      "coingecko_id": "secret"
-    },
-    "SUSHI": {
-      "symbol": "SUSHI",
-      "source": "binance",
-      "eth_contract": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
-      "bsc_contract": "0x947950bcc74888a40ffa2593c5798f11fc9124c4",
-      "name": "Sushi",
-      "coingecko_id": "sushi"
-    },
-    "AVA": {
-      "symbol": "AVA",
-      "source": "binance",
-      "name": "AVA (Travala)",
-      "coingecko_id": "concierge-io",
-      "bsc_contract": "0xd9483ea7214fcfd89b4fb8f513b544920e315a52",
-      "eth_contract": "0xa6c0c097741d55ecd9a3a7def3a8253fd022ceb9"
-    },
-    "TURTLE": {
-      "symbol": "TURTLE",
-      "source": "binance",
-      "name": "Turtle",
-      "coingecko_id": "turtle-4",
-      "eth_contract": "0x66fd8de541c0594b4dccdfc13bf3a390e50d3afd",
-      "bsc_contract": "0x66fd8de541c0594b4dccdfc13bf3a390e50d3afd"
-    },
-    "MANA": {
-      "symbol": "MANA",
-      "source": "binance",
-      "eth_contract": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
-      "name": "Meme Anarchic Numismatic Asset",
-      "coingecko_id": "meme-anarchic-numismatic-asset"
-    },
-    "1MBABYDOGE": {
-      "symbol": "1MBABYDOGE",
-      "source": "binance",
-      "name": "1MBABYDOGE",
-      "coingecko_id": "1mbabydoge"
-    },
-    "ACA": {
-      "symbol": "ACA",
-      "source": "binance",
-      "name": "Acala",
-      "coingecko_id": "acala"
-    },
-    "HYPER": {
-      "symbol": "HYPER",
-      "source": "binance",
-      "bsc_contract": "0xc9d23ed2adb0f551369946bd377f8644ce1ca5c4",
-      "name": "Hypernode",
-      "coingecko_id": "hypernode",
-      "eth_contract": "0x93a2db22b7c736b341c32ff666307f4a9ed910f5"
-    },
-    "HOT": {
-      "symbol": "HOT",
-      "source": "binance",
-      "eth_contract": "0x6c6ee5e31d828de241282b9606c8e98ea48526e2",
-      "name": "Holo",
-      "coingecko_id": "holotoken"
-    },
-    "C98": {
-      "symbol": "C98",
-      "source": "binance",
-      "eth_contract": "0xae12c5930881c53715b369cec7606b70d8eb229f",
-      "bsc_contract": "0xaec945e04baf28b135fa7c640f624f8d90f1c3a6",
-      "name": "Coin98",
-      "coingecko_id": "coin98"
-    },
-    "PEPE": {
-      "symbol": "PEPE",
-      "source": "binance",
-      "name": "Pepe Community",
-      "coingecko_id": "pepe-token",
-      "eth_contract": "0xbe042e9d09cb588331ff911c2b46fd833a3e5bd6",
-      "bsc_contract": "0x25d887ce7a35172c62febfd67a1856f20faebb00"
-    },
-    "1000CAT": {
-      "symbol": "1000CAT",
-      "source": "binance",
-      "name": "1000CAT",
-      "coingecko_id": "1000cat"
-    },
     "CKB": {
       "symbol": "CKB",
       "source": "binance",
       "name": "Nervos Network",
       "coingecko_id": "nervos-network"
+    },
+    "VELODROME": {
+      "symbol": "VELODROME",
+      "source": "binance"
     },
     "GAS": {
       "symbol": "GAS",
@@ -2426,378 +830,33 @@
       "coingecko_id": "gas-dao",
       "eth_contract": "0x6bba316c48b49bd1eac44573c5c871ff02958469"
     },
-    "NOM": {
-      "symbol": "NOM",
+    "WAN": {
+      "symbol": "WAN",
       "source": "binance",
-      "name": "Trust in Nom",
-      "coingecko_id": "trust-in-nom",
-      "eth_contract": "0x6e6f6d696e61decd6605bd4a57836c5db6923340"
+      "name": "Wanchain",
+      "coingecko_id": "wanchain"
     },
-    "0G": {
-      "symbol": "0G",
+    "USD1": {
+      "symbol": "USD1",
       "source": "binance",
-      "eth_contract": "0x4b948d64de1f71fcd12fb586f4c776421a35b3ee",
-      "bsc_contract": "0x4b948d64de1f71fcd12fb586f4c776421a35b3ee",
-      "name": "0G",
-      "coingecko_id": "zero-gravity"
+      "name": "USD1",
+      "coingecko_id": "usd1-wlfi",
+      "eth_contract": "0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d",
+      "bsc_contract": "0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d"
     },
-    "CFX": {
-      "symbol": "CFX",
+    "ZIL": {
+      "symbol": "ZIL",
       "source": "binance",
-      "name": "Cosmic Force Token v2",
-      "coingecko_id": "cosmic-force-token-v2",
-      "bsc_contract": "0xdf5ba79f0fd70c6609666d5ed603710609a530ab"
+      "bsc_contract": "0xb86abcb37c3a4b64f74f59301aff131a1becc787",
+      "name": "Zilliqa",
+      "coingecko_id": "zilliqa"
     },
-    "PYTH": {
-      "symbol": "PYTH",
+    "BIGTIME": {
+      "symbol": "BIGTIME",
       "source": "binance",
-      "name": "Pyth Network",
-      "coingecko_id": "pyth-network"
-    },
-    "IO": {
-      "symbol": "IO",
-      "source": "binance",
-      "name": "io.net",
-      "coingecko_id": "io"
-    },
-    "XPL": {
-      "symbol": "XPL",
-      "source": "binance",
-      "bsc_contract": "0xf84dd1ac34c0043d109f6600f98302cdd3e5a6eb",
-      "name": "Pulse",
-      "coingecko_id": "pulse-2"
-    },
-    "ENJ": {
-      "symbol": "ENJ",
-      "source": "binance",
-      "eth_contract": "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c",
-      "name": "Enjin Coin",
-      "coingecko_id": "enjincoin"
-    },
-    "SYRUP": {
-      "symbol": "SYRUP",
-      "source": "binance",
-      "eth_contract": "0x643c4e15d7d62ad0abec4a9bd4b001aa3ef52d66",
-      "name": "Maple Finance",
-      "coingecko_id": "syrup"
-    },
-    "BTC": {
-      "symbol": "BTC",
-      "source": "binance",
-      "name": "Osmosis allBTC",
-      "coingecko_id": "osmosis-allbtc",
-      "bsc_contract": "0x0afcb0065362ec8bc94902479b9d37e3fa49eda6"
-    },
-    "REZ": {
-      "symbol": "REZ",
-      "source": "binance",
-      "eth_contract": "0x3b50805453023a91a8bf641e279401a0b23fa6f9",
-      "name": "Renzo",
-      "coingecko_id": "renzo"
-    },
-    "SAPIEN": {
-      "symbol": "SAPIEN",
-      "source": "binance",
-      "name": "Sapien",
-      "coingecko_id": "sapien-2"
-    },
-    "HEI": {
-      "symbol": "HEI",
-      "source": "binance",
-      "eth_contract": "0xf8f173e20e15f3b6cb686fb64724d370689de083",
-      "name": "Heima",
-      "coingecko_id": "heima"
-    },
-    "TON": {
-      "symbol": "TON",
-      "source": "binance",
-      "name": "TON Community",
-      "coingecko_id": "tontoken",
-      "eth_contract": "0x6a6c2ada3ce053561c2fbc3ee211f23d9b8c520a",
-      "bsc_contract": "0x76a797a59ba2c17726896976b7b3747bfd1d220f"
-    },
-    "SYN": {
-      "symbol": "SYN",
-      "source": "binance",
-      "eth_contract": "0x1bd1bc78a183c0547cdc2dcea12c0a8c05bdc034",
-      "bsc_contract": "0xa4080f1778e69467e905b8d6f72f6e441f9e9484",
-      "name": "Synthra",
-      "coingecko_id": "synthra"
-    },
-    "ORCA": {
-      "symbol": "ORCA",
-      "source": "binance",
-      "name": "Orca",
-      "coingecko_id": "orca"
-    },
-    "UMA": {
-      "symbol": "UMA",
-      "source": "binance",
-      "eth_contract": "0x04fa0d235c4abf4bcf4787af4cf447de572ef828",
-      "name": "UMA",
-      "coingecko_id": "uma"
-    },
-    "XLM": {
-      "symbol": "XLM",
-      "source": "binance",
-      "name": "Stellar",
-      "coingecko_id": "stellar"
-    },
-    "SC": {
-      "symbol": "SC",
-      "source": "binance",
-      "name": "STAR CAT",
-      "coingecko_id": "star-cat"
-    },
-    "CHZ": {
-      "symbol": "CHZ",
-      "source": "binance",
-      "eth_contract": "0x3506424f91fd33084466f402d5d97f05f8e3b4af",
-      "name": "Chiliz",
-      "coingecko_id": "chiliz"
-    },
-    "NOT": {
-      "symbol": "NOT",
-      "source": "binance",
-      "name": "Nothing",
-      "coingecko_id": "nothing-3"
-    },
-    "KAIA": {
-      "symbol": "KAIA",
-      "source": "binance",
-      "name": "Kaia",
-      "coingecko_id": "kaia"
-    },
-    "HAEDAL": {
-      "symbol": "HAEDAL",
-      "source": "binance",
-      "bsc_contract": "0x3d9be0ac1001cd81c32464276d863d2ffdca4967",
-      "name": "Haedal Protocol",
-      "coingecko_id": "haedal"
-    },
-    "ONDO": {
-      "symbol": "ONDO",
-      "source": "binance",
-      "eth_contract": "0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3",
-      "name": "Ondo",
-      "coingecko_id": "ondo-finance"
-    },
-    "LDO": {
-      "symbol": "LDO",
-      "source": "binance",
-      "eth_contract": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
-      "name": "Linea Bridged LDO (Linea)",
-      "coingecko_id": "linea-bridged-ldo-linea",
-      "bsc_contract": "0x986854779804799c1d68867f5e03e601e781e41b"
-    },
-    "NEWT": {
-      "symbol": "NEWT",
-      "source": "binance",
-      "name": "Newton Protocol",
-      "coingecko_id": "newton-protocol",
-      "eth_contract": "0xd0ec028a3d21533fdd200838f39c85b03679285d",
-      "bsc_contract": "0xb8a677e6d805c8d743e6f14c8bc9c19305b5defc"
-    },
-    "WLD": {
-      "symbol": "WLD",
-      "source": "binance",
-      "eth_contract": "0x163f8c2467924be0ae7b5347228cabf260318753",
-      "name": "Worldcoin",
-      "coingecko_id": "worldcoin-wld"
-    },
-    "USDE": {
-      "symbol": "USDE",
-      "source": "binance",
-      "name": "USDE (ERD)",
-      "coingecko_id": "usde-2",
-      "eth_contract": "0x1d00e86748573c322f4cc41518aa0e77bd912eb4",
-      "bsc_contract": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-    },
-    "ALGO": {
-      "symbol": "ALGO",
-      "source": "binance",
-      "name": "Dear Algorithm",
-      "coingecko_id": "dear-algorithm"
-    },
-    "POLYX": {
-      "symbol": "POLYX",
-      "source": "binance",
-      "name": "Polymesh",
-      "coingecko_id": "polymesh"
-    },
-    "STEEM": {
-      "symbol": "STEEM",
-      "source": "binance",
-      "name": "Steem",
-      "coingecko_id": "steem"
-    },
-    "COMP": {
-      "symbol": "COMP",
-      "source": "binance",
-      "eth_contract": "0xc00e94cb662c3520282e6f5717214004a7f26888",
-      "bsc_contract": "0x52ce071bd9b1c4b00a0b92d298c512478cad67e8",
-      "name": "Compound",
-      "coingecko_id": "compound-governance-token"
-    },
-    "PHB": {
-      "symbol": "PHB",
-      "source": "binance",
-      "bsc_contract": "0x0409633a72d846fc5bbe2f98d88564d35987904d",
-      "name": "Phoenix Global [OLD]",
-      "coingecko_id": "red-pulse"
-    },
-    "BEL": {
-      "symbol": "BEL",
-      "source": "binance",
-      "eth_contract": "0xa91ac63d040deb1b7a5e4d4134ad23eb0ba07e14",
-      "bsc_contract": "0x8443f091997f06a61670b735ed92734f5628692f",
-      "name": "Bellscoin",
-      "coingecko_id": "bellscoin-3"
-    },
-    "CYBER": {
-      "symbol": "CYBER",
-      "source": "binance",
-      "eth_contract": "0x14778860e937f509e651192a90589de711fb88a9",
-      "bsc_contract": "0x14778860e937f509e651192a90589de711fb88a9",
-      "name": "Cyberpunk City",
-      "coingecko_id": "cyberpunk-city"
-    },
-    "VIRTUAL": {
-      "symbol": "VIRTUAL",
-      "source": "binance",
-      "eth_contract": "0x44ff8620b8ca30902395a7bd3f2407e1a091bf73",
-      "name": "Virtuals Protocol",
-      "coingecko_id": "virtual-protocol"
-    },
-    "SCR": {
-      "symbol": "SCR",
-      "source": "binance",
-      "name": "Scroll",
-      "coingecko_id": "scroll"
-    },
-    "CTSI": {
-      "symbol": "CTSI",
-      "source": "binance",
-      "eth_contract": "0x491604c0fdf08347dd1fa4ee062a822a5dd06b5d",
-      "bsc_contract": "0x8da443f84fea710266c8eb6bc34b71702d033ef2",
-      "name": "Cartesi",
-      "coingecko_id": "cartesi"
-    },
-    "RSR": {
-      "symbol": "RSR",
-      "source": "binance",
-      "eth_contract": "0x320623b8e4ff03373931769a31fc52a4e78b5d70",
-      "name": "Reserve Rights",
-      "coingecko_id": "reserve-rights-token"
-    },
-    "TREE": {
-      "symbol": "TREE",
-      "source": "binance",
-      "eth_contract": "0x77146784315ba81904d654466968e3a7c196d1f3",
-      "name": "/treeplanting",
-      "coingecko_id": "treeplanting",
-      "bsc_contract": "0x77146784315ba81904d654466968e3a7c196d1f3"
-    },
-    "STRK": {
-      "symbol": "STRK",
-      "source": "binance",
-      "eth_contract": "0xca14007eff0db1f8135f4c25b34de49ab0d42766",
-      "name": "Starknet",
-      "coingecko_id": "starknet"
-    },
-    "HEMI": {
-      "symbol": "HEMI",
-      "source": "binance",
-      "eth_contract": "0xeb964a1a6fab73b8c72a0d15c7337fa4804f484d",
-      "bsc_contract": "0x5ffd0eadc186af9512542d0d5e5eafc65d5afc5b",
-      "name": "Hemi",
-      "coingecko_id": "hemi"
-    },
-    "POND": {
-      "symbol": "POND",
-      "source": "binance",
-      "eth_contract": "0x57b946008913b82e4df85f501cbaed910e58d26c",
-      "name": "Marlin",
-      "coingecko_id": "marlin"
-    },
-    "PIXEL": {
-      "symbol": "PIXEL",
-      "source": "binance",
-      "name": "PixelVerse",
-      "coingecko_id": "pixelverse",
-      "eth_contract": "0x65e6b60ea01668634d68d0513fe814679f925bad",
-      "bsc_contract": "0x47db24e17c0c4622523449a239b3de746e2b0b23"
-    },
-    "CVC": {
-      "symbol": "CVC",
-      "source": "binance",
-      "eth_contract": "0x41e5560054824ea6b0732e656e3ad64e20e94e45",
-      "name": "Civic",
-      "coingecko_id": "civic"
-    },
-    "ONG": {
-      "symbol": "ONG",
-      "source": "binance",
-      "name": "Ontology Gas",
-      "coingecko_id": "ong"
-    },
-    "WBTC": {
-      "symbol": "WBTC",
-      "source": "binance",
-      "name": "zkSync Bridged WBTC (zkSync)",
-      "coingecko_id": "zksync-bridged-wbtc-zksync",
-      "eth_contract": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-      "bsc_contract": "0x0555e30da8f98308edb960aa94c0db47230d2b9c"
-    },
-    "TNSR": {
-      "symbol": "TNSR",
-      "source": "binance",
-      "name": "Tensorium [OLD]",
-      "coingecko_id": "tensorium"
-    },
-    "LAZIO": {
-      "symbol": "LAZIO",
-      "source": "binance",
-      "bsc_contract": "0x77d547256a2cd95f32f67ae0313e450ac200648d",
-      "name": "Lazio Fan Token",
-      "coingecko_id": "lazio-fan-token"
-    },
-    "TWT": {
-      "symbol": "TWT",
-      "source": "binance",
-      "bsc_contract": "0x4b0f1812e5df2a09796481ff14017e6005508003",
-      "name": "Trust Wallet",
-      "coingecko_id": "trust-wallet-token"
-    },
-    "SANTOS": {
-      "symbol": "SANTOS",
-      "source": "binance",
-      "bsc_contract": "0xa64455a4553c9034236734faddaddbb64ace4cc7",
-      "name": "Santos FC Fan Token",
-      "coingecko_id": "santos-fc-fan-token"
-    },
-    "TOWNS": {
-      "symbol": "TOWNS",
-      "source": "binance",
-      "eth_contract": "0x000000fa00b200406de700041cfc6b19bbfb4d13",
-      "bsc_contract": "0x00000000bca93b25a6694ca3d2109d545988b13b",
-      "name": "Towns",
-      "coingecko_id": "towns"
-    },
-    "DOT": {
-      "symbol": "DOT",
-      "source": "binance",
-      "bsc_contract": "0x8d010bf9c26881788b4e6bf5fd1bdc358c8f90b8",
-      "name": "xcDOT",
-      "coingecko_id": "xcdot",
-      "eth_contract": "0x196c20da81fbc324ecdf55501e95ce9f0bd84d14"
-    },
-    "POL": {
-      "symbol": "POL",
-      "source": "binance",
-      "name": "Proof Of Liquidity",
-      "coingecko_id": "proof-of-liquidity",
-      "eth_contract": "0x455e53cbb86018ac2b8092fdcd39d8444affc3f6"
+      "eth_contract": "0x64bc2ca1be492be7185faa2c8835d9b824c8a194",
+      "name": "Big Time",
+      "coingecko_id": "big-time"
     },
     "1INCH": {
       "symbol": "1INCH",
@@ -2807,38 +866,215 @@
       "name": "1INCH",
       "coingecko_id": "1inch"
     },
-    "VOXEL": {
-      "symbol": "VOXEL",
+    "BEL": {
+      "symbol": "BEL",
       "source": "binance",
-      "name": "Voxies",
-      "coingecko_id": "voxies"
+      "eth_contract": "0xa91ac63d040deb1b7a5e4d4134ad23eb0ba07e14",
+      "bsc_contract": "0x8443f091997f06a61670b735ed92734f5628692f",
+      "name": "Bellscoin",
+      "coingecko_id": "bellscoin-3"
     },
-    "MITO": {
-      "symbol": "MITO",
+    "PYR": {
+      "symbol": "PYR",
       "source": "binance",
-      "bsc_contract": "0x8e1e6bf7e13c400269987b65ab2b5724b016caef",
-      "name": "Mitosis",
-      "coingecko_id": "mitosis"
+      "eth_contract": "0x430ef9263e76dae63c84292c3409d61c598e9682",
+      "name": "Vulcan Forged",
+      "coingecko_id": "vulcan-forged"
     },
-    "1000CHEEMS": {
-      "symbol": "1000CHEEMS",
+    "OSMO": {
+      "symbol": "OSMO",
       "source": "binance",
-      "name": "1000CHEMS",
-      "coingecko_id": "1000chems"
+      "name": "Osmosis",
+      "coingecko_id": "osmosis"
     },
-    "EDU": {
-      "symbol": "EDU",
+    "CVX": {
+      "symbol": "CVX",
       "source": "binance",
-      "eth_contract": "0x26aad156ba8efa501b32b42ffcdc8413f90e9c99",
-      "bsc_contract": "0xbdeae1ca48894a1759a8374d63925f21f2ee2639",
-      "name": "Open Campus",
-      "coingecko_id": "edu-coin"
+      "eth_contract": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+      "name": "Convex Finance",
+      "coingecko_id": "convex-finance"
     },
-    "COS": {
-      "symbol": "COS",
+    "ORDI": {
+      "symbol": "ORDI",
       "source": "binance",
-      "name": "Contentos",
-      "coingecko_id": "contentos"
+      "name": "ORDI",
+      "coingecko_id": "ordinals"
+    },
+    "BANK": {
+      "symbol": "BANK",
+      "source": "binance",
+      "name": "Lorenzo Protocol",
+      "coingecko_id": "lorenzo-protocol",
+      "eth_contract": "0x24a6a37576377f63f194caa5f518a60f45b42921",
+      "bsc_contract": "0x3aee7602b612de36088f3ffed8c8f10e86ebf2bf"
+    },
+    "LUNA": {
+      "symbol": "LUNA",
+      "source": "binance",
+      "name": "Terra",
+      "coingecko_id": "terra-luna-2"
+    },
+    "LUMIA": {
+      "symbol": "LUMIA",
+      "source": "binance",
+      "name": "Lumia",
+      "coingecko_id": "lumia"
+    },
+    "HEMI": {
+      "symbol": "HEMI",
+      "source": "binance",
+      "eth_contract": "0xeb964a1a6fab73b8c72a0d15c7337fa4804f484d",
+      "bsc_contract": "0x5ffd0eadc186af9512542d0d5e5eafc65d5afc5b",
+      "name": "Hemi",
+      "coingecko_id": "hemi"
+    },
+    "TNSR": {
+      "symbol": "TNSR",
+      "source": "binance",
+      "name": "Tensorium [OLD]",
+      "coingecko_id": "tensorium"
+    },
+    "TURTLE": {
+      "symbol": "TURTLE",
+      "source": "binance",
+      "name": "Turtle",
+      "coingecko_id": "turtle-4",
+      "eth_contract": "0x66fd8de541c0594b4dccdfc13bf3a390e50d3afd",
+      "bsc_contract": "0x66fd8de541c0594b4dccdfc13bf3a390e50d3afd"
+    },
+    "EIGEN": {
+      "symbol": "EIGEN",
+      "source": "binance",
+      "eth_contract": "0xec53bf9167f50cdeb3ae105f56099aaab9061f83",
+      "name": "EigenCloud (prev. EigenLayer)",
+      "coingecko_id": "eigenlayer"
+    },
+    "WCT": {
+      "symbol": "WCT",
+      "source": "binance",
+      "eth_contract": "0xef4461891dfb3ac8572ccf7c794664a8dd927945",
+      "name": "WalletConnect Token",
+      "coingecko_id": "connect-token-wct"
+    },
+    "HBAR": {
+      "symbol": "HBAR",
+      "source": "binance",
+      "name": "Hedera",
+      "coingecko_id": "hedera-hashgraph"
+    },
+    "HMSTR": {
+      "symbol": "HMSTR",
+      "source": "binance",
+      "name": "Hamster Kombat",
+      "coingecko_id": "hamster-kombat"
+    },
+    "STORJ": {
+      "symbol": "STORJ",
+      "source": "binance",
+      "eth_contract": "0xb64ef51c888972c908cfacf59b47c1afbc0ab8ac",
+      "name": "Storj",
+      "coingecko_id": "storj"
+    },
+    "ZEN": {
+      "symbol": "ZEN",
+      "source": "binance",
+      "name": "Zenith",
+      "coingecko_id": "zenith-3",
+      "eth_contract": "0x3bbbb6a231d0a1a12c6b79ba5bc2ed6358db5160"
+    },
+    "VET": {
+      "symbol": "VET",
+      "source": "binance",
+      "name": "VeChain",
+      "coingecko_id": "vechain"
+    },
+    "KAIA": {
+      "symbol": "KAIA",
+      "source": "binance",
+      "name": "Kaia",
+      "coingecko_id": "kaia"
+    },
+    "XPL": {
+      "symbol": "XPL",
+      "source": "binance",
+      "bsc_contract": "0xf84dd1ac34c0043d109f6600f98302cdd3e5a6eb",
+      "name": "Pulse",
+      "coingecko_id": "pulse-2"
+    },
+    "SYRUP": {
+      "symbol": "SYRUP",
+      "source": "binance",
+      "eth_contract": "0x643c4e15d7d62ad0abec4a9bd4b001aa3ef52d66",
+      "name": "Maple Finance",
+      "coingecko_id": "syrup"
+    },
+    "POND": {
+      "symbol": "POND",
+      "source": "binance",
+      "eth_contract": "0x57b946008913b82e4df85f501cbaed910e58d26c",
+      "name": "Marlin",
+      "coingecko_id": "marlin"
+    },
+    "RIF": {
+      "symbol": "RIF",
+      "source": "binance",
+      "eth_contract": "0x01b603be3d545f096015741e6503440282bf45fb",
+      "name": "Rootstock Infrastructure Framework",
+      "coingecko_id": "rif-token"
+    },
+    "APT": {
+      "symbol": "APT",
+      "source": "binance",
+      "name": "Aptos",
+      "coingecko_id": "aptos"
+    },
+    "VIC": {
+      "symbol": "VIC",
+      "source": "binance",
+      "name": "Viction",
+      "coingecko_id": "tomochain"
+    },
+    "NTRN": {
+      "symbol": "NTRN",
+      "source": "binance",
+      "name": "Neutron",
+      "coingecko_id": "neutron-3"
+    },
+    "DYDX": {
+      "symbol": "DYDX",
+      "source": "binance",
+      "name": "dYdX (Wormhole)",
+      "coingecko_id": "dydx-wormhole"
+    },
+    "ENJ": {
+      "symbol": "ENJ",
+      "source": "binance",
+      "eth_contract": "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c",
+      "name": "Enjin Coin",
+      "coingecko_id": "enjincoin"
+    },
+    "PHB": {
+      "symbol": "PHB",
+      "source": "binance",
+      "bsc_contract": "0x0409633a72d846fc5bbe2f98d88564d35987904d",
+      "name": "Phoenix Global [OLD]",
+      "coingecko_id": "red-pulse"
+    },
+    "BB": {
+      "symbol": "BB",
+      "source": "binance",
+      "bsc_contract": "0x16f9cc3c6f8d8006cfc0ee693cef9d76b0d44c36",
+      "name": "BounceBit",
+      "coingecko_id": "bouncebit",
+      "eth_contract": "0xd459eceddafcc1d876a3be7290a2e16e801073a3"
+    },
+    "BMT": {
+      "symbol": "BMT",
+      "source": "binance",
+      "name": "Bubblemaps",
+      "coingecko_id": "bubblemaps",
+      "eth_contract": "0xf028adee51533b1b47beaa890feb54a457f51e89",
+      "bsc_contract": "0x7d814b9ed370ec0a502edc3267393bf62d891b62"
     },
     "ALICE": {
       "symbol": "ALICE",
@@ -2848,167 +1084,138 @@
       "eth_contract": "0xac51066d7bec65dc4589368da368b212745d63e8",
       "bsc_contract": "0xac51066d7bec65dc4589368da368b212745d63e8"
     },
-    "WOO": {
-      "symbol": "WOO",
+    "NEIRO": {
+      "symbol": "NEIRO",
       "source": "binance",
-      "eth_contract": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
-      "bsc_contract": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
-      "name": "WOO",
-      "coingecko_id": "woo-network"
+      "name": "Neiro on Tron",
+      "coingecko_id": "neiro-on-tron",
+      "eth_contract": "0xa6180029845469e89c507fe3eafedfa242687822",
+      "bsc_contract": "0x94162acc63812d53ac2bcf1f4aef65863273e63b"
     },
-    "CATI": {
-      "symbol": "CATI",
+    "STRAX": {
+      "symbol": "STRAX",
       "source": "binance",
-      "name": "Catizen",
-      "coingecko_id": "catizen"
+      "name": "Xertra",
+      "coingecko_id": "stratis"
     },
-    "ETH": {
-      "symbol": "ETH",
+    "HIGH": {
+      "symbol": "HIGH",
       "source": "binance",
-      "name": "The Ticker Is ETH",
-      "coingecko_id": "the-ticker-is-eth",
-      "bsc_contract": "0x4db5a66e937a9f4473fa95b1caf1d1e1d62e29ea",
-      "eth_contract": "0x5e21d1ee5cf0077b314c381720273ae82378d613"
+      "name": "Highstreet",
+      "coingecko_id": "highstreet",
+      "eth_contract": "0x71ab77b7dbb4fa7e017bc15090b2163221420282",
+      "bsc_contract": "0x5f4bde007dc06b867f86ebfe4802e34a1ffeed63"
     },
-    "MMT": {
-      "symbol": "MMT",
+    "LINEA": {
+      "symbol": "LINEA",
       "source": "binance",
-      "bsc_contract": "0xb34966a2a66cb116ebe87b9554c020dcc950e917",
-      "name": "Momentum",
-      "coingecko_id": "momentum-3"
+      "eth_contract": "0x1789e0043623282d5dcc7f213d703c6d8bafbb04",
+      "name": "Linea",
+      "coingecko_id": "linea"
     },
-    "DOGS": {
-      "symbol": "DOGS",
+    "CTSI": {
+      "symbol": "CTSI",
       "source": "binance",
-      "eth_contract": "0xf9962329a1e9fa84836d2f37640d7012fb588e9d",
-      "name": "We Love Dogs",
-      "coingecko_id": "we-love-dogs"
+      "eth_contract": "0x491604c0fdf08347dd1fa4ee062a822a5dd06b5d",
+      "bsc_contract": "0x8da443f84fea710266c8eb6bc34b71702d033ef2",
+      "name": "Cartesi",
+      "coingecko_id": "cartesi"
     },
-    "APT": {
-      "symbol": "APT",
+    "MAGIC": {
+      "symbol": "MAGIC",
       "source": "binance",
-      "name": "Aptos",
-      "coingecko_id": "aptos"
+      "eth_contract": "0x435cbf7c09e01d6a07b9997770f7b9d1ab754020",
+      "name": "Magnificent 7777",
+      "coingecko_id": "magnificent-7777"
     },
-    "FARM": {
-      "symbol": "FARM",
+    "AXS": {
+      "symbol": "AXS",
       "source": "binance",
-      "name": "This is a Farm",
-      "coingecko_id": "this-is-a-farm",
-      "eth_contract": "0xa0246c9032bc3a600820415ae600c6388619a14d",
-      "bsc_contract": "0x4b5c23cac08a567ecf0c1ffca8372a45a5d33743"
+      "eth_contract": "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b",
+      "bsc_contract": "0x715d400f88c167884bbcc41c5fea407ed4d2f8a0",
+      "name": "Axie Infinity",
+      "coingecko_id": "axie-infinity"
     },
-    "JUV": {
-      "symbol": "JUV",
+    "RESOLV": {
+      "symbol": "RESOLV",
       "source": "binance",
-      "name": "Juventus Fan Token",
-      "coingecko_id": "juventus-fan-token"
+      "eth_contract": "0x259338656198ec7a76c729514d3cb45dfbf768a1",
+      "bsc_contract": "0xda6cef7f667d992a60eb823ab215493aa0c6b360",
+      "name": "Resolv",
+      "coingecko_id": "resolv"
     },
-    "WIN": {
-      "symbol": "WIN",
+    "SNX": {
+      "symbol": "SNX",
       "source": "binance",
-      "name": "WINkLink BSC",
-      "coingecko_id": "winklink-bsc",
-      "eth_contract": "0xb10cb07ca2cdac77fbb5707f6690301f9d036f45",
-      "bsc_contract": "0xaef0d72a118ce24fee3cd1d43d383897d05b4e99"
+      "eth_contract": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
+      "name": "Synthetix",
+      "coingecko_id": "havven"
     },
-    "ACX": {
-      "symbol": "ACX",
+    "SUPER": {
+      "symbol": "SUPER",
       "source": "binance",
-      "eth_contract": "0x44108f0223a3c3028f5fe7aec7f9bb2e66bef82f",
-      "name": "Across Protocol",
-      "coingecko_id": "across-protocol"
+      "name": "SuperVerse",
+      "coingecko_id": "superfarm",
+      "eth_contract": "0xe53ec727dbdeb9e2d5456c3be40cff031ab40a55"
     },
-    "ICP": {
-      "symbol": "ICP",
+    "YB": {
+      "symbol": "YB",
       "source": "binance",
-      "eth_contract": "0x00f3c42833c3170159af4e92dbb451fb3f708917",
-      "name": "Internet Computer",
-      "coingecko_id": "internet-computer"
+      "eth_contract": "0x01791f726b4103694969820be083196cc7c045ff",
+      "bsc_contract": "0xfb93ee8152dd0a0e6f4b49c66c06d800cf1db72d",
+      "name": "Yield Basis",
+      "coingecko_id": "yield-basis"
     },
-    "YGG": {
-      "symbol": "YGG",
-      "source": "binance",
-      "eth_contract": "0x25f8087ead173b73d6e8b84329989a8eea16cf73",
-      "bsc_contract": "0x13ab6739368a4e4abf24695bf52959224367391f",
-      "name": "Yield Guild Games",
-      "coingecko_id": "yield-guild-games"
+    "BEAMX": {
+      "symbol": "BEAMX",
+      "source": "binance"
     },
-    "ASTER": {
-      "symbol": "ASTER",
+    "IQ": {
+      "symbol": "IQ",
       "source": "binance",
-      "bsc_contract": "0xd17fd7002e1b91ba9a38c00426e83a11db587ce6",
-      "name": "ASTERION",
-      "coingecko_id": "asterion"
+      "eth_contract": "0x579cea1889991f68acc35ff5c3dd0621ff29b0c9",
+      "bsc_contract": "0x0e37d70b51ffa2b98b4d34a5712c5291115464e3",
+      "name": "IQ Labs",
+      "coingecko_id": "iq6900-2"
     },
-    "OP": {
-      "symbol": "OP",
+    "PARTI": {
+      "symbol": "PARTI",
       "source": "binance",
-      "name": "Optimism",
-      "coingecko_id": "optimism"
+      "bsc_contract": "0x59264f02d301281f3393e1385c0aefd446eb0f00",
+      "name": "Particle Network",
+      "coingecko_id": "particle-network"
     },
-    "USTC": {
-      "symbol": "USTC",
+    "GMT": {
+      "symbol": "GMT",
       "source": "binance",
-      "name": "Wrapped USTC",
-      "coingecko_id": "wrapped-ust",
-      "eth_contract": "0xa47c8bf37f92abed4a126bda807a7b7498661acd",
-      "bsc_contract": "0x23396cf899ca06c4472205fc903bdb4de249d6fc"
+      "bsc_contract": "0x3019bf2a2ef8040c242c9a4c5c4bd4c81678b2a1",
+      "name": "GMT",
+      "coingecko_id": "stepn",
+      "eth_contract": "0xe3c408bd53c31c085a1746af401a4042954ff740"
     },
-    "PNUT": {
-      "symbol": "PNUT",
+    "AXL": {
+      "symbol": "AXL",
       "source": "binance",
-      "eth_contract": "0xe69ccaaaea33ebfe5b76e0dd373cd9a1a31fd410",
-      "name": "Pnut the Squirrel",
-      "coingecko_id": "pnut-the-squirrel"
+      "eth_contract": "0x25b24b3c47918b7962b3e49c4f468367f73cc0e0",
+      "bsc_contract": "0x25b24b3c47918b7962b3e49c4f468367f73cc0e0",
+      "name": "AXL INU",
+      "coingecko_id": "axl-inu"
     },
-    "REI": {
-      "symbol": "REI",
+    "ATA": {
+      "symbol": "ATA",
       "source": "binance",
-      "name": "Rei",
-      "coingecko_id": "unit-00-rei"
+      "name": "Automata",
+      "coingecko_id": "automata",
+      "eth_contract": "0xa2120b9e674d3fc3875f415a7df52e382f141225",
+      "bsc_contract": "0xa2120b9e674d3fc3875f415a7df52e382f141225"
     },
-    "HUMA": {
-      "symbol": "HUMA",
+    "ALLO": {
+      "symbol": "ALLO",
       "source": "binance",
-      "bsc_contract": "0x92516e0ddf1ddbf7fab1b79cac26689fdc5ba8e6",
-      "name": "Huma Finance",
-      "coingecko_id": "huma-finance"
-    },
-    "MLN": {
-      "symbol": "MLN",
-      "source": "binance",
-      "eth_contract": "0xec67005c4e498ec7f55e092bd1d35cbc47c91892",
-      "name": "Enzyme",
-      "coingecko_id": "melon"
-    },
-    "BIGTIME": {
-      "symbol": "BIGTIME",
-      "source": "binance",
-      "eth_contract": "0x64bc2ca1be492be7185faa2c8835d9b824c8a194",
-      "name": "Big Time",
-      "coingecko_id": "big-time"
-    },
-    "BFUSD": {
-      "symbol": "BFUSD",
-      "source": "binance",
-      "name": "BFUSD",
-      "coingecko_id": "bfusd"
-    },
-    "ENSO": {
-      "symbol": "ENSO",
-      "source": "binance",
-      "eth_contract": "0x699f088b5dddcafb7c4824db5b10b57b37cb0c66",
-      "bsc_contract": "0xfeb339236d25d3e415f280189bc7c2fbab6ae9ef",
-      "name": "Enso",
-      "coingecko_id": "enso"
-    },
-    "IMX": {
-      "symbol": "IMX",
-      "source": "binance",
-      "eth_contract": "0xf57e7e7c23978c3caec3c3548e3d615c346e79ff",
-      "name": "Immutable",
-      "coingecko_id": "immutable-x"
+      "eth_contract": "0x8408d45b61f5823298f19a09b53b7339c0280489",
+      "bsc_contract": "0xcce5f304fd043d6a4e8ccb5376a4a4fb583b98d5",
+      "name": "Allora",
+      "coingecko_id": "allora"
     },
     "SKL": {
       "symbol": "SKL",
@@ -3017,9 +1224,598 @@
       "name": "SKALE",
       "coingecko_id": "skale"
     },
+    "ILV": {
+      "symbol": "ILV",
+      "source": "binance",
+      "eth_contract": "0x767fe9edc9e0df98e07454847909b5e959d7ca0e",
+      "name": "Illuvium",
+      "coingecko_id": "illuvium"
+    },
+    "OM": {
+      "symbol": "OM",
+      "source": "binance",
+      "eth_contract": "0x3593d125a4f7849a1b059e64f4517a86dd60c95d",
+      "bsc_contract": "0xf78d2e7936f5fe18308a3b2951a93b6c4a41f5e2",
+      "name": "MANTRA",
+      "coingecko_id": "mantra-dao"
+    },
+    "FDUSD": {
+      "symbol": "FDUSD",
+      "source": "binance",
+      "eth_contract": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
+      "bsc_contract": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
+      "name": "First Digital USD",
+      "coingecko_id": "first-digital-usd"
+    },
+    "ZRO": {
+      "symbol": "ZRO",
+      "source": "binance",
+      "eth_contract": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+      "bsc_contract": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+      "name": "LayerZero",
+      "coingecko_id": "layerzero"
+    },
+    "ADX": {
+      "symbol": "ADX",
+      "source": "binance",
+      "eth_contract": "0xade00c28244d5ce17d72e40330b1c318cd12b7c3",
+      "bsc_contract": "0x6bff4fb161347ad7de4a625ae5aa3a1ca7077819",
+      "name": "Adrena",
+      "coingecko_id": "adrena"
+    },
+    "RAY": {
+      "symbol": "RAY",
+      "source": "binance",
+      "name": "Raydium",
+      "coingecko_id": "raydium"
+    },
+    "KERNEL": {
+      "symbol": "KERNEL",
+      "source": "binance",
+      "eth_contract": "0x3f80b1c54ae920be41a77f8b902259d48cf24ccf",
+      "bsc_contract": "0x9ecaf80c1303cca8791afbc0ad405c8a35e8d9f1",
+      "name": "KernelDAO",
+      "coingecko_id": "kernel-2"
+    },
+    "CVC": {
+      "symbol": "CVC",
+      "source": "binance",
+      "eth_contract": "0x41e5560054824ea6b0732e656e3ad64e20e94e45",
+      "name": "Civic",
+      "coingecko_id": "civic"
+    },
+    "QNT": {
+      "symbol": "QNT",
+      "source": "binance",
+      "eth_contract": "0x4a220e6096b25eadb88358cb44068a3248254675",
+      "name": "Quant",
+      "coingecko_id": "quant-network"
+    },
+    "PIVX": {
+      "symbol": "PIVX",
+      "source": "binance",
+      "name": "PIVX",
+      "coingecko_id": "pivx"
+    },
+    "BANANA": {
+      "symbol": "BANANA",
+      "source": "binance",
+      "eth_contract": "0x38e68a37e401f7271568cecaac63c6b1e19130b4",
+      "bsc_contract": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95",
+      "name": "World Record Banana",
+      "coingecko_id": "world-record-banana"
+    },
+    "HFT": {
+      "symbol": "HFT",
+      "source": "binance",
+      "eth_contract": "0xb3999f658c0391d94a37f7ff328f3fec942bcadc",
+      "bsc_contract": "0x44ec807ce2f4a6f2737a92e985f318d035883e47",
+      "name": "Hashflow",
+      "coingecko_id": "hashflow"
+    },
+    "HOT": {
+      "symbol": "HOT",
+      "source": "binance",
+      "eth_contract": "0x6c6ee5e31d828de241282b9606c8e98ea48526e2",
+      "name": "Holo",
+      "coingecko_id": "holotoken"
+    },
+    "AI": {
+      "symbol": "AI",
+      "source": "binance",
+      "bsc_contract": "0xbda011d7f8ec00f66c1923b049b94c67d148d8b2",
+      "name": "Sleepless AI",
+      "coingecko_id": "sleepless-ai",
+      "eth_contract": "0xc91b523a59acc63a64f61fc7bbfb4bfc82dd25f2"
+    },
+    "PIXEL": {
+      "symbol": "PIXEL",
+      "source": "binance",
+      "name": "PixelVerse",
+      "coingecko_id": "pixelverse",
+      "eth_contract": "0x65e6b60ea01668634d68d0513fe814679f925bad",
+      "bsc_contract": "0x47db24e17c0c4622523449a239b3de746e2b0b23"
+    },
+    "TKO": {
+      "symbol": "TKO",
+      "source": "binance",
+      "bsc_contract": "0x9f589e3eabe42ebc94a44727b3f3531c0c877809",
+      "name": "Tokocrypto",
+      "coingecko_id": "tokocrypto"
+    },
+    "EURI": {
+      "symbol": "EURI",
+      "source": "binance",
+      "eth_contract": "0x9d1a7a3191102e9f900faa10540837ba84dcbae7",
+      "bsc_contract": "0x9d1a7a3191102e9f900faa10540837ba84dcbae7",
+      "name": "Eurite",
+      "coingecko_id": "eurite"
+    },
+    "FIS": {
+      "symbol": "FIS",
+      "source": "binance",
+      "eth_contract": "0xef3a930e1ffffacd2fc13434ac81bd278b0ecc8d",
+      "name": "Stafi",
+      "coingecko_id": "stafi"
+    },
+    "COOKIE": {
+      "symbol": "COOKIE",
+      "source": "binance",
+      "eth_contract": "0xc0041ef357b183448b235a8ea73ce4e4ec8c265f",
+      "bsc_contract": "0xc0041ef357b183448b235a8ea73ce4e4ec8c265f",
+      "name": "CookieBase",
+      "coingecko_id": "cookiebase"
+    },
+    "HYPER": {
+      "symbol": "HYPER",
+      "source": "binance",
+      "bsc_contract": "0xc9d23ed2adb0f551369946bd377f8644ce1ca5c4",
+      "name": "Hypernode",
+      "coingecko_id": "hypernode",
+      "eth_contract": "0x93a2db22b7c736b341c32ff666307f4a9ed910f5"
+    },
+    "0G": {
+      "symbol": "0G",
+      "source": "binance",
+      "eth_contract": "0x4b948d64de1f71fcd12fb586f4c776421a35b3ee",
+      "bsc_contract": "0x4b948d64de1f71fcd12fb586f4c776421a35b3ee",
+      "name": "0G",
+      "coingecko_id": "zero-gravity"
+    },
+    "RVN": {
+      "symbol": "RVN",
+      "source": "binance",
+      "name": "Ravencoin",
+      "coingecko_id": "ravencoin"
+    },
+    "ZRX": {
+      "symbol": "ZRX",
+      "source": "binance",
+      "eth_contract": "0xe41d2489571d322189246dafa5ebde1f4699f498",
+      "name": "Energi Bridged ZRX (Energi)",
+      "coingecko_id": "energi-bridged-zrx-energi"
+    },
+    "WAL": {
+      "symbol": "WAL",
+      "source": "binance",
+      "name": "Walrus",
+      "coingecko_id": "walrus-2"
+    },
+    "ORCA": {
+      "symbol": "ORCA",
+      "source": "binance",
+      "name": "Orca",
+      "coingecko_id": "orca"
+    },
+    "SYN": {
+      "symbol": "SYN",
+      "source": "binance",
+      "eth_contract": "0x1bd1bc78a183c0547cdc2dcea12c0a8c05bdc034",
+      "bsc_contract": "0xa4080f1778e69467e905b8d6f72f6e441f9e9484",
+      "name": "Synthra",
+      "coingecko_id": "synthra"
+    },
+    "ZEC": {
+      "symbol": "ZEC",
+      "source": "binance",
+      "bsc_contract": "0x1ba42e5193dfa8b03d15dd1b86a3113bbbef8eeb",
+      "name": "Zcash",
+      "coingecko_id": "zcash"
+    },
+    "XUSD": {
+      "symbol": "XUSD",
+      "source": "binance",
+      "name": "XUSD (BabelFish)",
+      "coingecko_id": "xusd-babelfish",
+      "eth_contract": "0xc08e7e23c235073c6807c2efe7021304cb7c2815",
+      "bsc_contract": "0xf81ac2e1a0373dde1bce01e2fe694a9b7e3bfcb9"
+    },
+    "PROVE": {
+      "symbol": "PROVE",
+      "source": "binance",
+      "eth_contract": "0x6bef15d938d4e72056ac92ea4bdd0d76b1c4ad29",
+      "bsc_contract": "0x7ddf164cecfddd0f992299d033b5a11279a15929",
+      "name": "Succinct",
+      "coingecko_id": "succinct"
+    },
+    "VIRTUAL": {
+      "symbol": "VIRTUAL",
+      "source": "binance",
+      "eth_contract": "0x44ff8620b8ca30902395a7bd3f2407e1a091bf73",
+      "name": "Virtuals Protocol",
+      "coingecko_id": "virtual-protocol"
+    },
+    "USDC": {
+      "symbol": "USDC",
+      "source": "binance",
+      "name": "zkSync Bridged USDC (zkSync)",
+      "coingecko_id": "zksync-bridged-usdc-zksync",
+      "bsc_contract": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "eth_contract": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+    },
+    "TURBO": {
+      "symbol": "TURBO",
+      "source": "binance",
+      "name": "TURBO.WIN",
+      "coingecko_id": "turbo-win",
+      "eth_contract": "0x109ba5f0230b7b39e4a8ab56e7361db89fa0e108",
+      "bsc_contract": "0x9d0211c1b1a217a574cb55b0e9c367e56debeae0"
+    },
     "BROCCOLI714": {
       "symbol": "BROCCOLI714",
       "source": "binance"
+    },
+    "REQ": {
+      "symbol": "REQ",
+      "source": "binance",
+      "eth_contract": "0x8f8221afbb33998d8584a2b05749ba73c37a938a",
+      "name": "Request",
+      "coingecko_id": "request-network"
+    },
+    "CETUS": {
+      "symbol": "CETUS",
+      "source": "binance",
+      "name": "Cetus Protocol",
+      "coingecko_id": "cetus-protocol"
+    },
+    "DCR": {
+      "symbol": "DCR",
+      "source": "binance",
+      "name": "Decred",
+      "coingecko_id": "decred"
+    },
+    "ASTR": {
+      "symbol": "ASTR",
+      "source": "binance",
+      "eth_contract": "0xf27441230eadeac85b764610325cc9a0d7859689",
+      "name": "Soneium Bridged ASTR (Soneium)",
+      "coingecko_id": "soneium-bridged-astar-soneium"
+    },
+    "BLUR": {
+      "symbol": "BLUR",
+      "source": "binance",
+      "eth_contract": "0x5283d291dbcf85356a21ba090e6db59121208b44",
+      "name": "Blur",
+      "coingecko_id": "blur"
+    },
+    "PUMP": {
+      "symbol": "PUMP",
+      "source": "binance",
+      "bsc_contract": "0xb7c0007ab75350c582d5eab1862b872b5cf53f0c",
+      "name": "Respect The Pump",
+      "coingecko_id": "respect-the-pump"
+    },
+    "WLD": {
+      "symbol": "WLD",
+      "source": "binance",
+      "eth_contract": "0x163f8c2467924be0ae7b5347228cabf260318753",
+      "name": "Worldcoin",
+      "coingecko_id": "worldcoin-wld"
+    },
+    "REI": {
+      "symbol": "REI",
+      "source": "binance",
+      "name": "Rei",
+      "coingecko_id": "unit-00-rei"
+    },
+    "CATI": {
+      "symbol": "CATI",
+      "source": "binance",
+      "name": "Catizen",
+      "coingecko_id": "catizen"
+    },
+    "HOLO": {
+      "symbol": "HOLO",
+      "source": "binance",
+      "name": "Holozone",
+      "coingecko_id": "holozone",
+      "bsc_contract": "0x1a5d7e4c3a7f940b240b7357a4bfed30d17f9497"
+    },
+    "KSM": {
+      "symbol": "KSM",
+      "source": "binance",
+      "name": "Kusama",
+      "coingecko_id": "kusama"
+    },
+    "SHELL": {
+      "symbol": "SHELL",
+      "source": "binance",
+      "eth_contract": "0xf2c88757f8d03634671208935974b60a2a28bdb3",
+      "bsc_contract": "0xf2c88757f8d03634671208935974b60a2a28bdb3",
+      "name": "Stargate Bridged Shell (Avalanche)",
+      "coingecko_id": "stargate-bridged-shell-avalanche"
+    },
+    "THETA": {
+      "symbol": "THETA",
+      "source": "binance",
+      "name": "Theta Network",
+      "coingecko_id": "theta-token"
+    },
+    "RAD": {
+      "symbol": "RAD",
+      "source": "binance",
+      "eth_contract": "0x31c8eacbffdd875c74b94b077895bd78cf1e64a3",
+      "name": "Radtarded Rat",
+      "coingecko_id": "retarded-rat"
+    },
+    "SPK": {
+      "symbol": "SPK",
+      "source": "binance",
+      "eth_contract": "0xc20059e0317de91738d13af027dfc4a50781b066",
+      "name": "Spark",
+      "coingecko_id": "spark-2"
+    },
+    "ERA": {
+      "symbol": "ERA",
+      "source": "binance",
+      "eth_contract": "0xe2ad0bf751834f2fbdc62a41014f84d67ca1de2a",
+      "bsc_contract": "0x6f9f0c4ad9af7ebd61ac5a1d4e0f2227f7b0e5f9",
+      "name": "Erable°",
+      "coingecko_id": "erable"
+    },
+    "POWR": {
+      "symbol": "POWR",
+      "source": "binance",
+      "eth_contract": "0x595832f8fc6bf59c85c527fec3740a1b7a361269",
+      "name": "Powerledger",
+      "coingecko_id": "power-ledger"
+    },
+    "GHST": {
+      "symbol": "GHST",
+      "source": "binance",
+      "eth_contract": "0x3f382dbd960e3a9bbceae22651e88158d2791550",
+      "name": "Aavegotchi",
+      "coingecko_id": "aavegotchi"
+    },
+    "AWE": {
+      "symbol": "AWE",
+      "source": "binance",
+      "name": "AWE Network",
+      "coingecko_id": "stp-network"
+    },
+    "SPELL": {
+      "symbol": "SPELL",
+      "source": "binance",
+      "eth_contract": "0x090185f2135308bad17527004364ebcc2d37e5f6",
+      "name": "The Spellcaster",
+      "coingecko_id": "the-spellcaster"
+    },
+    "MOVR": {
+      "symbol": "MOVR",
+      "source": "binance",
+      "name": "MOVR.ai",
+      "coingecko_id": "movr-ai"
+    },
+    "HIVE": {
+      "symbol": "HIVE",
+      "source": "binance",
+      "name": "SolHive",
+      "coingecko_id": "solhive",
+      "bsc_contract": "0x8fb024a51841e45891579bdc924550996b72b0fd"
+    },
+    "ICX": {
+      "symbol": "ICX",
+      "source": "binance",
+      "name": "ICON",
+      "coingecko_id": "icon"
+    },
+    "HEI": {
+      "symbol": "HEI",
+      "source": "binance",
+      "eth_contract": "0xf8f173e20e15f3b6cb686fb64724d370689de083",
+      "name": "Heima",
+      "coingecko_id": "heima"
+    },
+    "MET": {
+      "symbol": "MET",
+      "source": "binance",
+      "eth_contract": "0x2ebd53d035150f328bd754d6dc66b99b0edb89aa",
+      "name": "Metronome",
+      "coingecko_id": "metronome"
+    },
+    "TRX": {
+      "symbol": "TRX",
+      "source": "binance",
+      "name": "TRON (BSC)",
+      "coingecko_id": "tron-bsc",
+      "bsc_contract": "0xce7de646e7208a4ef112cb6ed5038fa6cc6b12e3"
+    },
+    "OG": {
+      "symbol": "OG",
+      "source": "binance",
+      "name": "OG Fan Token",
+      "coingecko_id": "og-fan-token"
+    },
+    "YFI": {
+      "symbol": "YFI",
+      "source": "binance",
+      "eth_contract": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
+      "name": "yearn.finance",
+      "coingecko_id": "yearn-finance"
+    },
+    "BNSOL": {
+      "symbol": "BNSOL",
+      "source": "binance",
+      "name": "Binance Staked SOL",
+      "coingecko_id": "binance-staked-sol"
+    },
+    "SOL": {
+      "symbol": "SOL",
+      "source": "binance",
+      "name": "Wrapped SOL",
+      "coingecko_id": "wrapped-solana",
+      "bsc_contract": "0x570a5d26f7765ecb712c0924e4de545b89fd43df"
+    },
+    "FIO": {
+      "symbol": "FIO",
+      "source": "binance",
+      "name": "FIO Protocol",
+      "coingecko_id": "fio-protocol"
+    },
+    "MANTA": {
+      "symbol": "MANTA",
+      "source": "binance",
+      "name": "Manta Network",
+      "coingecko_id": "manta-network"
+    },
+    "IO": {
+      "symbol": "IO",
+      "source": "binance",
+      "name": "io.net",
+      "coingecko_id": "io"
+    },
+    "FLUX": {
+      "symbol": "FLUX",
+      "source": "binance",
+      "eth_contract": "0xbfde5ac4f5adb419a931a5bf64b0f3bb5a623d06",
+      "name": "Flux",
+      "coingecko_id": "zelcash"
+    },
+    "QUICK": {
+      "symbol": "QUICK",
+      "source": "binance",
+      "eth_contract": "0xd2ba23de8a19316a638dc1e7a9adda1d74233368",
+      "name": "Quickswap",
+      "coingecko_id": "quickswap"
+    },
+    "BONK": {
+      "symbol": "BONK",
+      "source": "binance",
+      "name": "BONK on ETH",
+      "coingecko_id": "bonk-on-eth",
+      "eth_contract": "0x4fbaf51b95b024d0d7cab575be2a1f0afedc9b64",
+      "bsc_contract": "0xa697e272a73744b343528c3bc4702f2565b2f422"
+    },
+    "MDT": {
+      "symbol": "MDT",
+      "source": "binance",
+      "eth_contract": "0x814e0908b12a99fecf5bc101bb5d0b8b5cdf7d26",
+      "name": "Measurable Data",
+      "coingecko_id": "measurable-data-token"
+    },
+    "JASMY": {
+      "symbol": "JASMY",
+      "source": "binance",
+      "eth_contract": "0x7420b4b9a0110cdc71fb720908340c03f9bc03ec",
+      "name": "JasmyCoin",
+      "coingecko_id": "jasmycoin"
+    },
+    "RONIN": {
+      "symbol": "RONIN",
+      "source": "binance"
+    },
+    "GALA": {
+      "symbol": "GALA",
+      "source": "binance",
+      "eth_contract": "0xd1d2eb1b1e90b638588728b4130137d262c87cae",
+      "name": "GALA",
+      "coingecko_id": "gala"
+    },
+    "IDEX": {
+      "symbol": "IDEX",
+      "source": "binance",
+      "eth_contract": "0xb705268213d593b8fd88d3fdeff93aff5cbdcfae",
+      "name": "IDEX",
+      "coingecko_id": "aurora-dao"
+    },
+    "BIFI": {
+      "symbol": "BIFI",
+      "source": "binance",
+      "eth_contract": "0x2791bfd60d232150bff86b39b7146c0eaaa2ba81",
+      "name": "BiFi",
+      "coingecko_id": "bifi"
+    },
+    "RSR": {
+      "symbol": "RSR",
+      "source": "binance",
+      "eth_contract": "0x320623b8e4ff03373931769a31fc52a4e78b5d70",
+      "name": "Reserve Rights",
+      "coingecko_id": "reserve-rights-token"
+    },
+    "AUCTION": {
+      "symbol": "AUCTION",
+      "source": "binance",
+      "eth_contract": "0xa9b1eb5908cfc3cdf91f9b8b3a74108598009096",
+      "name": "Bounce",
+      "coingecko_id": "auction"
+    },
+    "ALT": {
+      "symbol": "ALT",
+      "source": "binance",
+      "bsc_contract": "0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb",
+      "name": "AltLayer",
+      "coingecko_id": "altlayer",
+      "eth_contract": "0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb"
+    },
+    "SAGA": {
+      "symbol": "SAGA",
+      "source": "binance",
+      "name": "Wrapped SAGA",
+      "coingecko_id": "wrapped-saga",
+      "eth_contract": "0xf42fcffc27a5b8d0afec45659407b82f9f32fa98"
+    },
+    "RED": {
+      "symbol": "RED",
+      "source": "binance",
+      "eth_contract": "0xc744df3419a8c9bd4d6b9852a503eb1c5308a326",
+      "name": "RED TOKEN",
+      "coingecko_id": "red-token"
+    },
+    "FORTH": {
+      "symbol": "FORTH",
+      "source": "binance",
+      "eth_contract": "0x77fba179c79de5b7653f68b5039af940ada60ce0",
+      "name": "Ampleforth Governance",
+      "coingecko_id": "ampleforth-governance-token"
+    },
+    "PENDLE": {
+      "symbol": "PENDLE",
+      "source": "binance",
+      "eth_contract": "0x808507121b80c02388fad14726482e061b8da827",
+      "bsc_contract": "0xb3ed0a426155b79b898849803e3b36552f7ed507",
+      "name": "Pendle",
+      "coingecko_id": "pendle"
+    },
+    "API3": {
+      "symbol": "API3",
+      "source": "binance",
+      "eth_contract": "0x0b38210ea11411557c13457d4da7dc6ea731b88a",
+      "name": "Api3",
+      "coingecko_id": "api3"
+    },
+    "METIS": {
+      "symbol": "METIS",
+      "source": "binance",
+      "name": "Metis",
+      "coingecko_id": "metis-token",
+      "eth_contract": "0x9e32b13ce7f2e80a01932b42553652e053d6ed8e"
+    },
+    "NKN": {
+      "symbol": "NKN",
+      "source": "binance",
+      "eth_contract": "0x5cf04716ba20127f1e2297addcf4b5035000c9eb",
+      "name": "NKN",
+      "coingecko_id": "nkn"
     },
     "UNI": {
       "symbol": "UNI",
@@ -3029,6 +1825,250 @@
       "eth_contract": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
       "bsc_contract": "0xbf5140a22578168fd562dccf235e5d43a02ce9b1"
     },
+    "PEOPLE": {
+      "symbol": "PEOPLE",
+      "source": "binance",
+      "eth_contract": "0x7a58c0be72be218b41c608b7fe7c5bb630736c71",
+      "name": "ConstitutionDAO (Wormhole)",
+      "coingecko_id": "constitutiondao-wormhole"
+    },
+    "GLMR": {
+      "symbol": "GLMR",
+      "source": "binance",
+      "name": "Moonbeam",
+      "coingecko_id": "moonbeam"
+    },
+    "EUR": {
+      "symbol": "EUR",
+      "source": "binance"
+    },
+    "MLN": {
+      "symbol": "MLN",
+      "source": "binance",
+      "eth_contract": "0xec67005c4e498ec7f55e092bd1d35cbc47c91892",
+      "name": "Enzyme",
+      "coingecko_id": "melon"
+    },
+    "ANKR": {
+      "symbol": "ANKR",
+      "source": "binance",
+      "eth_contract": "0x8290333cef9e6d528dd5618fb97a76f268f3edd4",
+      "bsc_contract": "0xf307910a4c7bbc79691fd374889b36d8531b08e3",
+      "name": "Ankr Network",
+      "coingecko_id": "ankr"
+    },
+    "DATA": {
+      "symbol": "DATA",
+      "source": "binance",
+      "bsc_contract": "0x0864c156b3c5f69824564dec60c629ae6401bf2a",
+      "name": "Streamr",
+      "coingecko_id": "streamr",
+      "eth_contract": "0x8f693ca8d21b157107184d29d398a8d082b38b76"
+    },
+    "ENA": {
+      "symbol": "ENA",
+      "source": "binance",
+      "eth_contract": "0x57e114b691db790c35207b2e685d4a43181e6061",
+      "name": "Ethena",
+      "coingecko_id": "ethena"
+    },
+    "IOTX": {
+      "symbol": "IOTX",
+      "source": "binance",
+      "bsc_contract": "0x9678e42cebeb63f23197d726b29b1cb20d0064e5",
+      "name": "IoTeX",
+      "coingecko_id": "iotex",
+      "eth_contract": "0x6fb3e0a217407efff7ca062d46c26e5d60a14d69"
+    },
+    "DOGE": {
+      "symbol": "DOGE",
+      "source": "binance",
+      "bsc_contract": "0xba2ae424d960c26247dd6c32edc70b295c744c43",
+      "name": "Doge on Pulsechain",
+      "coingecko_id": "doge-on-pulsechain",
+      "eth_contract": "0x81fcc294d91bd8ffc8a822d7df0e2fd2f8526c39"
+    },
+    "MMT": {
+      "symbol": "MMT",
+      "source": "binance",
+      "bsc_contract": "0xb34966a2a66cb116ebe87b9554c020dcc950e917",
+      "name": "Momentum",
+      "coingecko_id": "momentum-3"
+    },
+    "DASH": {
+      "symbol": "DASH",
+      "source": "binance",
+      "name": "DASH",
+      "coingecko_id": "dash-2",
+      "eth_contract": "0xedc3be0080f65c628964f44ba3f2b6057e60f8dc"
+    },
+    "HOOK": {
+      "symbol": "HOOK",
+      "source": "binance",
+      "bsc_contract": "0xa260e12d2b924cb899ae80bb58123ac3fee1e2f0",
+      "name": "Hooked Protocol",
+      "coingecko_id": "hooked-protocol"
+    },
+    "PAXG": {
+      "symbol": "PAXG",
+      "source": "binance",
+      "name": "PAX Gold",
+      "coingecko_id": "pax-gold",
+      "eth_contract": "0x45804880de22913dafe09f4980848ece6ecbaf78"
+    },
+    "DGB": {
+      "symbol": "DGB",
+      "source": "binance",
+      "name": "DigiByte",
+      "coingecko_id": "digibyte"
+    },
+    "VTHO": {
+      "symbol": "VTHO",
+      "source": "binance",
+      "name": "VeThor",
+      "coingecko_id": "vethor-token"
+    },
+    "AVNT": {
+      "symbol": "AVNT",
+      "source": "binance",
+      "name": "Avantis",
+      "coingecko_id": "avantis"
+    },
+    "NOM": {
+      "symbol": "NOM",
+      "source": "binance",
+      "name": "Trust in Nom",
+      "coingecko_id": "trust-in-nom",
+      "eth_contract": "0x6e6f6d696e61decd6605bd4a57836c5db6923340"
+    },
+    "WIN": {
+      "symbol": "WIN",
+      "source": "binance",
+      "name": "WINkLink BSC",
+      "coingecko_id": "winklink-bsc",
+      "eth_contract": "0xb10cb07ca2cdac77fbb5707f6690301f9d036f45",
+      "bsc_contract": "0xaef0d72a118ce24fee3cd1d43d383897d05b4e99"
+    },
+    "NEO": {
+      "symbol": "NEO",
+      "source": "binance",
+      "name": "NEO",
+      "coingecko_id": "neo"
+    },
+    "COS": {
+      "symbol": "COS",
+      "source": "binance",
+      "name": "Contentos",
+      "coingecko_id": "contentos"
+    },
+    "ONG": {
+      "symbol": "ONG",
+      "source": "binance",
+      "name": "Ontology Gas",
+      "coingecko_id": "ong"
+    },
+    "CHESS": {
+      "symbol": "CHESS",
+      "source": "binance",
+      "bsc_contract": "0x20de22029ab63cf9a7cf5feb2b737ca1ee4c82a6",
+      "name": "Tranchess",
+      "coingecko_id": "tranchess"
+    },
+    "NEWT": {
+      "symbol": "NEWT",
+      "source": "binance",
+      "name": "Newton Protocol",
+      "coingecko_id": "newton-protocol",
+      "eth_contract": "0xd0ec028a3d21533fdd200838f39c85b03679285d",
+      "bsc_contract": "0xb8a677e6d805c8d743e6f14c8bc9c19305b5defc"
+    },
+    "TON": {
+      "symbol": "TON",
+      "source": "binance",
+      "name": "TON Community",
+      "coingecko_id": "tontoken",
+      "eth_contract": "0x6a6c2ada3ce053561c2fbc3ee211f23d9b8c520a",
+      "bsc_contract": "0x76a797a59ba2c17726896976b7b3747bfd1d220f"
+    },
+    "AMP": {
+      "symbol": "AMP",
+      "source": "binance",
+      "eth_contract": "0xff20817765cb7f73d4bde2e66e067e58d11095c2",
+      "name": "Amp",
+      "coingecko_id": "amp-token"
+    },
+    "STO": {
+      "symbol": "STO",
+      "source": "binance",
+      "eth_contract": "0x1d88713b483a8e45cff0e5cd7c2e15e5fab4534d",
+      "bsc_contract": "0xdaf1695c41327b61b9b9965ac6a5843a3198cf07",
+      "name": "StakeStone",
+      "coingecko_id": "stakestone"
+    },
+    "CFX": {
+      "symbol": "CFX",
+      "source": "binance",
+      "name": "Cosmic Force Token v2",
+      "coingecko_id": "cosmic-force-token-v2",
+      "bsc_contract": "0xdf5ba79f0fd70c6609666d5ed603710609a530ab"
+    },
+    "NOT": {
+      "symbol": "NOT",
+      "source": "binance",
+      "name": "Nothing",
+      "coingecko_id": "nothing-3"
+    },
+    "COW": {
+      "symbol": "COW",
+      "source": "binance",
+      "eth_contract": "0xdef1ca1fb7fbcdc777520aa7f396b4e015f497ab",
+      "bsc_contract": "0x7aaaa5b10f97321345acd76945083141be1c5631",
+      "name": "CoW Protocol",
+      "coingecko_id": "cow-protocol"
+    },
+    "BARD": {
+      "symbol": "BARD",
+      "source": "binance",
+      "eth_contract": "0xf0db65d17e30a966c2ae6a21f6bba71cea6e9754",
+      "bsc_contract": "0xd23a186a78c0b3b805505e5f8ea4083295ef9f3a",
+      "name": "Lombard",
+      "coingecko_id": "lombard-protocol"
+    },
+    "STRK": {
+      "symbol": "STRK",
+      "source": "binance",
+      "eth_contract": "0xca14007eff0db1f8135f4c25b34de49ab0d42766",
+      "name": "Starknet",
+      "coingecko_id": "starknet"
+    },
+    "PHA": {
+      "symbol": "PHA",
+      "source": "binance",
+      "eth_contract": "0x6c5ba91642f10282b576d91922ae6448c9d52f4e",
+      "name": "PHALA",
+      "coingecko_id": "pha"
+    },
+    "BAT": {
+      "symbol": "BAT",
+      "source": "binance",
+      "eth_contract": "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
+      "name": "BitBat Token",
+      "coingecko_id": "bitbat-token"
+    },
+    "VOXEL": {
+      "symbol": "VOXEL",
+      "source": "binance",
+      "name": "Voxies",
+      "coingecko_id": "voxies"
+    },
+    "SOPH": {
+      "symbol": "SOPH",
+      "source": "binance",
+      "eth_contract": "0x6b7774cb12ed7573a7586e7d0e62a2a563ddd3f0",
+      "bsc_contract": "0x31dba3c96481fde3cd81c2aaf51f2d8bf618c742",
+      "name": "Sophon",
+      "coingecko_id": "sophon"
+    },
     "WAXP": {
       "symbol": "WAXP",
       "source": "binance",
@@ -3036,11 +2076,208 @@
       "name": "WAX",
       "coingecko_id": "wax"
     },
-    "A": {
-      "symbol": "A",
+    "INJ": {
+      "symbol": "INJ",
       "source": "binance",
-      "name": "Vaulta",
-      "coingecko_id": "vaulta"
+      "eth_contract": "0xe28b3b32b6c345a34ff64674606124dd5aceca30",
+      "bsc_contract": "0xa2b726b1145a4773f68593cf171187d8ebe4d495",
+      "name": "Injective",
+      "coingecko_id": "injective-protocol"
+    },
+    "XNO": {
+      "symbol": "XNO",
+      "source": "binance",
+      "name": "Nano",
+      "coingecko_id": "nano"
+    },
+    "COMP": {
+      "symbol": "COMP",
+      "source": "binance",
+      "eth_contract": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+      "bsc_contract": "0x52ce071bd9b1c4b00a0b92d298c512478cad67e8",
+      "name": "Compound",
+      "coingecko_id": "compound-governance-token"
+    },
+    "SLP": {
+      "symbol": "SLP",
+      "source": "binance",
+      "name": "Smooth Love Potion",
+      "coingecko_id": "smooth-love-potion",
+      "eth_contract": "0xcc8fa225d80b9c7d42f96e9570156c65d6caaa25"
+    },
+    "JST": {
+      "symbol": "JST",
+      "source": "binance",
+      "name": "JUST",
+      "coingecko_id": "just"
+    },
+    "LISTA": {
+      "symbol": "LISTA",
+      "source": "binance",
+      "bsc_contract": "0xfceb31a79f71ac9cbdcf853519c1b12d379edc46",
+      "name": "Lista DAO",
+      "coingecko_id": "lista"
+    },
+    "QTUM": {
+      "symbol": "QTUM",
+      "source": "binance",
+      "name": "Qtum",
+      "coingecko_id": "qtum"
+    },
+    "XRP": {
+      "symbol": "XRP",
+      "source": "binance",
+      "bsc_contract": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe",
+      "name": "WarioXRPDumbledoreYugioh69Inu",
+      "coingecko_id": "warioxrpdumbledoreyugioh69inu",
+      "eth_contract": "0xb1c064c3f2908f741c9dea4afc5773238b53e6cc"
+    },
+    "BOME": {
+      "symbol": "BOME",
+      "source": "binance",
+      "name": "BOOK OF MEME",
+      "coingecko_id": "book-of-meme"
+    },
+    "MORPHO": {
+      "symbol": "MORPHO",
+      "source": "binance",
+      "eth_contract": "0x9994e35db50125e0df82e4c2dde62496ce330999",
+      "name": "Legacy Morpho",
+      "coingecko_id": "morpho-2"
+    },
+    "MOVE": {
+      "symbol": "MOVE",
+      "source": "binance",
+      "name": "Movement",
+      "coingecko_id": "movement",
+      "bsc_contract": "0x95ca12cd249d27008a482009e101a8501cf3a64f",
+      "eth_contract": "0x3073f7aaa4db83f95e9fff17424f71d4751a3073"
+    },
+    "SCRT": {
+      "symbol": "SCRT",
+      "source": "binance",
+      "name": "Secret",
+      "coingecko_id": "secret"
+    },
+    "SXT": {
+      "symbol": "SXT",
+      "source": "binance",
+      "eth_contract": "0xe6bfd33f52d82ccb5b37e16d3dd81f9ffdabb195",
+      "name": "Space and Time",
+      "coingecko_id": "space-and-time"
+    },
+    "BERA": {
+      "symbol": "BERA",
+      "source": "binance",
+      "name": "Berachain",
+      "coingecko_id": "berachain-bera"
+    },
+    "QKC": {
+      "symbol": "QKC",
+      "source": "binance",
+      "eth_contract": "0xea26c4ac16d4a5a106820bc8aee85fd0b7b2b664",
+      "name": "QuarkChain",
+      "coingecko_id": "quark-chain"
+    },
+    "PNUT": {
+      "symbol": "PNUT",
+      "source": "binance",
+      "eth_contract": "0xe69ccaaaea33ebfe5b76e0dd373cd9a1a31fd410",
+      "name": "Pnut the Squirrel",
+      "coingecko_id": "pnut-the-squirrel"
+    },
+    "SAND": {
+      "symbol": "SAND",
+      "source": "binance",
+      "eth_contract": "0x3845badade8e6dff049820680d1f14bd3903a5d0",
+      "name": "The Sandbox (Wormhole)",
+      "coingecko_id": "the-sandbox-wormhole"
+    },
+    "ACM": {
+      "symbol": "ACM",
+      "source": "binance",
+      "eth_contract": "0x1bd9abf284e893705104e64b564b414620b722f1",
+      "bsc_contract": "0x1bd9abf284e893705104e64b564b414620b722f1",
+      "name": "AC Milan Fan Token",
+      "coingecko_id": "ac-milan-fan-token"
+    },
+    "ONT": {
+      "symbol": "ONT",
+      "source": "binance",
+      "bsc_contract": "0xfd7b3a77848f1c2d67e05e54d78d174a0c850335",
+      "name": "Ontology",
+      "coingecko_id": "ontology"
+    },
+    "PLUME": {
+      "symbol": "PLUME",
+      "source": "binance",
+      "eth_contract": "0x4c1746a800d224393fe2470c70a35717ed4ea5f1",
+      "bsc_contract": "0x5afadcd1e8e3ca78ee2d37100102f2aec8bc0aa8",
+      "name": "Plume",
+      "coingecko_id": "plume"
+    },
+    "SKY": {
+      "symbol": "SKY",
+      "source": "binance",
+      "name": "Skynet",
+      "coingecko_id": "skynet-3",
+      "eth_contract": "0x56072c95faa701256059aa122697b133aded9279"
+    },
+    "FET": {
+      "symbol": "FET",
+      "source": "binance",
+      "eth_contract": "0xaea46a60368a7bd060eec7df8cba43b7ef41ad85",
+      "bsc_contract": "0x031b41e504677879370e9dbcf937283a8691fa7f",
+      "name": "Artificial Superintelligence Alliance",
+      "coingecko_id": "fetch-ai"
+    },
+    "VANA": {
+      "symbol": "VANA",
+      "source": "binance",
+      "eth_contract": "0x7ff7fa94b8b66ef313f7970d4eebd2cb3103a2c0",
+      "bsc_contract": "0x7ff7fa94b8b66ef313f7970d4eebd2cb3103a2c0",
+      "name": "Vana",
+      "coingecko_id": "vana"
+    },
+    "BNT": {
+      "symbol": "BNT",
+      "source": "binance",
+      "eth_contract": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
+      "name": "Bancor Network",
+      "coingecko_id": "bancor"
+    },
+    "SAPIEN": {
+      "symbol": "SAPIEN",
+      "source": "binance",
+      "name": "Sapien",
+      "coingecko_id": "sapien-2"
+    },
+    "FUN": {
+      "symbol": "FUN",
+      "source": "binance",
+      "name": "terminal of fun",
+      "coingecko_id": "terminal-of-fun",
+      "eth_contract": "0x419d0d8bdd9af5e606ae2232ed285aff190e711b"
+    },
+    "KAITO": {
+      "symbol": "KAITO",
+      "source": "binance",
+      "name": "KAITO",
+      "coingecko_id": "kaito"
+    },
+    "FIL": {
+      "symbol": "FIL",
+      "source": "binance",
+      "bsc_contract": "0x0d8ce2a99bb6e3b7db580ed848240e4a0f9ae153",
+      "name": "Filecoin",
+      "coingecko_id": "filecoin"
+    },
+    "PORTO": {
+      "symbol": "PORTO",
+      "source": "binance",
+      "bsc_contract": "0x49f2145d6366099e13b10fbf80646c0f377ee7f6",
+      "name": "FC Porto",
+      "coingecko_id": "fc-porto"
     },
     "PUNDIX": {
       "symbol": "PUNDIX",
@@ -3048,6 +2285,637 @@
       "eth_contract": "0x0fd10b9899882a6f2fcb5c371e17e70fdee00c38",
       "name": "Pundi X",
       "coingecko_id": "pundi-x-2"
+    },
+    "DODO": {
+      "symbol": "DODO",
+      "source": "binance",
+      "eth_contract": "0x747e550a7b848ace786c3cfe754aa78febc8a022",
+      "bsc_contract": "0x67ee3cb086f8a16f34bee3ca72fad36f7db929e2",
+      "name": "Dodo the Black Swan",
+      "coingecko_id": "dodo-the-black-swan"
+    },
+    "FORM": {
+      "symbol": "FORM",
+      "source": "binance",
+      "bsc_contract": "0x5b73a93b4e5e4f1fd27d8b3f8c97d69908b5e284",
+      "name": "Makeform",
+      "coingecko_id": "makeform"
+    },
+    "ONDO": {
+      "symbol": "ONDO",
+      "source": "binance",
+      "eth_contract": "0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3",
+      "name": "Ondo",
+      "coingecko_id": "ondo-finance"
+    },
+    "NFP": {
+      "symbol": "NFP",
+      "source": "binance",
+      "bsc_contract": "0x551897f8203bd131b350601d3ac0679ba0fc0136",
+      "name": "NFPrompt",
+      "coingecko_id": "nfprompt-token"
+    },
+    "WBTC": {
+      "symbol": "WBTC",
+      "source": "binance",
+      "name": "zkSync Bridged WBTC (zkSync)",
+      "coingecko_id": "zksync-bridged-wbtc-zksync",
+      "eth_contract": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "bsc_contract": "0x0555e30da8f98308edb960aa94c0db47230d2b9c"
+    },
+    "DUSK": {
+      "symbol": "DUSK",
+      "source": "binance",
+      "eth_contract": "0x940a2db1b7008b6c776d4faaca729d6d4a4aa551",
+      "bsc_contract": "0xb2bd0749dbe21f623d9baba856d3b0f0e1bfec9c",
+      "name": "DUSK",
+      "coingecko_id": "dusk-network"
+    },
+    "AGLD": {
+      "symbol": "AGLD",
+      "source": "binance",
+      "eth_contract": "0x32353a6c91143bfd6c7d363b546e62a9a2489a20",
+      "name": "Adventure Gold",
+      "coingecko_id": "adventure-gold"
+    },
+    "ASTER": {
+      "symbol": "ASTER",
+      "source": "binance",
+      "bsc_contract": "0xd17fd7002e1b91ba9a38c00426e83a11db587ce6",
+      "name": "ASTERION",
+      "coingecko_id": "asterion"
+    },
+    "ALPINE": {
+      "symbol": "ALPINE",
+      "source": "binance",
+      "bsc_contract": "0x287880ea252b52b63cc5f40a2d3e5a44aa665a76",
+      "name": "Alpine F1 Team Fan Token",
+      "coingecko_id": "alpine-f1-team-fan-token"
+    },
+    "POLYX": {
+      "symbol": "POLYX",
+      "source": "binance",
+      "name": "Polymesh",
+      "coingecko_id": "polymesh"
+    },
+    "DAI": {
+      "symbol": "DAI",
+      "source": "binance",
+      "name": "ZKsync ERC20 Bridged DAI (zkSync)",
+      "coingecko_id": "zksync-erc20-bridged-dai-zksync",
+      "bsc_contract": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+      "eth_contract": "0x6b175474e89094c44da98b954eedeac495271d0f"
+    },
+    "KNC": {
+      "symbol": "KNC",
+      "source": "binance",
+      "eth_contract": "0xdefa4e8a7bcba345f687a2f1456f5edd9ce97202",
+      "bsc_contract": "0xfe56d5892bdffc7bf58f2e84be1b2c32d21c308b",
+      "name": "Kyber Network Crystal",
+      "coingecko_id": "kyber-network-crystal"
+    },
+    "1000CAT": {
+      "symbol": "1000CAT",
+      "source": "binance",
+      "name": "1000CAT",
+      "coingecko_id": "1000cat"
+    },
+    "A": {
+      "symbol": "A",
+      "source": "binance",
+      "name": "Vaulta",
+      "coingecko_id": "vaulta"
+    },
+    "1MBABYDOGE": {
+      "symbol": "1MBABYDOGE",
+      "source": "binance",
+      "name": "1MBABYDOGE",
+      "coingecko_id": "1mbabydoge"
+    },
+    "GTC": {
+      "symbol": "GTC",
+      "source": "binance",
+      "eth_contract": "0xe138fda441fc31b36171122397a8a11d6cd2c479",
+      "name": "Global Trust Coin",
+      "coingecko_id": "global-trust-coin",
+      "bsc_contract": "0x6cd871fb811224aa23b6bf1646177cdfe5106416"
+    },
+    "NXPC": {
+      "symbol": "NXPC",
+      "source": "binance",
+      "name": "Nexpace",
+      "coingecko_id": "nexpace"
+    },
+    "ACE": {
+      "symbol": "ACE",
+      "source": "binance",
+      "eth_contract": "0xec5483804e637d45cde22fa0869656b64b5ab1ab",
+      "name": "Fusionist",
+      "coingecko_id": "endurance",
+      "bsc_contract": "0xc27a719105a987b4c34116223cae8bd8f4b5def4"
+    },
+    "PSG": {
+      "symbol": "PSG",
+      "source": "binance",
+      "name": "Paris Saint-Germain Fan Token",
+      "coingecko_id": "paris-saint-germain-fan-token"
+    },
+    "CTK": {
+      "symbol": "CTK",
+      "source": "binance",
+      "name": "Cryptyk",
+      "coingecko_id": "cryptyk",
+      "eth_contract": "0x42a501903afaa1086b5975773375c80e363f4063"
+    },
+    "CITY": {
+      "symbol": "CITY",
+      "source": "binance",
+      "name": "Manchester City Fan Token",
+      "coingecko_id": "manchester-city-fan-token"
+    },
+    "MASK": {
+      "symbol": "MASK",
+      "source": "binance",
+      "name": "MaskNumber",
+      "coingecko_id": "masknumber",
+      "eth_contract": "0x69af81e73a73b40adf4f3d4223cd9b1ece623074",
+      "bsc_contract": "0x2ed9a5c8c13b93955103b9a7c167b67ef4d568a3"
+    },
+    "XVS": {
+      "symbol": "XVS",
+      "source": "binance",
+      "eth_contract": "0xd3cc9d8f3689b83c91b7b59cab4946b063eb894a",
+      "bsc_contract": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63",
+      "name": "Venus",
+      "coingecko_id": "venus"
+    },
+    "SOLV": {
+      "symbol": "SOLV",
+      "source": "binance",
+      "bsc_contract": "0xabe8e5cabe24cb36df9540088fd7ce1175b9bc52",
+      "name": "Solv Protocol",
+      "coingecko_id": "solv-protocol"
+    },
+    "SCR": {
+      "symbol": "SCR",
+      "source": "binance",
+      "name": "Scroll",
+      "coingecko_id": "scroll"
+    },
+    "1000CHEEMS": {
+      "symbol": "1000CHEEMS",
+      "source": "binance",
+      "name": "1000CHEMS",
+      "coingecko_id": "1000chems"
+    },
+    "SFP": {
+      "symbol": "SFP",
+      "source": "binance",
+      "eth_contract": "0x12e2b8033420270db2f3b328e32370cb5b2ca134",
+      "bsc_contract": "0xd41fdb03ba84762dd66a0af1a6c8540ff1ba5dfb",
+      "name": "SafePal",
+      "coingecko_id": "safepal"
+    },
+    "DENT": {
+      "symbol": "DENT",
+      "source": "binance",
+      "eth_contract": "0x3597bfd533a99c9aa083587b074434e61eb0a258",
+      "name": "Dent",
+      "coingecko_id": "dent"
+    },
+    "TIA": {
+      "symbol": "TIA",
+      "source": "binance",
+      "name": "Tiamonds [OLD]",
+      "coingecko_id": "tia",
+      "eth_contract": "0x824e35f7a75324f99300afac75ecf7354e17ea26"
+    },
+    "USTC": {
+      "symbol": "USTC",
+      "source": "binance",
+      "name": "Wrapped USTC",
+      "coingecko_id": "wrapped-ust",
+      "eth_contract": "0xa47c8bf37f92abed4a126bda807a7b7498661acd",
+      "bsc_contract": "0x23396cf899ca06c4472205fc903bdb4de249d6fc"
+    },
+    "NIL": {
+      "symbol": "NIL",
+      "source": "binance",
+      "eth_contract": "0x7cf9a80db3b29ee8efe3710aadb7b95270572d47",
+      "name": "Nillion",
+      "coingecko_id": "nillion"
+    },
+    "IOTA": {
+      "symbol": "IOTA",
+      "source": "binance",
+      "name": "IOTA",
+      "coingecko_id": "iota"
+    },
+    "TAO": {
+      "symbol": "TAO",
+      "source": "binance",
+      "name": "The Anthropic Order",
+      "coingecko_id": "the-anthropic-order"
+    },
+    "AIXBT": {
+      "symbol": "AIXBT",
+      "source": "binance",
+      "eth_contract": "0x0d37af9d8ae74f35f3a38bd2a08fcb29890ca6d2",
+      "name": "aixbt",
+      "coingecko_id": "aixbt"
+    },
+    "EGLD": {
+      "symbol": "EGLD",
+      "source": "binance",
+      "name": "MultiversX",
+      "coingecko_id": "elrond-erd-2"
+    },
+    "AR": {
+      "symbol": "AR",
+      "source": "binance",
+      "name": "Arweave",
+      "coingecko_id": "arweave"
+    },
+    "LA": {
+      "symbol": "LA",
+      "source": "binance",
+      "eth_contract": "0xe50365f5d679cb98a1dd62d6f6e58e59321bcddf",
+      "bsc_contract": "0x389ad4bb96d0d6ee5b6ef0efaf4b7db0ba2e02a0",
+      "name": "LA",
+      "coingecko_id": "latoken"
+    },
+    "G": {
+      "symbol": "G",
+      "source": "binance",
+      "eth_contract": "0x9c7beba8f6ef6643abd725e45a4e8387ef260649",
+      "name": "Gravity (by Galxe)",
+      "coingecko_id": "g-token",
+      "bsc_contract": "0x9c7beba8f6ef6643abd725e45a4e8387ef260649"
+    },
+    "MINA": {
+      "symbol": "MINA",
+      "source": "binance",
+      "name": "Mina Protocol",
+      "coingecko_id": "mina-protocol"
+    },
+    "SSV": {
+      "symbol": "SSV",
+      "source": "binance",
+      "eth_contract": "0x9d65ff81a3c488d585bbfb0bfe3c7707c7917f54",
+      "name": "SSV Network",
+      "coingecko_id": "ssv-network"
+    },
+    "FTT": {
+      "symbol": "FTT",
+      "source": "binance",
+      "eth_contract": "0x50d1c9771902476076ecfc8b2a83ad6b9355a4c9",
+      "name": "FTX",
+      "coingecko_id": "ftx-token"
+    },
+    "LUNC": {
+      "symbol": "LUNC",
+      "source": "binance",
+      "eth_contract": "0xd2877702675e6ceb975b4a1dff9fb7baf4c91ea9",
+      "bsc_contract": "0x156ab3346823b651294766e23e6cf87254d68962",
+      "name": "Wrapped LUNC",
+      "coingecko_id": "wrapped-terra"
+    },
+    "XTZ": {
+      "symbol": "XTZ",
+      "source": "binance",
+      "bsc_contract": "0x16939ef78684453bfdfb47825f8a5f714f12623a",
+      "name": "Tezos",
+      "coingecko_id": "tezos"
+    },
+    "DOLO": {
+      "symbol": "DOLO",
+      "source": "binance",
+      "eth_contract": "0x0f81001ef0a83ecce5ccebf63eb302c70a39a654",
+      "name": "Dolomite",
+      "coingecko_id": "dolomite"
+    },
+    "SUI": {
+      "symbol": "SUI",
+      "source": "binance",
+      "name": "Sui",
+      "coingecko_id": "sui"
+    },
+    "USUAL": {
+      "symbol": "USUAL",
+      "source": "binance",
+      "eth_contract": "0xc4441c2be5d8fa8126822b9929ca0b81ea0de38e",
+      "bsc_contract": "0x4acd4d03af6f9cc0fb7c5f0868b7b6287d7969c5",
+      "name": "Usual",
+      "coingecko_id": "usual"
+    },
+    "SC": {
+      "symbol": "SC",
+      "source": "binance",
+      "name": "STAR CAT",
+      "coingecko_id": "star-cat"
+    },
+    "ASR": {
+      "symbol": "ASR",
+      "source": "binance",
+      "name": "AS Roma Fan Token",
+      "coingecko_id": "as-roma-fan-token"
+    },
+    "NEAR": {
+      "symbol": "NEAR",
+      "source": "binance",
+      "bsc_contract": "0x1fa4a73a3f0133f0025378af00236f3abdee5d63",
+      "name": "NEAR Protocol",
+      "coingecko_id": "near",
+      "eth_contract": "0x85f17cf997934a597031b2e18a9ab6ebd4b9f6a4"
+    },
+    "AEVO": {
+      "symbol": "AEVO",
+      "source": "binance",
+      "eth_contract": "0xb528edbef013aff855ac3c50b381f253af13b997",
+      "name": "Aevo",
+      "coingecko_id": "aevo-exchange"
+    },
+    "YGG": {
+      "symbol": "YGG",
+      "source": "binance",
+      "eth_contract": "0x25f8087ead173b73d6e8b84329989a8eea16cf73",
+      "bsc_contract": "0x13ab6739368a4e4abf24695bf52959224367391f",
+      "name": "Yield Guild Games",
+      "coingecko_id": "yield-guild-games"
+    },
+    "MIRA": {
+      "symbol": "MIRA",
+      "source": "binance",
+      "eth_contract": "0xf5207ac91c9e7ec7ebb03e93cbcbcad10878ac79",
+      "bsc_contract": "0x7839fbfd09dae4d0f15bfb36b8f16f7898fbe684",
+      "name": "Mira",
+      "coingecko_id": "mira-3"
+    },
+    "MTL": {
+      "symbol": "MTL",
+      "source": "binance",
+      "name": "Metal DAO",
+      "coingecko_id": "metal"
+    },
+    "DOT": {
+      "symbol": "DOT",
+      "source": "binance",
+      "bsc_contract": "0x8d010bf9c26881788b4e6bf5fd1bdc358c8f90b8",
+      "name": "xcDOT",
+      "coingecko_id": "xcdot",
+      "eth_contract": "0x196c20da81fbc324ecdf55501e95ce9f0bd84d14"
+    },
+    "UMA": {
+      "symbol": "UMA",
+      "source": "binance",
+      "eth_contract": "0x04fa0d235c4abf4bcf4787af4cf447de572ef828",
+      "name": "UMA",
+      "coingecko_id": "uma"
+    },
+    "SIGN": {
+      "symbol": "SIGN",
+      "source": "binance",
+      "eth_contract": "0x868fced65edbf0056c4163515dd840e9f287a4c3",
+      "bsc_contract": "0x868fced65edbf0056c4163515dd840e9f287a4c3",
+      "name": "Sign",
+      "coingecko_id": "sign-global"
+    },
+    "ICP": {
+      "symbol": "ICP",
+      "source": "binance",
+      "eth_contract": "0x00f3c42833c3170159af4e92dbb451fb3f708917",
+      "name": "Internet Computer",
+      "coingecko_id": "internet-computer"
+    },
+    "ACT": {
+      "symbol": "ACT",
+      "source": "binance",
+      "bsc_contract": "0x9f3bcbe48e8b754f331dfc694a894e8e686ac31d",
+      "name": "Act I The AI Prophecy",
+      "coingecko_id": "act-i-the-ai-prophecy"
+    },
+    "PEPE": {
+      "symbol": "PEPE",
+      "source": "binance",
+      "name": "Pepe Community",
+      "coingecko_id": "pepe-token",
+      "eth_contract": "0xbe042e9d09cb588331ff911c2b46fd833a3e5bd6",
+      "bsc_contract": "0x25d887ce7a35172c62febfd67a1856f20faebb00"
+    },
+    "BCH": {
+      "symbol": "BCH",
+      "source": "binance",
+      "bsc_contract": "0x8ff795a6f4d97e7887c79bea79aba5cc76444adf",
+      "name": "Bitcoin Cash",
+      "coingecko_id": "bitcoin-cash"
+    },
+    "TUSD": {
+      "symbol": "TUSD",
+      "source": "binance",
+      "bsc_contract": "0x40af3827f39d0eacbf4a168f8d4ee67c121d11c9",
+      "name": "Turbo USD",
+      "coingecko_id": "turbo-usd",
+      "eth_contract": "0x0000000000085d4780b73119b644ae5ecd22b376"
+    },
+    "DIA": {
+      "symbol": "DIA",
+      "source": "binance",
+      "eth_contract": "0x84ca8bc7997272c7cfb4d0cd3d55cd942b3c9419",
+      "bsc_contract": "0x99956d38059cf7beda96ec91aa7bb2477e0901dd",
+      "name": "DIA",
+      "coingecko_id": "dia-data"
+    },
+    "GNS": {
+      "symbol": "GNS",
+      "source": "binance",
+      "name": "Gains Network",
+      "coingecko_id": "gains-network"
+    },
+    "CAKE": {
+      "symbol": "CAKE",
+      "source": "binance",
+      "eth_contract": "0x152649ea73beab28c5b49b26eb48f7ead6d4c898",
+      "bsc_contract": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+      "name": "PancakeSwap",
+      "coingecko_id": "pancakeswap-token"
+    },
+    "CHZ": {
+      "symbol": "CHZ",
+      "source": "binance",
+      "eth_contract": "0x3506424f91fd33084466f402d5d97f05f8e3b4af",
+      "name": "Chiliz",
+      "coingecko_id": "chiliz"
+    },
+    "JOE": {
+      "symbol": "JOE",
+      "source": "binance",
+      "bsc_contract": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
+      "name": "Joe Coin",
+      "coingecko_id": "joe-coin",
+      "eth_contract": "0x76e222b07c53d28b89b0bac18602810fc22b49a8"
+    },
+    "RENDER": {
+      "symbol": "RENDER",
+      "source": "binance",
+      "eth_contract": "0x6de037ef9ad2725eb40118bb1702ebb27e4aeb24",
+      "name": "Render",
+      "coingecko_id": "render-token"
+    },
+    "STG": {
+      "symbol": "STG",
+      "source": "binance",
+      "eth_contract": "0xaf5191b0de278c7286d6c7cc6ab6bb8a73ba2cd6",
+      "bsc_contract": "0xb0d502e938ed5f4df2e681fe6e419ff29631d62b",
+      "name": "Stargate Finance",
+      "coingecko_id": "stargate-finance"
+    },
+    "SYS": {
+      "symbol": "SYS",
+      "source": "binance",
+      "name": "Syscoin",
+      "coingecko_id": "syscoin"
+    },
+    "GMX": {
+      "symbol": "GMX",
+      "source": "binance",
+      "bsc_contract": "0x6961974d3bc7f26f3488c64330111c8ecfe75bf3",
+      "name": "GMX",
+      "coingecko_id": "gmx"
+    },
+    "PENGU": {
+      "symbol": "PENGU",
+      "source": "binance",
+      "name": "Pudgy Penguins",
+      "coingecko_id": "pudgy-penguins",
+      "eth_contract": "0x6418c0dd099a9fda397c766304cdd918233e8847",
+      "bsc_contract": "0x6418c0dd099a9fda397c766304cdd918233e8847"
+    },
+    "ATM": {
+      "symbol": "ATM",
+      "source": "binance",
+      "name": "Automatic Treasury Machine",
+      "coingecko_id": "automatic-treasury-machine"
+    },
+    "THE": {
+      "symbol": "THE",
+      "source": "binance",
+      "name": "The Protocol",
+      "coingecko_id": "the-protocol",
+      "bsc_contract": "0xf4c8e32eadec4bfe97e0f595add0f4450a863a11",
+      "eth_contract": "0x0cba60ca5ef4d42f92a5070a8fedd13be93e2861"
+    },
+    "TREE": {
+      "symbol": "TREE",
+      "source": "binance",
+      "eth_contract": "0x77146784315ba81904d654466968e3a7c196d1f3",
+      "name": "/treeplanting",
+      "coingecko_id": "treeplanting",
+      "bsc_contract": "0x77146784315ba81904d654466968e3a7c196d1f3"
+    },
+    "CELO": {
+      "symbol": "CELO",
+      "source": "binance",
+      "name": "Celo",
+      "coingecko_id": "celo"
+    },
+    "BANANAS31": {
+      "symbol": "BANANAS31",
+      "source": "binance",
+      "bsc_contract": "0x3d4f0513e8a29669b960f9dbca61861548a9a760",
+      "name": "Banana For Scale",
+      "coingecko_id": "banana-for-scale-2"
+    },
+    "ETHFI": {
+      "symbol": "ETHFI",
+      "source": "binance",
+      "eth_contract": "0xfe0c30065b384f05761f15d0cc899d4f9f9cc0eb",
+      "name": "Ether.fi",
+      "coingecko_id": "ether-fi"
+    },
+    "JUV": {
+      "symbol": "JUV",
+      "source": "binance",
+      "name": "Juventus Fan Token",
+      "coingecko_id": "juventus-fan-token"
+    },
+    "SANTOS": {
+      "symbol": "SANTOS",
+      "source": "binance",
+      "bsc_contract": "0xa64455a4553c9034236734faddaddbb64ace4cc7",
+      "name": "Santos FC Fan Token",
+      "coingecko_id": "santos-fc-fan-token"
+    },
+    "MBL": {
+      "symbol": "MBL",
+      "source": "binance",
+      "name": "MovieBloc",
+      "coingecko_id": "moviebloc"
+    },
+    "C": {
+      "symbol": "C",
+      "source": "binance",
+      "bsc_contract": "0xc32cc70741c3a8433dcbcb5ade071c299b55ffc8",
+      "name": "Chainbase",
+      "coingecko_id": "chainbase"
+    },
+    "ARDR": {
+      "symbol": "ARDR",
+      "source": "binance",
+      "name": "Ardor",
+      "coingecko_id": "ardor"
+    },
+    "ACH": {
+      "symbol": "ACH",
+      "source": "binance",
+      "eth_contract": "0xed04915c23f00a313a544955524eb7dbd823143d",
+      "bsc_contract": "0xbc7d6b50616989655afd682fb42743507003056d",
+      "name": "Alchemy Pay",
+      "coingecko_id": "alchemy-pay"
+    },
+    "BABY": {
+      "symbol": "BABY",
+      "source": "binance",
+      "name": "Deer Seized by US Government",
+      "coingecko_id": "deer-seized-by-us-government",
+      "bsc_contract": "0x53e562b9b7e5e94b81f10e96ee70ad06df3d2657",
+      "eth_contract": "0xff931a7946d2fa11cf9123ef0dc6f6c7c6cb60c4"
+    },
+    "IOST": {
+      "symbol": "IOST",
+      "source": "binance",
+      "bsc_contract": "0xaf48b7e315a52518cfbf7d96c455d9dfad94cb48",
+      "name": "IOST",
+      "coingecko_id": "iostoken"
+    },
+    "CRV": {
+      "symbol": "CRV",
+      "source": "binance",
+      "name": "Curve DAO",
+      "coingecko_id": "curve-dao-token",
+      "eth_contract": "0xd533a949740bb3306d119cc777fa900ba034cd52"
+    },
+    "BIO": {
+      "symbol": "BIO",
+      "source": "binance",
+      "eth_contract": "0xcb1592591996765ec0efc1f92599a19767ee5ffa",
+      "name": "Bio Protocol",
+      "coingecko_id": "bio-protocol"
+    },
+    "LAYER": {
+      "symbol": "LAYER",
+      "source": "binance",
+      "name": "UniLayer",
+      "coingecko_id": "unilayer",
+      "eth_contract": "0x0ff6ffcfda92c53f615a4a75d982f399c989366b",
+      "bsc_contract": "0xc2c23a86def9e9f5972a633b3d25f7ecbfa5e575"
+    },
+    "AVA": {
+      "symbol": "AVA",
+      "source": "binance",
+      "name": "AVA (Travala)",
+      "coingecko_id": "concierge-io",
+      "bsc_contract": "0xd9483ea7214fcfd89b4fb8f513b544920e315a52",
+      "eth_contract": "0xa6c0c097741d55ecd9a3a7def3a8253fd022ceb9"
     },
     "ARPA": {
       "symbol": "ARPA",
@@ -3057,37 +2925,28 @@
       "name": "ARPA",
       "coingecko_id": "arpa"
     },
-    "PHA": {
-      "symbol": "PHA",
+    "ARK": {
+      "symbol": "ARK",
       "source": "binance",
-      "eth_contract": "0x6c5ba91642f10282b576d91922ae6448c9d52f4e",
-      "name": "PHALA",
-      "coingecko_id": "pha"
+      "name": "Arken World",
+      "coingecko_id": "arken-world",
+      "bsc_contract": "0xcae117ca6bc8a341d2e7207f30e180f0e5618b9d"
     },
-    "DGB": {
-      "symbol": "DGB",
+    "ZKC": {
+      "symbol": "ZKC",
       "source": "binance",
-      "name": "DigiByte",
-      "coingecko_id": "digibyte"
+      "eth_contract": "0x000006c2a22ff4a44ff1f5d0f2ed65f781f55555",
+      "bsc_contract": "0x15247e6e23d3923a853ccf15940a20ccdf16e94a",
+      "name": "zkChan",
+      "coingecko_id": "zkchan"
     },
-    "VELODROME": {
-      "symbol": "VELODROME",
-      "source": "binance"
-    },
-    "OPEN": {
-      "symbol": "OPEN",
+    "TLM": {
+      "symbol": "TLM",
       "source": "binance",
-      "name": "OPEN Tony",
-      "coingecko_id": "open-tony",
-      "eth_contract": "0x323c03c48660fe31186fa82c289b0766d331ce21",
-      "bsc_contract": "0xa227cc36938f0c9e09ce0e64dfab226cad739447"
-    },
-    "FLUX": {
-      "symbol": "FLUX",
-      "source": "binance",
-      "eth_contract": "0xbfde5ac4f5adb419a931a5bf64b0f3bb5a623d06",
-      "name": "Flux",
-      "coingecko_id": "zelcash"
+      "eth_contract": "0x888888848b652b3e3a0f34c96e00eec0f3a23f72",
+      "bsc_contract": "0x2222227e22102fe3322098e4cbfe18cfebd57c95",
+      "name": "Alien Worlds",
+      "coingecko_id": "alien-worlds"
     },
     "AUDIO": {
       "symbol": "AUDIO",
@@ -3096,19 +2955,160 @@
       "name": "Audius",
       "coingecko_id": "audius"
     },
-    "QUICK": {
-      "symbol": "QUICK",
+    "ZBT": {
+      "symbol": "ZBT",
       "source": "binance",
-      "eth_contract": "0xd2ba23de8a19316a638dc1e7a9adda1d74233368",
-      "name": "Quickswap",
-      "coingecko_id": "quickswap"
+      "eth_contract": "0xfab99fcf605fd8f4593edb70a43ba56542777777",
+      "bsc_contract": "0xfab99fcf605fd8f4593edb70a43ba56542777777",
+      "name": "ZEROBASE",
+      "coingecko_id": "zerobase"
     },
-    "RARE": {
-      "symbol": "RARE",
+    "JUP": {
+      "symbol": "JUP",
       "source": "binance",
-      "eth_contract": "0x93dfaf57d986b9ca77df9376c50878e013d9c7c8",
-      "name": "Unique One",
-      "coingecko_id": "unique-one"
+      "eth_contract": "0x4b1e80cac91e2216eeb63e29b957eb91ae9c2be8",
+      "bsc_contract": "0x0231f91e02debd20345ae8ab7d71a41f8e140ce7",
+      "name": "Jupiter",
+      "coingecko_id": "jupiter-exchange-solana"
+    },
+    "SEI": {
+      "symbol": "SEI",
+      "source": "binance",
+      "eth_contract": "0xbdf43ecadc5cef51b7d1772f722e40596bc1788b",
+      "name": "Sei",
+      "coingecko_id": "sei-network"
+    },
+    "ALGO": {
+      "symbol": "ALGO",
+      "source": "binance",
+      "name": "Dear Algorithm",
+      "coingecko_id": "dear-algorithm"
+    },
+    "XEC": {
+      "symbol": "XEC",
+      "source": "binance",
+      "name": "eCash",
+      "coingecko_id": "ecash"
+    },
+    "ALCX": {
+      "symbol": "ALCX",
+      "source": "binance",
+      "eth_contract": "0xdbdb4d16eda451d0503b854cf79d55697f90c8df",
+      "name": "Alchemix",
+      "coingecko_id": "alchemix"
+    },
+    "USDE": {
+      "symbol": "USDE",
+      "source": "binance",
+      "name": "USDE (ERD)",
+      "coingecko_id": "usde-2",
+      "eth_contract": "0x1d00e86748573c322f4cc41518aa0e77bd912eb4",
+      "bsc_contract": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+    },
+    "AAVE": {
+      "symbol": "AAVE",
+      "source": "binance",
+      "eth_contract": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+      "bsc_contract": "0xfb6115445bff7b52feb98650c87f44907e58f802",
+      "name": "Aave",
+      "coingecko_id": "aave"
+    },
+    "ATOM": {
+      "symbol": "ATOM",
+      "source": "binance",
+      "bsc_contract": "0x0eb3a705fc54725037cc9e008bdede697f62f335",
+      "name": "Lost Bitcoin Layer",
+      "coingecko_id": "lost-bitcoin-layer"
+    },
+    "REZ": {
+      "symbol": "REZ",
+      "source": "binance",
+      "eth_contract": "0x3b50805453023a91a8bf641e279401a0b23fa6f9",
+      "name": "Renzo",
+      "coingecko_id": "renzo"
+    },
+    "W": {
+      "symbol": "W",
+      "source": "binance",
+      "name": "Wormhole",
+      "coingecko_id": "wormhole",
+      "bsc_contract": "0x19683a9d2a31508847a026dfe77f53a05a084444",
+      "eth_contract": "0xb0ffa8000886e57f86dd5264b9582b2ad87b2b91"
+    },
+    "BFUSD": {
+      "symbol": "BFUSD",
+      "source": "binance",
+      "name": "BFUSD",
+      "coingecko_id": "bfusd"
+    },
+    "ME": {
+      "symbol": "ME",
+      "source": "binance",
+      "name": "Magic Eden",
+      "coingecko_id": "magic-eden"
+    },
+    "JTO": {
+      "symbol": "JTO",
+      "source": "binance",
+      "name": "Jito",
+      "coingecko_id": "jito-governance-token"
+    },
+    "ACA": {
+      "symbol": "ACA",
+      "source": "binance",
+      "name": "Acala",
+      "coingecko_id": "acala"
+    },
+    "SAHARA": {
+      "symbol": "SAHARA",
+      "source": "binance",
+      "eth_contract": "0xfdffb411c4a70aa7c95d5c981a6fb4da867e1111",
+      "bsc_contract": "0xfdffb411c4a70aa7c95d5c981a6fb4da867e1111",
+      "name": "Sahara AI",
+      "coingecko_id": "sahara-ai"
+    },
+    "TOWNS": {
+      "symbol": "TOWNS",
+      "source": "binance",
+      "eth_contract": "0x000000fa00b200406de700041cfc6b19bbfb4d13",
+      "bsc_contract": "0x00000000bca93b25a6694ca3d2109d545988b13b",
+      "name": "Towns",
+      "coingecko_id": "towns"
+    },
+    "FLOW": {
+      "symbol": "FLOW",
+      "source": "binance",
+      "name": "STAKE FLOW",
+      "coingecko_id": "stake-flow",
+      "bsc_contract": "0x7dc31152f557f0a21897cab58b0d2d213a6d4444"
+    },
+    "ENS": {
+      "symbol": "ENS",
+      "source": "binance",
+      "eth_contract": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+      "name": "Ethereum Name Service",
+      "coingecko_id": "ethereum-name-service"
+    },
+    "S": {
+      "symbol": "S",
+      "source": "binance",
+      "name": "Token S",
+      "coingecko_id": "token-s"
+    },
+    "LSK": {
+      "symbol": "LSK",
+      "source": "binance",
+      "eth_contract": "0x6033f7f88332b8db6ad452b7c6d5bb643990ae3f",
+      "name": "Lisk",
+      "coingecko_id": "lisk"
+    },
+    "DEGO": {
+      "symbol": "DEGO",
+      "source": "binance",
+      "eth_contract": "0x3da932456d082cba208feb0b096d49b202bf89c8",
+      "bsc_contract": "0x3da932456d082cba208feb0b096d49b202bf89c8",
+      "name": "Dego Finance",
+      "coingecko_id": "dego-finance"
     }
   },
   "contract_map": {
@@ -3655,6 +3655,6 @@
     "0x2ebd53d035150f328bd754d6dc66b99b0edb89aa": "MET",
     "0x7cf9a80db3b29ee8efe3710aadb7b95270572d47": "NIL"
   },
-  "last_update": "2025-11-17T23:40:14.740608",
+  "last_update": "2025-11-22T22:07:00.181521",
   "total_count": 441
 }
