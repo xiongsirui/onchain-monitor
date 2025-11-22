@@ -41,7 +41,6 @@ listener_state.pkl
 *.pkl
 
 # Configuration files with sensitive data
-config.py
 .env
 *.key
 credentials.json
