@@ -14,6 +14,7 @@
 
 from web3 import Web3, AsyncWeb3
 from web3.providers import WebSocketProvider
+from web3.exceptions import ProviderConnectionError
 import json
 import time
 import pickle
@@ -793,6 +794,11 @@ class AsyncEVMWebSocketListener(EVMChainListener):
 
         self._ws_callback = callback
 
+        # 确保已经建立持久连接，否则后续订阅会报
+        # \"Connection to websocket has not been initiated for the provider.\"
+        if not self.async_w3.provider.has_persistent_connection:
+            await self.async_w3.provider.connect()
+
         # 为每个钱包单独订阅 Transfer→to=wallet 的日志
         for wallet in self.binance_wallets:
             topic_to = '0x' + wallet[2:].zfill(64)
@@ -825,6 +831,14 @@ class AsyncEVMWebSocketListener(EVMChainListener):
             asyncio.run(self._run_ws(callback))
         except KeyboardInterrupt:
             print(f"\n⏹️  [{self.chain_name}] WebSocket 监听已停止")
+        except ProviderConnectionError as e:
+            # WebSocket 连接失败时，自动回退到 HTTP 轮询模式，避免整个监听线程崩溃
+            print(f"\n⚠️  [{self.chain_name}] WebSocket 监听失败，回退到 HTTP 轮询模式: {e}")
+            super().listen(from_block=from_block, poll_interval=poll_interval, callback=callback)
+        except Exception as e:
+            # 其他异常也做降级处理，保证至少有 HTTP 轮询
+            print(f"\n⚠️  [{self.chain_name}] WebSocket 监听异常，回退到 HTTP 轮询模式: {e}")
+            super().listen(from_block=from_block, poll_interval=poll_interval, callback=callback)
 
 
 class SolanaChainListener(BaseChainListener):

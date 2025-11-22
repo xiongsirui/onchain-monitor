@@ -86,7 +86,7 @@ def main():
     )
 
     # 询问是否启用 Solana
-    use_solana = input("是否同时启用 Solana 监听？(y/N): ").strip().lower()
+    use_solana = 'n'
     if use_solana == 'y':
         listener.add_solana_listener(
             rpc_url=SOL_RPC_URL
