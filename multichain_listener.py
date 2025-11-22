@@ -83,8 +83,15 @@ class AdvancedTokenAnalyzer:
             'min_tx_count': 10,                  # 笔
             'same_timestamp_tolerance': 60,      # 秒
             'same_value_tolerance': 0.01,        # 比例
-            'min_unique_senders': 2,             # 个
-            'max_sender_concentration': 0.7,     # 最大单一发送者占比
+            'min_unique_senders': 1,             # 个（降低为1，允许单发送者）
+            'max_sender_concentration': 0.95,    # 最大单一发送者占比（提高到95%）
+        }
+
+        # 大额转账阈值（项目方打新特征）
+        self.large_transfer_thresholds = {
+            'min_total_value': 1e24,             # 100万代币（18 decimals）
+            'min_single_value': 1e23,            # 10万代币单笔
+            'bonus_score': 0.3,                  # 大额转账加分
         }
 
         # 区块缓存（避免重复查询）
@@ -148,20 +155,41 @@ class AdvancedTokenAnalyzer:
         transfer_count = len(transfers)
         sender_count = len(senders)
 
+        # 🆕 检查是否为大额转账（项目方打新特征）
+        total_value = sum(tx.get('value', 0) for tx in transfers)
+        max_single_value = max((tx.get('value', 0) for tx in transfers), default=0)
+
+        is_large_transfer = (
+            total_value >= self.large_transfer_thresholds['min_total_value'] or
+            max_single_value >= self.large_transfer_thresholds['min_single_value']
+        )
+
         # 检查转账数量
         if transfer_count < 2:
-            analysis['warnings'].append("转账次数过少（< 2）")
-            score -= 0.3
+            if is_large_transfer:
+                analysis['patterns'].append("⭐ 大额初始转账（疑似项目方打新）")
+                score -= 0.1  # 大额转账只扣少量分数
+            else:
+                analysis['warnings'].append("转账次数过少（< 2）")
+                score -= 0.3
         elif transfer_count < 3:
-            analysis['warnings'].append("转账次数较少（< 3）")
-            score -= 0.1
+            if is_large_transfer:
+                analysis['patterns'].append("⭐ 大额转账（可能是项目方入库）")
+                score -= 0.05
+            else:
+                analysis['warnings'].append("转账次数较少（< 3）")
+                score -= 0.1
         else:
             analysis['patterns'].append(f"发现 {transfer_count} 笔转账")
 
-        # 检查发送者数量
+        # 检查发送者数量（大额转账降低要求）
         if sender_count < self.sybil_thresholds['min_unique_senders']:
-            analysis['warnings'].append(f"独立发送者过少（< {self.sybil_thresholds['min_unique_senders']}）")
-            score -= 0.3
+            if is_large_transfer and sender_count >= 1:
+                # 大额单发送者是正常的项目方打新模式
+                analysis['patterns'].append(f"💎 单一发送者大额转账（项目方入库模式）")
+            else:
+                analysis['warnings'].append(f"独立发送者过少（< {self.sybil_thresholds['min_unique_senders']}）")
+                score -= 0.3
         else:
             analysis['patterns'].append(f"{sender_count} 个独立发送者")
 
@@ -174,10 +202,18 @@ class AdvancedTokenAnalyzer:
 
             max_concentration = max(sender_concentration.values()) / transfer_count
             if max_concentration > self.sybil_thresholds['max_sender_concentration']:
-                analysis['warnings'].append(f"发送者过于集中（{max_concentration:.1%}来自单一地址）")
-                score -= 0.2
+                if not is_large_transfer:
+                    # 只有非大额转账才警告集中度
+                    analysis['warnings'].append(f"发送者过于集中（{max_concentration:.1%}来自单一地址）")
+                    score -= 0.2
 
-        return max(0.0, score)
+        # 🆕 大额转账加分
+        if is_large_transfer:
+            bonus = self.large_transfer_thresholds['bonus_score']
+            score += bonus
+            analysis['patterns'].append(f"✅ 大额转账检测通过（加 {bonus*100:.0f}% 置信度）")
+
+        return min(1.0, max(0.0, score))
 
     def _analyze_time_patterns(self, transfers, analysis):
         """时间模式分析"""
@@ -256,12 +292,26 @@ class AdvancedTokenAnalyzer:
         return max(0.0, score)
 
     def _detect_sybil_attack(self, transfers, senders, analysis):
-        """女巫攻击检测"""
+        """女巫攻击检测（智能区分项目方和女巫）"""
         score = 1.0
 
         sybil_indicators = 0
 
-        # 指标1: 发送者过少
+        # 🆕 先检查是否为大额转账（豁免女巫检测）
+        total_value = sum(tx.get('value', 0) for tx in transfers)
+        max_single_value = max((tx.get('value', 0) for tx in transfers), default=0)
+
+        is_large_transfer = (
+            total_value >= self.large_transfer_thresholds['min_total_value'] or
+            max_single_value >= self.large_transfer_thresholds['min_single_value']
+        )
+
+        # 大额转账豁免机制：项目方打新通常是大额单发送者
+        if is_large_transfer:
+            analysis['patterns'].append("💰 大额转账豁免女巫检测")
+            return 1.0  # 满分通过
+
+        # 指标1: 发送者过少（已经放宽到1个）
         if len(senders) < self.sybil_thresholds['min_unique_senders']:
             sybil_indicators += 1
 
@@ -275,11 +325,15 @@ class AdvancedTokenAnalyzer:
                 if close_count > len(intervals) * 0.5:
                     sybil_indicators += 1
 
-        # 指标3: 金额过于相似
+        # 指标3: 金额过于相似（小额转账才视为可疑）
         amounts = [tx['value'] for tx in transfers]
         unique_amounts = len(set(amounts))
         if unique_amounts < len(amounts) * 0.3:
-            sybil_indicators += 1
+            # 检查是否为小额测试（真正的女巫特征）
+            avg_amount = sum(amounts) / len(amounts) if amounts else 0
+            if avg_amount < 1e22:  # 小于 10,000 tokens（18 decimals）
+                sybil_indicators += 1
+                analysis['patterns'].append("⚠️ 发现小额重复转账模式")
 
         # 综合判断
         if sybil_indicators >= 2:
@@ -432,7 +486,16 @@ class BaseChainListener(ABC):
         print(f"   {'─'*60}\n")
 
     def _check_alert_conditions(self, contract, buffer, analysis, token_info):
-        """检查告警条件"""
+        """
+        检查告警条件
+
+        HIGH 级别告警:
+        1. 置信度 >= 80% + 转账 >= 3 + 发送者 >= 2 (原有逻辑)
+        2. 置信度 >= 80% + 单笔大额转账 (项目方打新场景)
+
+        MEDIUM 级别告警:
+        - 置信度 >= 60% + 转账 >= 5
+        """
         if buffer.get('alert_sent'):
             return  # 已发送过告警
 
@@ -440,16 +503,33 @@ class BaseChainListener(ABC):
         transfer_count = len(buffer['transfers'])
         sender_count = len(buffer['senders'])
 
+        # 检查是否为大额转账
+        total_value = sum(tx.get('value', 0) for tx in buffer['transfers'])
+        max_single_value = max((tx.get('value', 0) for tx in buffer['transfers']), default=0)
+        is_large_transfer = (
+            total_value >= 1e24 or  # 100万代币总额
+            max_single_value >= 1e23  # 10万代币单笔
+        )
+
         # 告警条件
         should_alert = False
         alert_level = None
+        trigger_reason = None  # 触发原因标识
 
+        # HIGH 级别：原有逻辑 OR 大额单笔转账
         if confidence >= 0.8 and transfer_count >= 3 and sender_count >= 2:
             should_alert = True
             alert_level = 'HIGH'
+            trigger_reason = 'multi_transfer'  # 多笔转账逻辑
+        elif confidence >= 0.8 and is_large_transfer:
+            # 新增：大额单笔转账也触发 HIGH 告警
+            should_alert = True
+            alert_level = 'HIGH'
+            trigger_reason = 'large_single'  # 大额单笔逻辑
         elif confidence >= 0.6 and transfer_count >= 5:
             should_alert = True
             alert_level = 'MEDIUM'
+            trigger_reason = 'medium_confidence'  # 中等置信度
 
         if should_alert:
             # 二次验证 - 避免误报
@@ -467,20 +547,41 @@ class BaseChainListener(ABC):
 
             self.stats['high_confidence_tokens'] += 1
             buffer['alert_sent'] = True
+            buffer['trigger_reason'] = trigger_reason  # 保存触发原因
             self._send_alert(alert_level, contract, buffer, analysis, token_info)
 
     def _send_alert(self, level, contract, buffer, analysis, token_info):
         """发送告警"""
         symbol = f"{'🚨'*3}" if level == 'HIGH' else "⚡"
 
+        # 获取触发原因
+        trigger_reason = buffer.get('trigger_reason', 'unknown')
+
+        # 根据触发原因生成提示信息
+        trigger_hints = {
+            'multi_transfer': '📊 多笔转账+多发送者模式',
+            'large_single': '💰 大额单笔转账（疑似项目方打新）',
+            'medium_confidence': '⚠️  中等置信度信号'
+        }
+        trigger_hint = trigger_hints.get(trigger_reason, '🔍 触发告警')
+
         print(f"\n{symbol} [{self.chain_name}] {level} 级别告警! {symbol}")
+        print(f"   触发原因: {trigger_hint}")
         print(f"   代币: {token_info['symbol']} ({token_info['name']})")
         print(f"   合约: {contract}")
         print(f"   转账数: {len(buffer['transfers'])} 笔")
         print(f"   发送者: {len(buffer['senders'])} 个")
         print(f"   置信度: {analysis['confidence']:.2%}")
         print(f"   {analysis['recommendation']}")
-        print(f"   立即行动建议: 深入调查此代币！\n")
+
+        # 根据触发原因给出不同的行动建议
+        action_suggestions = {
+            'multi_transfer': '建议：检查多个发送者地址关联性，确认是否为真实用户',
+            'large_single': '建议：重点关注！大额转账通常是项目方入库，可能即将上线',
+            'medium_confidence': '建议：持续观察，等待更多转账数据验证'
+        }
+        action = action_suggestions.get(trigger_reason, '建议：深入调查此代币')
+        print(f"   💡 {action}\n")
 
         # 发送飞书通知
         if self.feishu_notifier:
@@ -572,8 +673,28 @@ class BaseChainListener(ABC):
         print(f"   时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
     def _should_run_analysis(self, buffer: Dict[str, Any]) -> bool:
-        """分析阈值控制"""
-        return len(buffer['transfers']) >= 2
+        """
+        分析阈值控制（支持大额单笔转账）
+
+        触发条件:
+        1. 至少2笔转账（原有逻辑）
+        2. 单笔大额转账（项目方打新场景）
+        """
+        # 原有逻辑：2笔以上
+        if len(buffer['transfers']) >= 2:
+            return True
+
+        # 新增：单笔大额转账也触发分析
+        if len(buffer['transfers']) == 1:
+            tx = buffer['transfers'][0]
+            value = tx.get('value', 0)
+
+            # 检查是否为大额转账（与 AdvancedTokenAnalyzer 阈值一致）
+            # 单笔 >= 10万代币 或 总额 >= 100万代币
+            if value >= 1e23:  # 10万代币单笔 (假设18 decimals)
+                return True
+
+        return False
 
     def _run_full_analysis(self, contract: str, buffer: Dict[str, Any], token_info: Dict[str, Any]):
         """执行策略分析并触发告警"""
@@ -788,9 +909,9 @@ class AsyncEVMWebSocketListener(EVMChainListener):
         # WebSocket 模式下不需要轮询间隔，但为了兼容接口仍接受 poll_interval 参数
         self._ws_callback: Optional[Callable] = None
 
-    async def _handle_log(self, ctx):
-        """WebSocket 订阅回调，处理单条日志"""
-        log = ctx.result
+    async def _handle_log(self, handler_context):
+        """WebSocket 订阅回调，处理单条日志 (Web3.py v7 subscription_manager API)"""
+        log = handler_context.result
         transfer_data = self.decode_transfer_log(log)
         if not transfer_data:
             return
@@ -806,7 +927,7 @@ class AsyncEVMWebSocketListener(EVMChainListener):
             self._ws_callback(transfer_data, self.new_tokens_buffer)
 
     async def _run_ws(self, callback=None):
-        """内部协程：为每个监控钱包建立 logs 订阅"""
+        """内部协程：为每个监控钱包建立 logs 订阅 (Web3.py v7+ subscription_manager)"""
         print(f"\n{'='*80}")
         print(f"🔄 [{self.chain_name}] 启动 WebSocket 监听")
         print(f"{'='*80}")
@@ -815,34 +936,57 @@ class AsyncEVMWebSocketListener(EVMChainListener):
 
         self._ws_callback = callback
 
-        # 确保已经建立持久连接，否则后续订阅会报
-        # \"Connection to websocket has not been initiated for the provider.\"
+        # 确保已经建立持久连接
         if not self.async_w3.provider.has_persistent_connection:
             await self.async_w3.provider.connect()
 
-        # 为每个钱包单独订阅 Transfer→to=wallet 的日志
-        for wallet in self.binance_wallets:
-            topic_to = '0x' + wallet[2:].zfill(64)
-            logs_filter = {
-                'topics': [
-                    TRANSFER_EVENT_SIGNATURE,
-                    None,
-                    topic_to,
-                ]
-            }
-            await self.async_w3.eth.subscribe(
-                'logs',
-                logs_filter,
-                handler=self._handle_log,
-            )
-            print(f"✅ [{self.chain_name}] 已订阅钱包 {self._shorten(wallet)} 的 Transfer 事件")
-
-        # 保持协程存活
         try:
-            while True:
-                await asyncio.sleep(3600)
-        except asyncio.CancelledError:
-            print(f"\n⏹️  [{self.chain_name}] WebSocket 监听已停止")
+            # Web3.py v7.7.0+ 使用 subscription_manager
+            from web3.utils.subscriptions import LogsSubscription
+
+            subscriptions = []
+            for i, wallet in enumerate(self.binance_wallets):
+                topic_to = '0x' + wallet[2:].zfill(64)
+                sub = LogsSubscription(
+                    label=f"{self.chain_name}-wallet-{i}",
+                    topics=[
+                        TRANSFER_EVENT_SIGNATURE,
+                        None,
+                        topic_to,
+                    ],
+                    handler=self._handle_log,
+                )
+                subscriptions.append(sub)
+                print(f"✅ [{self.chain_name}] 已订阅钱包 {self._shorten(wallet)} 的 Transfer 事件")
+
+            await self.async_w3.subscription_manager.subscribe(subscriptions)
+            await self.async_w3.subscription_manager.handle_subscriptions()
+
+        except ImportError:
+            # Web3.py v6 或更早版本，使用旧的 subscribe API
+            print(f"⚠️ [{self.chain_name}] 使用旧版 subscribe API")
+            for wallet in self.binance_wallets:
+                topic_to = '0x' + wallet[2:].zfill(64)
+                logs_filter = {
+                    'topics': [
+                        TRANSFER_EVENT_SIGNATURE,
+                        None,
+                        topic_to,
+                    ]
+                }
+                subscription_id = await self.async_w3.eth.subscribe('logs', logs_filter)
+                print(f"✅ [{self.chain_name}] 已订阅钱包 {self._shorten(wallet)} 的 Transfer 事件 (subscription_id: {subscription_id})")
+
+            # 监听订阅事件
+            async for response in self.async_w3.socket.process_subscriptions():
+                log = response.get('result')
+                if log:
+                    transfer_data = self.decode_transfer_log(log)
+                    if transfer_data:
+                        transfer_data['timestamp'] = self.get_block_timestamp(transfer_data['block_number'])
+                        self.process_transfer(transfer_data)
+                        if self._ws_callback:
+                            self._ws_callback(transfer_data, self.new_tokens_buffer)
 
     def listen(self, from_block: str = 'latest', poll_interval: int = 12, callback=None):
         """兼容 BaseChainListener 接口的同步入口，内部运行异步 WebSocket 监听"""

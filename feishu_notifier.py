@@ -100,6 +100,15 @@ class FeishuNotifier:
         }
         risk_label = risk_labels.get(analysis['risk_level'], analysis['risk_level'])
 
+        # 触发原因标签
+        trigger_reason = buffer.get('trigger_reason', 'unknown')
+        trigger_hints = {
+            'multi_transfer': '📊 多笔转账+多发送者模式',
+            'large_single': '💰 大额单笔转账（疑似项目方打新）',
+            'medium_confidence': '⚠️ 中等置信度信号'
+        }
+        trigger_hint = trigger_hints.get(trigger_reason, '🔍 触发告警')
+
         # 构造卡片
         card = {
             "config": {
@@ -139,6 +148,18 @@ class FeishuNotifier:
                             }
                         }
                     ]
+                },
+                # 分隔线
+                {
+                    "tag": "hr"
+                },
+                # 触发原因（新增）
+                {
+                    "tag": "div",
+                    "text": {
+                        "tag": "lark_md",
+                        "content": f"**🎯 触发原因**\n{trigger_hint}"
+                    }
                 },
                 # 分隔线
                 {
