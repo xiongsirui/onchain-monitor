@@ -8,7 +8,7 @@
 # ============================================================================
 # 代理配置
 # ============================================================================
-PROXY = '127.0.0.1:7897'  # HTTP 代理
+PROXY = '127.0.0.1:7897'  # 如果不需要代理，设为 None
 
 # ============================================================================
 # 是否启用币安代币过滤
@@ -19,11 +19,11 @@ ENABLE_FILTER = True
 # Ethereum 配置 (HTTP 轮询 + 代理)
 # ============================================================================
 ETH_CONFIG = {
-    # Infura HTTP RPC（支持代理）
-    'rpc_url': 'https://mainnet.infura.io/v3/a5c953a20c9b46d2b620c84b3eafe726',
+    # Infura HTTP RPC
+    'rpc_url': 'https://mainnet.infura.io/v3/YOUR_INFURA_API_KEY',
 
-    # 不使用 WebSocket（WebSocket 不支持 HTTP 代理）
-    'ws_url': None,
+    # Infura WebSocket ⭐
+    'ws_url': 'wss://mainnet.infura.io/ws/v3/YOUR_INFURA_API_KEY',
 
     # HTTP 轮询间隔
     'poll_interval': 12,  # 12秒（ETH 出块时间）
@@ -33,11 +33,11 @@ ETH_CONFIG = {
 # BSC 配置 (HTTP 轮询)
 # ============================================================================
 BSC_CONFIG = {
-    # Binance 官方 RPC（免费且稳定）
-    'rpc_url': 'https://bsc-dataseed.binance.org/',
+    # Ankr HTTP RPC
+    'rpc_url': 'https://rpc.ankr.com/bsc/YOUR_ANKR_API_KEY',
 
-    # 不使用 WebSocket
-    'ws_url': None,
+    # Ankr WebSocket ⭐
+    'ws_url': 'wss://rpc.ankr.com/bsc/ws/YOUR_ANKR_API_KEY',
 
     # HTTP 轮询间隔
     'poll_interval': 3,  # 3秒（BSC 出块时间）
