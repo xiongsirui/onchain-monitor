@@ -8,7 +8,7 @@
 # ============================================================================
 # 代理配置
 # ============================================================================
-PROXY = '127.0.0.1:7897'  # 如果不需要代理，设为 None
+PROXY = None  # 如果不需要代理，设为 None
 
 # ============================================================================
 # 是否启用币安代币过滤
@@ -20,10 +20,10 @@ ENABLE_FILTER = True
 # ============================================================================
 ETH_CONFIG = {
     # Infura HTTP RPC
-    'rpc_url': 'https://mainnet.infura.io/v3/YOUR_INFURA_API_KEY',
+    'rpc_url': 'https://mainnet.infura.io/v3/a5c953a20c9b46d2b620c84b3eafe726',
 
     # Infura WebSocket ⭐
-    'ws_url': 'wss://mainnet.infura.io/ws/v3/YOUR_INFURA_API_KEY',
+    'ws_url': 'wss://mainnet.infura.io/ws/v3/a5c953a20c9b46d2b620c84b3eafe726',
 
     # HTTP 轮询间隔
     'poll_interval': 12,  # 12秒（ETH 出块时间）
@@ -34,10 +34,10 @@ ETH_CONFIG = {
 # ============================================================================
 BSC_CONFIG = {
     # Ankr HTTP RPC
-    'rpc_url': 'https://rpc.ankr.com/bsc/YOUR_ANKR_API_KEY',
+    'rpc_url': 'https://bsc-mainnet.infura.io/v3/a5c953a20c9b46d2b620c84b3eafe726',
 
     # Ankr WebSocket ⭐
-    'ws_url': 'wss://rpc.ankr.com/bsc/ws/YOUR_ANKR_API_KEY',
+    'ws_url': 'wss://bsc-mainnet.infura.io/ws/v3/a5c953a20c9b46d2b620c84b3eafe726',
 
     # HTTP 轮询间隔
     'poll_interval': 3,  # 3秒（BSC 出块时间）
@@ -56,7 +56,7 @@ SOLANA_CONFIG = {
 # ============================================================================
 FEISHU_CONFIG = {
     'enabled': True,
-    'webhook_url': 'https://open.feishu.cn/open-apis/bot/v2/hook/YOUR_FEISHU_TOKEN',
+    'webhook_url': 'https://open.feishu.cn/open-apis/bot/v2/hook/e8b6ba7d-980b-42e1-bd69-6c5f04403bbc',
 }
 
 # ============================================================================
