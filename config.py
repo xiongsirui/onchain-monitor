@@ -11,7 +11,7 @@ WebSocket 完整配置 - ETH + BSC
 # ============================================================================
 # 代理配置
 # ============================================================================
-PROXY = '127.0.0.1:7897'  # 如果不需要代理，设为 None
+PROXY = None  # 如果不需要代理，设为 None
 
 # ============================================================================
 # 是否启用币安代币过滤
@@ -23,10 +23,10 @@ ENABLE_FILTER = True
 # ============================================================================
 ETH_CONFIG = {
     # Infura HTTP RPC
-    'rpc_url': 'https://mainnet.infura.io/v3/YOUR_INFURA_API_KEY',
+    'rpc_url': 'https://mainnet.infura.io/v3/a5c953a20c9b46d2b620c84b3eafe726',
 
     # Infura WebSocket ⭐
-    'ws_url': 'wss://mainnet.infura.io/ws/v3/YOUR_INFURA_API_KEY',
+    'ws_url': 'wss://mainnet.infura.io/ws/v3/a5c953a20c9b46d2b620c84b3eafe726',
 
     # 轮询间隔（WebSocket 模式下不使用）
     'poll_interval': 12,
@@ -37,10 +37,10 @@ ETH_CONFIG = {
 # ============================================================================
 BSC_CONFIG = {
     # Ankr HTTP RPC
-    'rpc_url': 'https://rpc.ankr.com/bsc/YOUR_ANKR_API_KEY',
+    'rpc_url': 'https://bsc-mainnet.infura.io/v3/a5c953a20c9b46d2b620c84b3eafe726',
 
     # Ankr WebSocket ⭐
-    'ws_url': 'wss://rpc.ankr.com/bsc/ws/YOUR_ANKR_API_KEY',
+    'ws_url': 'wss://bsc-mainnet.infura.io/ws/v3/a5c953a20c9b46d2b620c84b3eafe726',
 
     # 轮询间隔（WebSocket 模式下不使用）
     'poll_interval': 3,
