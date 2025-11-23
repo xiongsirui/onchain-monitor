@@ -960,11 +960,13 @@ class AsyncEVMWebSocketListener(EVMChainListener):
                 print(f"✅ [{self.chain_name}] 已订阅钱包 {self._shorten(wallet)} 的 Transfer 事件")
 
             await self.async_w3.subscription_manager.subscribe(subscriptions)
+            print(f"✅ [{self.chain_name}] WebSocket 连接成功，使用 Web3.py v7+ 新版 API")
             await self.async_w3.subscription_manager.handle_subscriptions()
 
-        except ImportError:
+        except (ImportError, AttributeError) as e:
             # Web3.py v6 或更早版本，使用旧的 subscribe API
-            print(f"⚠️ [{self.chain_name}] 使用旧版 subscribe API")
+            # 这是正常的兼容性回退，不是错误
+            print(f"ℹ️  [{self.chain_name}] WebSocket 使用 Web3.py v6 兼容模式")
             for wallet in self.binance_wallets:
                 topic_to = '0x' + wallet[2:].zfill(64)
                 logs_filter = {
