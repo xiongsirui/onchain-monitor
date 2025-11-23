@@ -901,8 +901,12 @@ class AsyncEVMWebSocketListener(EVMChainListener):
             print(f"⚠️ [{chain_name}] 当前 WebSocketProvider 暂未配置代理，仍将直接连接 {ws_url}")
 
         try:
-            self.async_w3 = AsyncWeb3(WebSocketProvider(ws_url))
-            print(f"✅ [{chain_name}] WebSocket 已配置: {ws_url}")
+            # 创建持久化 WebSocket 连接
+            # Web3.py v7+ 的 WebSocketProvider 默认是持久化的
+            ws_provider = WebSocketProvider(ws_url)
+            self.async_w3 = AsyncWeb3(ws_provider)
+            print(f"✅ [{chain_name}] WebSocket Provider 已初始化")
+            print(f"   URL: {ws_url}")
         except Exception as e:
             raise Exception(f"❌ [{chain_name}] WebSocket 初始化失败: {e}")
 
@@ -937,8 +941,23 @@ class AsyncEVMWebSocketListener(EVMChainListener):
         self._ws_callback = callback
 
         # 确保已经建立持久连接
-        if not self.async_w3.provider.has_persistent_connection:
-            await self.async_w3.provider.connect()
+        try:
+            # 检查连接状态
+            if hasattr(self.async_w3.provider, 'has_persistent_connection'):
+                if not self.async_w3.provider.has_persistent_connection:
+                    print(f"⏳ [{self.chain_name}] 正在建立 WebSocket 连接...")
+                    await self.async_w3.provider.connect()
+                    print(f"✅ [{self.chain_name}] WebSocket 连接已建立")
+            else:
+                # 旧版本 WebSocketProvider，直接尝试连接
+                print(f"⏳ [{self.chain_name}] 正在建立 WebSocket 连接...")
+                await self.async_w3.provider.connect()
+                print(f"✅ [{self.chain_name}] WebSocket 连接已建立")
+        except AttributeError as e:
+            # Provider 没有 connect 方法，可能已经自动连接
+            print(f"ℹ️  [{self.chain_name}] WebSocket Provider 自动连接模式")
+        except Exception as e:
+            raise Exception(f"❌ [{self.chain_name}] WebSocket 连接建立失败: {e}")
 
         try:
             # Web3.py v7.7.0+ 使用 subscription_manager
